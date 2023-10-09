@@ -16,6 +16,13 @@
 - Sell and item to an existing customer
 - Get a list of all purchases by a customer
 
+## GUI Design Information
+
+### Font Size(s)
+
+- Page Headers / Titles = 15
+- Standard Info Text & Input Boxes = 12
+
 # Useful Resource
 
 - [UML Class Diagram Info](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/)

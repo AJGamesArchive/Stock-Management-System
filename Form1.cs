@@ -1,10 +1,16 @@
 namespace Stock_Management_System
 {
-    public partial class Form1 : Form
+    public partial class MainSystem : Form
     {
-        public Form1()
+        public MainSystem()
         {
             InitializeComponent();
+        }
+
+        // Login Screen, Create New Account Button
+        private void NewAccountBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
