@@ -10,11 +10,11 @@ namespace Stock_Management_System
     {
         public enum Type
         {
-            Customer,
+            Staff,
             Admin
         }
+        public string Name { get; set; }
         public string Password { get; set; }
         public Type Rank { get; set; }
-        public string CreationDate { get; set; }
     }
 }

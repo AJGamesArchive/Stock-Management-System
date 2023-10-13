@@ -35,9 +35,9 @@
             this.ForgotPasswordBtn = new System.Windows.Forms.Button();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.LoginPasswordEntryTxt = new System.Windows.Forms.TextBox();
-            this.LoginEmailEntryTxt = new System.Windows.Forms.TextBox();
+            this.LoginNameEntryTxt = new System.Windows.Forms.TextBox();
             this.LoginPasswordEntryLbl = new System.Windows.Forms.Label();
-            this.LoginEmailEntryLbl = new System.Windows.Forms.Label();
+            this.LoginNameEntryLbl = new System.Windows.Forms.Label();
             this.SystemLoginLbl = new System.Windows.Forms.Label();
             this.TabAccCreate = new System.Windows.Forms.TabPage();
             this.CreateAccControlsGrp = new System.Windows.Forms.GroupBox();
@@ -46,13 +46,11 @@
             this.EnterAccountRankCmb = new System.Windows.Forms.ComboBox();
             this.EnterPasswordConfirmTxt = new System.Windows.Forms.TextBox();
             this.EnterPasswordTxt = new System.Windows.Forms.TextBox();
-            this.EnterEmailTxt = new System.Windows.Forms.TextBox();
             this.EnterUsernameTxt = new System.Windows.Forms.TextBox();
             this.EnterPaswordConfirmLbl = new System.Windows.Forms.Label();
             this.EnterAccountRankLbl = new System.Windows.Forms.Label();
             this.EnterPasswordLbl = new System.Windows.Forms.Label();
-            this.EnterEmailLbl = new System.Windows.Forms.Label();
-            this.EnterUsernameLbl = new System.Windows.Forms.Label();
+            this.EnterNameLbl = new System.Windows.Forms.Label();
             this.CreateAccountHeaderLbl = new System.Windows.Forms.Label();
             this.CreateAccDetailsGrp = new System.Windows.Forms.GroupBox();
             this.CreateAccGDPRGrp = new System.Windows.Forms.GroupBox();
@@ -94,9 +92,9 @@
             this.TabLogin.Controls.Add(this.ForgotPasswordBtn);
             this.TabLogin.Controls.Add(this.LoginBtn);
             this.TabLogin.Controls.Add(this.LoginPasswordEntryTxt);
-            this.TabLogin.Controls.Add(this.LoginEmailEntryTxt);
+            this.TabLogin.Controls.Add(this.LoginNameEntryTxt);
             this.TabLogin.Controls.Add(this.LoginPasswordEntryLbl);
-            this.TabLogin.Controls.Add(this.LoginEmailEntryLbl);
+            this.TabLogin.Controls.Add(this.LoginNameEntryLbl);
             this.TabLogin.Controls.Add(this.SystemLoginLbl);
             this.TabLogin.Location = new System.Drawing.Point(4, 5);
             this.TabLogin.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -115,7 +113,7 @@
             this.NewAccountBtn.Name = "NewAccountBtn";
             this.NewAccountBtn.Size = new System.Drawing.Size(138, 29);
             this.NewAccountBtn.TabIndex = 7;
-            this.NewAccountBtn.Text = "New Customer";
+            this.NewAccountBtn.Text = "New Account";
             this.NewAccountBtn.UseVisualStyleBackColor = true;
             this.NewAccountBtn.Click += new System.EventHandler(this.NewAccountBtn_Click);
             // 
@@ -151,14 +149,14 @@
             this.LoginPasswordEntryTxt.Size = new System.Drawing.Size(229, 29);
             this.LoginPasswordEntryTxt.TabIndex = 4;
             // 
-            // LoginEmailEntryTxt
+            // LoginNameEntryTxt
             // 
-            this.LoginEmailEntryTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LoginEmailEntryTxt.Location = new System.Drawing.Point(322, 159);
-            this.LoginEmailEntryTxt.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.LoginEmailEntryTxt.Name = "LoginEmailEntryTxt";
-            this.LoginEmailEntryTxt.Size = new System.Drawing.Size(229, 29);
-            this.LoginEmailEntryTxt.TabIndex = 3;
+            this.LoginNameEntryTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginNameEntryTxt.Location = new System.Drawing.Point(322, 159);
+            this.LoginNameEntryTxt.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.LoginNameEntryTxt.Name = "LoginNameEntryTxt";
+            this.LoginNameEntryTxt.Size = new System.Drawing.Size(229, 29);
+            this.LoginNameEntryTxt.TabIndex = 3;
             // 
             // LoginPasswordEntryLbl
             // 
@@ -171,16 +169,16 @@
             this.LoginPasswordEntryLbl.TabIndex = 2;
             this.LoginPasswordEntryLbl.Text = "Password:";
             // 
-            // LoginEmailEntryLbl
+            // LoginNameEntryLbl
             // 
-            this.LoginEmailEntryLbl.AutoSize = true;
-            this.LoginEmailEntryLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LoginEmailEntryLbl.Location = new System.Drawing.Point(269, 162);
-            this.LoginEmailEntryLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LoginEmailEntryLbl.Name = "LoginEmailEntryLbl";
-            this.LoginEmailEntryLbl.Size = new System.Drawing.Size(51, 21);
-            this.LoginEmailEntryLbl.TabIndex = 1;
-            this.LoginEmailEntryLbl.Text = "Email:";
+            this.LoginNameEntryLbl.AutoSize = true;
+            this.LoginNameEntryLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LoginNameEntryLbl.Location = new System.Drawing.Point(263, 162);
+            this.LoginNameEntryLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoginNameEntryLbl.Name = "LoginNameEntryLbl";
+            this.LoginNameEntryLbl.Size = new System.Drawing.Size(55, 21);
+            this.LoginNameEntryLbl.TabIndex = 1;
+            this.LoginNameEntryLbl.Text = "Name:";
             // 
             // SystemLoginLbl
             // 
@@ -198,13 +196,11 @@
             this.TabAccCreate.Controls.Add(this.CreateAccControlsGrp);
             this.TabAccCreate.Controls.Add(this.EnterAccountRankCmb);
             this.TabAccCreate.Controls.Add(this.EnterPasswordConfirmTxt);
-            this.TabAccCreate.Controls.Add(this.EnterEmailTxt);
             this.TabAccCreate.Controls.Add(this.EnterUsernameTxt);
             this.TabAccCreate.Controls.Add(this.EnterPaswordConfirmLbl);
             this.TabAccCreate.Controls.Add(this.EnterAccountRankLbl);
             this.TabAccCreate.Controls.Add(this.EnterPasswordLbl);
-            this.TabAccCreate.Controls.Add(this.EnterEmailLbl);
-            this.TabAccCreate.Controls.Add(this.EnterUsernameLbl);
+            this.TabAccCreate.Controls.Add(this.EnterNameLbl);
             this.TabAccCreate.Controls.Add(this.CreateAccountHeaderLbl);
             this.TabAccCreate.Controls.Add(this.CreateAccGDPRGrp);
             this.TabAccCreate.Controls.Add(this.CreateAccDetailsGrp);
@@ -257,7 +253,7 @@
             // 
             this.EnterAccountRankCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EnterAccountRankCmb.FormattingEnabled = true;
-            this.EnterAccountRankCmb.Location = new System.Drawing.Point(136, 149);
+            this.EnterAccountRankCmb.Location = new System.Drawing.Point(136, 119);
             this.EnterAccountRankCmb.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.EnterAccountRankCmb.Name = "EnterAccountRankCmb";
             this.EnterAccountRankCmb.Size = new System.Drawing.Size(240, 29);
@@ -280,15 +276,6 @@
             this.EnterPasswordTxt.Name = "EnterPasswordTxt";
             this.EnterPasswordTxt.Size = new System.Drawing.Size(240, 29);
             this.EnterPasswordTxt.TabIndex = 2;
-            // 
-            // EnterEmailTxt
-            // 
-            this.EnterEmailTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EnterEmailTxt.Location = new System.Drawing.Point(136, 119);
-            this.EnterEmailTxt.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.EnterEmailTxt.Name = "EnterEmailTxt";
-            this.EnterEmailTxt.Size = new System.Drawing.Size(240, 29);
-            this.EnterEmailTxt.TabIndex = 2;
             // 
             // EnterUsernameTxt
             // 
@@ -314,7 +301,7 @@
             // 
             this.EnterAccountRankLbl.AutoSize = true;
             this.EnterAccountRankLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EnterAccountRankLbl.Location = new System.Drawing.Point(28, 151);
+            this.EnterAccountRankLbl.Location = new System.Drawing.Point(28, 121);
             this.EnterAccountRankLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EnterAccountRankLbl.Name = "EnterAccountRankLbl";
             this.EnterAccountRankLbl.Size = new System.Drawing.Size(108, 21);
@@ -332,27 +319,16 @@
             this.EnterPasswordLbl.TabIndex = 1;
             this.EnterPasswordLbl.Text = "Password:";
             // 
-            // EnterEmailLbl
+            // EnterNameLbl
             // 
-            this.EnterEmailLbl.AutoSize = true;
-            this.EnterEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EnterEmailLbl.Location = new System.Drawing.Point(85, 122);
-            this.EnterEmailLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.EnterEmailLbl.Name = "EnterEmailLbl";
-            this.EnterEmailLbl.Size = new System.Drawing.Size(51, 21);
-            this.EnterEmailLbl.TabIndex = 1;
-            this.EnterEmailLbl.Text = "Email:";
-            // 
-            // EnterUsernameLbl
-            // 
-            this.EnterUsernameLbl.AutoSize = true;
-            this.EnterUsernameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EnterUsernameLbl.Location = new System.Drawing.Point(52, 92);
-            this.EnterUsernameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.EnterUsernameLbl.Name = "EnterUsernameLbl";
-            this.EnterUsernameLbl.Size = new System.Drawing.Size(84, 21);
-            this.EnterUsernameLbl.TabIndex = 1;
-            this.EnterUsernameLbl.Text = "Username:";
+            this.EnterNameLbl.AutoSize = true;
+            this.EnterNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EnterNameLbl.Location = new System.Drawing.Point(81, 92);
+            this.EnterNameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.EnterNameLbl.Name = "EnterNameLbl";
+            this.EnterNameLbl.Size = new System.Drawing.Size(55, 21);
+            this.EnterNameLbl.TabIndex = 1;
+            this.EnterNameLbl.Text = "Name:";
             // 
             // CreateAccountHeaderLbl
             // 
@@ -510,18 +486,16 @@
         private Button ForgotPasswordBtn;
         private Button LoginBtn;
         private TextBox LoginPasswordEntryTxt;
-        private TextBox LoginEmailEntryTxt;
+        private TextBox LoginNameEntryTxt;
         private Label LoginPasswordEntryLbl;
-        private Label LoginEmailEntryLbl;
+        private Label LoginNameEntryLbl;
         private Label SystemLoginLbl;
-        private Label EnterUsernameLbl;
+        private Label EnterNameLbl;
         private Label CreateAccountHeaderLbl;
         private Label EnterGDPRLbl;
         private Label EnterAccountRankLbl;
         private Label EnterPasswordLbl;
-        private Label EnterEmailLbl;
         private TextBox EnterPasswordTxt;
-        private TextBox EnterEmailTxt;
         private TextBox EnterUsernameTxt;
         private TextBox EnterPasswordConfirmTxt;
         private Label EnterPaswordConfirmLbl;
