@@ -32,7 +32,7 @@
 - **Select Shopping Method** (Search/Filter For Spesific Item, Browse Items)
 - - **Select Item Type** (Clothing, Shoe, Accessory)
 - - - **Select Clothing Style** (Shorts, Capris, Leggings, Vests, Tops, Jackets)
-- - - - Select Size & Colour (Stocked Sizes & Colours)
+- - - - **Select Size & Colour** (Stocked Sizes & Colours)
 - - - - - **Display Item Details** (Name, Price, Stock Level, Size, Colour, Style)
 - - - **Select Shoe Type** (Racer, Stability, Neutral, Trial, Track)
 - - - - - **Select Size** (Stocked Sizes)
