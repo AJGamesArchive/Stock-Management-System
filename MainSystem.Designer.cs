@@ -1082,6 +1082,7 @@
             this.AddCustomerBtn.TabIndex = 3;
             this.AddCustomerBtn.Text = "Add New";
             this.AddCustomerBtn.UseVisualStyleBackColor = true;
+            this.AddCustomerBtn.Click += new System.EventHandler(this.AddCustomerBtn_Click);
             // 
             // CustomerNameDisplayLbl
             // 
