@@ -30,7 +30,7 @@
         {
             this.NavSystemMain = new System.Windows.Forms.TabControl();
             this.TabShop = new System.Windows.Forms.TabPage();
-            this.SystemControlsGrpBx = new System.Windows.Forms.GroupBox();
+            this.SystemControlsAGrpBx = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SelectedItemDetailsGrpBx = new System.Windows.Forms.GroupBox();
@@ -119,9 +119,23 @@
             this.CustomerEmailSelectLbl = new System.Windows.Forms.Label();
             this.CustomerEmailSelectCmb = new System.Windows.Forms.ComboBox();
             this.TabAdmin = new System.Windows.Forms.TabPage();
+            this.ViewPurchasesGrpBx = new System.Windows.Forms.GroupBox();
+            this.ViewRestockRequirementsGrpBx = new System.Windows.Forms.GroupBox();
+            this.SystemControlsBGrpBx = new System.Windows.Forms.GroupBox();
+            this.VCPCustomerNameDisplayLbl = new System.Windows.Forms.Label();
+            this.VCPCustomerGDPRDisplayLbl = new System.Windows.Forms.Label();
+            this.VCPCustomerGDPRLbl = new System.Windows.Forms.Label();
+            this.VCPCustomerNameLbl = new System.Windows.Forms.Label();
+            this.VCPCustomerEmailLbl = new System.Windows.Forms.Label();
+            this.VCPCustomerEmailCmb = new System.Windows.Forms.ComboBox();
+            this.ViewCustomerPurchasesDgv = new System.Windows.Forms.DataGridView();
+            this.SelectSupplyerLbl = new System.Windows.Forms.Label();
+            this.SelectSupplyerCmb = new System.Windows.Forms.ComboBox();
+            this.ViewRestockDgv = new System.Windows.Forms.DataGridView();
+            this.AddSupplyerBtn = new System.Windows.Forms.Button();
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
-            this.SystemControlsGrpBx.SuspendLayout();
+            this.SystemControlsAGrpBx.SuspendLayout();
             this.SelectedItemDetailsGrpBx.SuspendLayout();
             this.AccessoryFilterGrpBx.SuspendLayout();
             this.ShoeItemFilterGrpBx.SuspendLayout();
@@ -129,6 +143,11 @@
             this.ClothingItemFilterGrpBx.SuspendLayout();
             this.SelectItemGrpBx.SuspendLayout();
             this.SelectCustomerGrpBx.SuspendLayout();
+            this.TabAdmin.SuspendLayout();
+            this.ViewPurchasesGrpBx.SuspendLayout();
+            this.ViewRestockRequirementsGrpBx.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewRestockDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // NavSystemMain
@@ -147,7 +166,7 @@
             // 
             // TabShop
             // 
-            this.TabShop.Controls.Add(this.SystemControlsGrpBx);
+            this.TabShop.Controls.Add(this.SystemControlsAGrpBx);
             this.TabShop.Controls.Add(this.SelectedItemDetailsGrpBx);
             this.TabShop.Controls.Add(this.AccessoryFilterGrpBx);
             this.TabShop.Controls.Add(this.ShoeItemFilterGrpBx);
@@ -163,17 +182,17 @@
             this.TabShop.Text = "ShopTab";
             this.TabShop.UseVisualStyleBackColor = true;
             // 
-            // SystemControlsGrpBx
+            // SystemControlsAGrpBx
             // 
-            this.SystemControlsGrpBx.Controls.Add(this.button2);
-            this.SystemControlsGrpBx.Controls.Add(this.button1);
-            this.SystemControlsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SystemControlsGrpBx.Location = new System.Drawing.Point(11, 523);
-            this.SystemControlsGrpBx.Name = "SystemControlsGrpBx";
-            this.SystemControlsGrpBx.Size = new System.Drawing.Size(931, 88);
-            this.SystemControlsGrpBx.TabIndex = 5;
-            this.SystemControlsGrpBx.TabStop = false;
-            this.SystemControlsGrpBx.Text = "System Controls";
+            this.SystemControlsAGrpBx.Controls.Add(this.button2);
+            this.SystemControlsAGrpBx.Controls.Add(this.button1);
+            this.SystemControlsAGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SystemControlsAGrpBx.Location = new System.Drawing.Point(11, 523);
+            this.SystemControlsAGrpBx.Name = "SystemControlsAGrpBx";
+            this.SystemControlsAGrpBx.Size = new System.Drawing.Size(931, 88);
+            this.SystemControlsAGrpBx.TabIndex = 5;
+            this.SystemControlsAGrpBx.TabStop = false;
+            this.SystemControlsAGrpBx.Text = "System Controls";
             // 
             // button2
             // 
@@ -1148,6 +1167,9 @@
             // 
             // TabAdmin
             // 
+            this.TabAdmin.Controls.Add(this.SystemControlsBGrpBx);
+            this.TabAdmin.Controls.Add(this.ViewRestockRequirementsGrpBx);
+            this.TabAdmin.Controls.Add(this.ViewPurchasesGrpBx);
             this.TabAdmin.Location = new System.Drawing.Point(4, 5);
             this.TabAdmin.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TabAdmin.Name = "TabAdmin";
@@ -1155,6 +1177,161 @@
             this.TabAdmin.TabIndex = 3;
             this.TabAdmin.Text = "AdminTab";
             this.TabAdmin.UseVisualStyleBackColor = true;
+            // 
+            // ViewPurchasesGrpBx
+            // 
+            this.ViewPurchasesGrpBx.Controls.Add(this.ViewCustomerPurchasesDgv);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerNameDisplayLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerGDPRDisplayLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerGDPRLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerNameLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerEmailLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerEmailCmb);
+            this.ViewPurchasesGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ViewPurchasesGrpBx.Location = new System.Drawing.Point(10, 3);
+            this.ViewPurchasesGrpBx.Name = "ViewPurchasesGrpBx";
+            this.ViewPurchasesGrpBx.Size = new System.Drawing.Size(616, 521);
+            this.ViewPurchasesGrpBx.TabIndex = 0;
+            this.ViewPurchasesGrpBx.TabStop = false;
+            this.ViewPurchasesGrpBx.Text = "View Purchases by Customer";
+            // 
+            // ViewRestockRequirementsGrpBx
+            // 
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.AddSupplyerBtn);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.ViewRestockDgv);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerCmb);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerLbl);
+            this.ViewRestockRequirementsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ViewRestockRequirementsGrpBx.Location = new System.Drawing.Point(640, 3);
+            this.ViewRestockRequirementsGrpBx.Name = "ViewRestockRequirementsGrpBx";
+            this.ViewRestockRequirementsGrpBx.Size = new System.Drawing.Size(615, 521);
+            this.ViewRestockRequirementsGrpBx.TabIndex = 1;
+            this.ViewRestockRequirementsGrpBx.TabStop = false;
+            this.ViewRestockRequirementsGrpBx.Text = "View Restock Requirements by Supplyer";
+            // 
+            // SystemControlsBGrpBx
+            // 
+            this.SystemControlsBGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SystemControlsBGrpBx.Location = new System.Drawing.Point(10, 523);
+            this.SystemControlsBGrpBx.Name = "SystemControlsBGrpBx";
+            this.SystemControlsBGrpBx.Size = new System.Drawing.Size(1245, 88);
+            this.SystemControlsBGrpBx.TabIndex = 6;
+            this.SystemControlsBGrpBx.TabStop = false;
+            this.SystemControlsBGrpBx.Text = "System Controls";
+            // 
+            // VCPCustomerNameDisplayLbl
+            // 
+            this.VCPCustomerNameDisplayLbl.AutoSize = true;
+            this.VCPCustomerNameDisplayLbl.Location = new System.Drawing.Point(221, 68);
+            this.VCPCustomerNameDisplayLbl.Name = "VCPCustomerNameDisplayLbl";
+            this.VCPCustomerNameDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.VCPCustomerNameDisplayLbl.TabIndex = 5;
+            this.VCPCustomerNameDisplayLbl.Text = "------";
+            // 
+            // VCPCustomerGDPRDisplayLbl
+            // 
+            this.VCPCustomerGDPRDisplayLbl.AutoSize = true;
+            this.VCPCustomerGDPRDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.VCPCustomerGDPRDisplayLbl.Location = new System.Drawing.Point(221, 97);
+            this.VCPCustomerGDPRDisplayLbl.Name = "VCPCustomerGDPRDisplayLbl";
+            this.VCPCustomerGDPRDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.VCPCustomerGDPRDisplayLbl.TabIndex = 6;
+            this.VCPCustomerGDPRDisplayLbl.Text = "------";
+            // 
+            // VCPCustomerGDPRLbl
+            // 
+            this.VCPCustomerGDPRLbl.AutoSize = true;
+            this.VCPCustomerGDPRLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VCPCustomerGDPRLbl.Location = new System.Drawing.Point(117, 97);
+            this.VCPCustomerGDPRLbl.Name = "VCPCustomerGDPRLbl";
+            this.VCPCustomerGDPRLbl.Size = new System.Drawing.Size(100, 21);
+            this.VCPCustomerGDPRLbl.TabIndex = 7;
+            this.VCPCustomerGDPRLbl.Text = "GDPR Status:";
+            // 
+            // VCPCustomerNameLbl
+            // 
+            this.VCPCustomerNameLbl.AutoSize = true;
+            this.VCPCustomerNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VCPCustomerNameLbl.Location = new System.Drawing.Point(90, 68);
+            this.VCPCustomerNameLbl.Name = "VCPCustomerNameLbl";
+            this.VCPCustomerNameLbl.Size = new System.Drawing.Size(127, 21);
+            this.VCPCustomerNameLbl.TabIndex = 8;
+            this.VCPCustomerNameLbl.Text = "Customer Name:";
+            // 
+            // VCPCustomerEmailLbl
+            // 
+            this.VCPCustomerEmailLbl.AutoSize = true;
+            this.VCPCustomerEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VCPCustomerEmailLbl.Location = new System.Drawing.Point(21, 34);
+            this.VCPCustomerEmailLbl.MaximumSize = new System.Drawing.Size(200, 0);
+            this.VCPCustomerEmailLbl.Name = "VCPCustomerEmailLbl";
+            this.VCPCustomerEmailLbl.Size = new System.Drawing.Size(198, 21);
+            this.VCPCustomerEmailLbl.TabIndex = 4;
+            this.VCPCustomerEmailLbl.Text = "Select a customer by email:";
+            // 
+            // VCPCustomerEmailCmb
+            // 
+            this.VCPCustomerEmailCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.VCPCustomerEmailCmb.FormattingEnabled = true;
+            this.VCPCustomerEmailCmb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.VCPCustomerEmailCmb.Location = new System.Drawing.Point(223, 31);
+            this.VCPCustomerEmailCmb.MaxDropDownItems = 10;
+            this.VCPCustomerEmailCmb.Name = "VCPCustomerEmailCmb";
+            this.VCPCustomerEmailCmb.Size = new System.Drawing.Size(282, 29);
+            this.VCPCustomerEmailCmb.Sorted = true;
+            this.VCPCustomerEmailCmb.TabIndex = 3;
+            // 
+            // ViewCustomerPurchasesDgv
+            // 
+            this.ViewCustomerPurchasesDgv.AllowUserToAddRows = false;
+            this.ViewCustomerPurchasesDgv.AllowUserToDeleteRows = false;
+            this.ViewCustomerPurchasesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ViewCustomerPurchasesDgv.Location = new System.Drawing.Point(6, 137);
+            this.ViewCustomerPurchasesDgv.Name = "ViewCustomerPurchasesDgv";
+            this.ViewCustomerPurchasesDgv.ReadOnly = true;
+            this.ViewCustomerPurchasesDgv.RowTemplate.Height = 25;
+            this.ViewCustomerPurchasesDgv.Size = new System.Drawing.Size(604, 377);
+            this.ViewCustomerPurchasesDgv.TabIndex = 9;
+            // 
+            // SelectSupplyerLbl
+            // 
+            this.SelectSupplyerLbl.AutoSize = true;
+            this.SelectSupplyerLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectSupplyerLbl.Location = new System.Drawing.Point(26, 34);
+            this.SelectSupplyerLbl.Name = "SelectSupplyerLbl";
+            this.SelectSupplyerLbl.Size = new System.Drawing.Size(202, 21);
+            this.SelectSupplyerLbl.TabIndex = 0;
+            this.SelectSupplyerLbl.Text = "Select a supplyere by name:";
+            // 
+            // SelectSupplyerCmb
+            // 
+            this.SelectSupplyerCmb.FormattingEnabled = true;
+            this.SelectSupplyerCmb.Location = new System.Drawing.Point(232, 31);
+            this.SelectSupplyerCmb.Name = "SelectSupplyerCmb";
+            this.SelectSupplyerCmb.Size = new System.Drawing.Size(282, 29);
+            this.SelectSupplyerCmb.TabIndex = 1;
+            // 
+            // ViewRestockDgv
+            // 
+            this.ViewRestockDgv.AllowUserToAddRows = false;
+            this.ViewRestockDgv.AllowUserToDeleteRows = false;
+            this.ViewRestockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ViewRestockDgv.Location = new System.Drawing.Point(6, 137);
+            this.ViewRestockDgv.Name = "ViewRestockDgv";
+            this.ViewRestockDgv.ReadOnly = true;
+            this.ViewRestockDgv.RowTemplate.Height = 25;
+            this.ViewRestockDgv.Size = new System.Drawing.Size(603, 377);
+            this.ViewRestockDgv.TabIndex = 2;
+            // 
+            // AddSupplyerBtn
+            // 
+            this.AddSupplyerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddSupplyerBtn.Location = new System.Drawing.Point(519, 29);
+            this.AddSupplyerBtn.Name = "AddSupplyerBtn";
+            this.AddSupplyerBtn.Size = new System.Drawing.Size(90, 32);
+            this.AddSupplyerBtn.TabIndex = 3;
+            this.AddSupplyerBtn.Text = "Add New";
+            this.AddSupplyerBtn.UseVisualStyleBackColor = true;
             // 
             // MainSystem
             // 
@@ -1169,7 +1346,7 @@
             this.Text = "Sarre Running Sports";
             this.NavSystemMain.ResumeLayout(false);
             this.TabShop.ResumeLayout(false);
-            this.SystemControlsGrpBx.ResumeLayout(false);
+            this.SystemControlsAGrpBx.ResumeLayout(false);
             this.SelectedItemDetailsGrpBx.ResumeLayout(false);
             this.SelectedItemDetailsGrpBx.PerformLayout();
             this.AccessoryFilterGrpBx.ResumeLayout(false);
@@ -1184,6 +1361,13 @@
             this.SelectItemGrpBx.PerformLayout();
             this.SelectCustomerGrpBx.ResumeLayout(false);
             this.SelectCustomerGrpBx.PerformLayout();
+            this.TabAdmin.ResumeLayout(false);
+            this.ViewPurchasesGrpBx.ResumeLayout(false);
+            this.ViewPurchasesGrpBx.PerformLayout();
+            this.ViewRestockRequirementsGrpBx.ResumeLayout(false);
+            this.ViewRestockRequirementsGrpBx.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewRestockDgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1278,8 +1462,22 @@
         private Label ItemDetailsLbl;
         private Button SellItemBtn;
         private Button CancelSailBtn;
-        private GroupBox SystemControlsGrpBx;
+        private GroupBox SystemControlsAGrpBx;
         private Button button2;
         private Button button1;
+        private GroupBox ViewRestockRequirementsGrpBx;
+        private GroupBox ViewPurchasesGrpBx;
+        private GroupBox SystemControlsBGrpBx;
+        private Label VCPCustomerNameDisplayLbl;
+        private Label VCPCustomerGDPRDisplayLbl;
+        private Label VCPCustomerGDPRLbl;
+        private Label VCPCustomerNameLbl;
+        private Label VCPCustomerEmailLbl;
+        private ComboBox VCPCustomerEmailCmb;
+        private DataGridView ViewCustomerPurchasesDgv;
+        private Label SelectSupplyerLbl;
+        private ComboBox SelectSupplyerCmb;
+        private DataGridView ViewRestockDgv;
+        private Button AddSupplyerBtn;
     }
 }
