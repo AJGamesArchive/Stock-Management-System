@@ -31,8 +31,8 @@
             this.NavSystemMain = new System.Windows.Forms.TabControl();
             this.TabShop = new System.Windows.Forms.TabPage();
             this.SystemControlsAGrpBx = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ManageStockBtn = new System.Windows.Forms.Button();
+            this.ClearFormBtn = new System.Windows.Forms.Button();
             this.SelectedItemDetailsGrpBx = new System.Windows.Forms.GroupBox();
             this.CancelSailBtn = new System.Windows.Forms.Button();
             this.SellItemBtn = new System.Windows.Forms.Button();
@@ -119,20 +119,22 @@
             this.CustomerEmailSelectLbl = new System.Windows.Forms.Label();
             this.CustomerEmailSelectCmb = new System.Windows.Forms.ComboBox();
             this.TabAdmin = new System.Windows.Forms.TabPage();
-            this.ViewPurchasesGrpBx = new System.Windows.Forms.GroupBox();
-            this.ViewRestockRequirementsGrpBx = new System.Windows.Forms.GroupBox();
             this.SystemControlsBGrpBx = new System.Windows.Forms.GroupBox();
+            this.SellStockBtn = new System.Windows.Forms.Button();
+            this.ClearSelectionsBtn = new System.Windows.Forms.Button();
+            this.ViewRestockRequirementsGrpBx = new System.Windows.Forms.GroupBox();
+            this.AddSupplyerBtn = new System.Windows.Forms.Button();
+            this.ViewRestockDgv = new System.Windows.Forms.DataGridView();
+            this.SelectSupplyerCmb = new System.Windows.Forms.ComboBox();
+            this.SelectSupplyerLbl = new System.Windows.Forms.Label();
+            this.ViewPurchasesGrpBx = new System.Windows.Forms.GroupBox();
+            this.ViewCustomerPurchasesDgv = new System.Windows.Forms.DataGridView();
             this.VCPCustomerNameDisplayLbl = new System.Windows.Forms.Label();
             this.VCPCustomerGDPRDisplayLbl = new System.Windows.Forms.Label();
             this.VCPCustomerGDPRLbl = new System.Windows.Forms.Label();
             this.VCPCustomerNameLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailCmb = new System.Windows.Forms.ComboBox();
-            this.ViewCustomerPurchasesDgv = new System.Windows.Forms.DataGridView();
-            this.SelectSupplyerLbl = new System.Windows.Forms.Label();
-            this.SelectSupplyerCmb = new System.Windows.Forms.ComboBox();
-            this.ViewRestockDgv = new System.Windows.Forms.DataGridView();
-            this.AddSupplyerBtn = new System.Windows.Forms.Button();
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
             this.SystemControlsAGrpBx.SuspendLayout();
@@ -144,10 +146,11 @@
             this.SelectItemGrpBx.SuspendLayout();
             this.SelectCustomerGrpBx.SuspendLayout();
             this.TabAdmin.SuspendLayout();
-            this.ViewPurchasesGrpBx.SuspendLayout();
+            this.SystemControlsBGrpBx.SuspendLayout();
             this.ViewRestockRequirementsGrpBx.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewRestockDgv)).BeginInit();
+            this.ViewPurchasesGrpBx.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // NavSystemMain
@@ -184,8 +187,8 @@
             // 
             // SystemControlsAGrpBx
             // 
-            this.SystemControlsAGrpBx.Controls.Add(this.button2);
-            this.SystemControlsAGrpBx.Controls.Add(this.button1);
+            this.SystemControlsAGrpBx.Controls.Add(this.ManageStockBtn);
+            this.SystemControlsAGrpBx.Controls.Add(this.ClearFormBtn);
             this.SystemControlsAGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SystemControlsAGrpBx.Location = new System.Drawing.Point(11, 523);
             this.SystemControlsAGrpBx.Name = "SystemControlsAGrpBx";
@@ -194,25 +197,26 @@
             this.SystemControlsAGrpBx.TabStop = false;
             this.SystemControlsAGrpBx.Text = "System Controls";
             // 
-            // button2
+            // ManageStockBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(563, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 31);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Manage Stock";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ManageStockBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ManageStockBtn.Location = new System.Drawing.Point(563, 35);
+            this.ManageStockBtn.Name = "ManageStockBtn";
+            this.ManageStockBtn.Size = new System.Drawing.Size(121, 31);
+            this.ManageStockBtn.TabIndex = 0;
+            this.ManageStockBtn.Text = "Manage Stock";
+            this.ManageStockBtn.UseVisualStyleBackColor = true;
+            this.ManageStockBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // ClearFormBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(256, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Clear Form";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ClearFormBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ClearFormBtn.Location = new System.Drawing.Point(256, 35);
+            this.ClearFormBtn.Name = "ClearFormBtn";
+            this.ClearFormBtn.Size = new System.Drawing.Size(99, 31);
+            this.ClearFormBtn.TabIndex = 0;
+            this.ClearFormBtn.Text = "Clear Form";
+            this.ClearFormBtn.UseVisualStyleBackColor = true;
             // 
             // SelectedItemDetailsGrpBx
             // 
@@ -1178,6 +1182,94 @@
             this.TabAdmin.Text = "AdminTab";
             this.TabAdmin.UseVisualStyleBackColor = true;
             // 
+            // SystemControlsBGrpBx
+            // 
+            this.SystemControlsBGrpBx.Controls.Add(this.SellStockBtn);
+            this.SystemControlsBGrpBx.Controls.Add(this.ClearSelectionsBtn);
+            this.SystemControlsBGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SystemControlsBGrpBx.Location = new System.Drawing.Point(10, 523);
+            this.SystemControlsBGrpBx.Name = "SystemControlsBGrpBx";
+            this.SystemControlsBGrpBx.Size = new System.Drawing.Size(1245, 88);
+            this.SystemControlsBGrpBx.TabIndex = 6;
+            this.SystemControlsBGrpBx.TabStop = false;
+            this.SystemControlsBGrpBx.Text = "System Controls";
+            // 
+            // SellStockBtn
+            // 
+            this.SellStockBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SellStockBtn.Location = new System.Drawing.Point(862, 34);
+            this.SellStockBtn.Name = "SellStockBtn";
+            this.SellStockBtn.Size = new System.Drawing.Size(121, 31);
+            this.SellStockBtn.TabIndex = 1;
+            this.SellStockBtn.Text = "Sell Stock";
+            this.SellStockBtn.UseVisualStyleBackColor = true;
+            this.SellStockBtn.Click += new System.EventHandler(this.SellStockBtn_Click);
+            // 
+            // ClearSelectionsBtn
+            // 
+            this.ClearSelectionsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ClearSelectionsBtn.Location = new System.Drawing.Point(212, 34);
+            this.ClearSelectionsBtn.Name = "ClearSelectionsBtn";
+            this.ClearSelectionsBtn.Size = new System.Drawing.Size(129, 31);
+            this.ClearSelectionsBtn.TabIndex = 2;
+            this.ClearSelectionsBtn.Text = "Clear Selections";
+            this.ClearSelectionsBtn.UseVisualStyleBackColor = true;
+            // 
+            // ViewRestockRequirementsGrpBx
+            // 
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.AddSupplyerBtn);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.ViewRestockDgv);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerCmb);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerLbl);
+            this.ViewRestockRequirementsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ViewRestockRequirementsGrpBx.Location = new System.Drawing.Point(640, 3);
+            this.ViewRestockRequirementsGrpBx.Name = "ViewRestockRequirementsGrpBx";
+            this.ViewRestockRequirementsGrpBx.Size = new System.Drawing.Size(615, 521);
+            this.ViewRestockRequirementsGrpBx.TabIndex = 1;
+            this.ViewRestockRequirementsGrpBx.TabStop = false;
+            this.ViewRestockRequirementsGrpBx.Text = "View Restock Requirements by Supplyer";
+            // 
+            // AddSupplyerBtn
+            // 
+            this.AddSupplyerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddSupplyerBtn.Location = new System.Drawing.Point(519, 29);
+            this.AddSupplyerBtn.Name = "AddSupplyerBtn";
+            this.AddSupplyerBtn.Size = new System.Drawing.Size(90, 32);
+            this.AddSupplyerBtn.TabIndex = 3;
+            this.AddSupplyerBtn.Text = "Add New";
+            this.AddSupplyerBtn.UseVisualStyleBackColor = true;
+            this.AddSupplyerBtn.Click += new System.EventHandler(this.AddSupplyerBtn_Click);
+            // 
+            // ViewRestockDgv
+            // 
+            this.ViewRestockDgv.AllowUserToAddRows = false;
+            this.ViewRestockDgv.AllowUserToDeleteRows = false;
+            this.ViewRestockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ViewRestockDgv.Location = new System.Drawing.Point(6, 137);
+            this.ViewRestockDgv.Name = "ViewRestockDgv";
+            this.ViewRestockDgv.ReadOnly = true;
+            this.ViewRestockDgv.RowTemplate.Height = 25;
+            this.ViewRestockDgv.Size = new System.Drawing.Size(603, 377);
+            this.ViewRestockDgv.TabIndex = 2;
+            // 
+            // SelectSupplyerCmb
+            // 
+            this.SelectSupplyerCmb.FormattingEnabled = true;
+            this.SelectSupplyerCmb.Location = new System.Drawing.Point(232, 31);
+            this.SelectSupplyerCmb.Name = "SelectSupplyerCmb";
+            this.SelectSupplyerCmb.Size = new System.Drawing.Size(282, 29);
+            this.SelectSupplyerCmb.TabIndex = 1;
+            // 
+            // SelectSupplyerLbl
+            // 
+            this.SelectSupplyerLbl.AutoSize = true;
+            this.SelectSupplyerLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectSupplyerLbl.Location = new System.Drawing.Point(26, 34);
+            this.SelectSupplyerLbl.Name = "SelectSupplyerLbl";
+            this.SelectSupplyerLbl.Size = new System.Drawing.Size(202, 21);
+            this.SelectSupplyerLbl.TabIndex = 0;
+            this.SelectSupplyerLbl.Text = "Select a supplyere by name:";
+            // 
             // ViewPurchasesGrpBx
             // 
             this.ViewPurchasesGrpBx.Controls.Add(this.ViewCustomerPurchasesDgv);
@@ -1195,29 +1287,17 @@
             this.ViewPurchasesGrpBx.TabStop = false;
             this.ViewPurchasesGrpBx.Text = "View Purchases by Customer";
             // 
-            // ViewRestockRequirementsGrpBx
+            // ViewCustomerPurchasesDgv
             // 
-            this.ViewRestockRequirementsGrpBx.Controls.Add(this.AddSupplyerBtn);
-            this.ViewRestockRequirementsGrpBx.Controls.Add(this.ViewRestockDgv);
-            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerCmb);
-            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerLbl);
-            this.ViewRestockRequirementsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ViewRestockRequirementsGrpBx.Location = new System.Drawing.Point(640, 3);
-            this.ViewRestockRequirementsGrpBx.Name = "ViewRestockRequirementsGrpBx";
-            this.ViewRestockRequirementsGrpBx.Size = new System.Drawing.Size(615, 521);
-            this.ViewRestockRequirementsGrpBx.TabIndex = 1;
-            this.ViewRestockRequirementsGrpBx.TabStop = false;
-            this.ViewRestockRequirementsGrpBx.Text = "View Restock Requirements by Supplyer";
-            // 
-            // SystemControlsBGrpBx
-            // 
-            this.SystemControlsBGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SystemControlsBGrpBx.Location = new System.Drawing.Point(10, 523);
-            this.SystemControlsBGrpBx.Name = "SystemControlsBGrpBx";
-            this.SystemControlsBGrpBx.Size = new System.Drawing.Size(1245, 88);
-            this.SystemControlsBGrpBx.TabIndex = 6;
-            this.SystemControlsBGrpBx.TabStop = false;
-            this.SystemControlsBGrpBx.Text = "System Controls";
+            this.ViewCustomerPurchasesDgv.AllowUserToAddRows = false;
+            this.ViewCustomerPurchasesDgv.AllowUserToDeleteRows = false;
+            this.ViewCustomerPurchasesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ViewCustomerPurchasesDgv.Location = new System.Drawing.Point(6, 137);
+            this.ViewCustomerPurchasesDgv.Name = "ViewCustomerPurchasesDgv";
+            this.ViewCustomerPurchasesDgv.ReadOnly = true;
+            this.ViewCustomerPurchasesDgv.RowTemplate.Height = 25;
+            this.ViewCustomerPurchasesDgv.Size = new System.Drawing.Size(604, 377);
+            this.ViewCustomerPurchasesDgv.TabIndex = 9;
             // 
             // VCPCustomerNameDisplayLbl
             // 
@@ -1281,58 +1361,6 @@
             this.VCPCustomerEmailCmb.Sorted = true;
             this.VCPCustomerEmailCmb.TabIndex = 3;
             // 
-            // ViewCustomerPurchasesDgv
-            // 
-            this.ViewCustomerPurchasesDgv.AllowUserToAddRows = false;
-            this.ViewCustomerPurchasesDgv.AllowUserToDeleteRows = false;
-            this.ViewCustomerPurchasesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewCustomerPurchasesDgv.Location = new System.Drawing.Point(6, 137);
-            this.ViewCustomerPurchasesDgv.Name = "ViewCustomerPurchasesDgv";
-            this.ViewCustomerPurchasesDgv.ReadOnly = true;
-            this.ViewCustomerPurchasesDgv.RowTemplate.Height = 25;
-            this.ViewCustomerPurchasesDgv.Size = new System.Drawing.Size(604, 377);
-            this.ViewCustomerPurchasesDgv.TabIndex = 9;
-            // 
-            // SelectSupplyerLbl
-            // 
-            this.SelectSupplyerLbl.AutoSize = true;
-            this.SelectSupplyerLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectSupplyerLbl.Location = new System.Drawing.Point(26, 34);
-            this.SelectSupplyerLbl.Name = "SelectSupplyerLbl";
-            this.SelectSupplyerLbl.Size = new System.Drawing.Size(202, 21);
-            this.SelectSupplyerLbl.TabIndex = 0;
-            this.SelectSupplyerLbl.Text = "Select a supplyere by name:";
-            // 
-            // SelectSupplyerCmb
-            // 
-            this.SelectSupplyerCmb.FormattingEnabled = true;
-            this.SelectSupplyerCmb.Location = new System.Drawing.Point(232, 31);
-            this.SelectSupplyerCmb.Name = "SelectSupplyerCmb";
-            this.SelectSupplyerCmb.Size = new System.Drawing.Size(282, 29);
-            this.SelectSupplyerCmb.TabIndex = 1;
-            // 
-            // ViewRestockDgv
-            // 
-            this.ViewRestockDgv.AllowUserToAddRows = false;
-            this.ViewRestockDgv.AllowUserToDeleteRows = false;
-            this.ViewRestockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewRestockDgv.Location = new System.Drawing.Point(6, 137);
-            this.ViewRestockDgv.Name = "ViewRestockDgv";
-            this.ViewRestockDgv.ReadOnly = true;
-            this.ViewRestockDgv.RowTemplate.Height = 25;
-            this.ViewRestockDgv.Size = new System.Drawing.Size(603, 377);
-            this.ViewRestockDgv.TabIndex = 2;
-            // 
-            // AddSupplyerBtn
-            // 
-            this.AddSupplyerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddSupplyerBtn.Location = new System.Drawing.Point(519, 29);
-            this.AddSupplyerBtn.Name = "AddSupplyerBtn";
-            this.AddSupplyerBtn.Size = new System.Drawing.Size(90, 32);
-            this.AddSupplyerBtn.TabIndex = 3;
-            this.AddSupplyerBtn.Text = "Add New";
-            this.AddSupplyerBtn.UseVisualStyleBackColor = true;
-            // 
             // MainSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1362,12 +1390,13 @@
             this.SelectCustomerGrpBx.ResumeLayout(false);
             this.SelectCustomerGrpBx.PerformLayout();
             this.TabAdmin.ResumeLayout(false);
-            this.ViewPurchasesGrpBx.ResumeLayout(false);
-            this.ViewPurchasesGrpBx.PerformLayout();
+            this.SystemControlsBGrpBx.ResumeLayout(false);
             this.ViewRestockRequirementsGrpBx.ResumeLayout(false);
             this.ViewRestockRequirementsGrpBx.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ViewRestockDgv)).EndInit();
+            this.ViewPurchasesGrpBx.ResumeLayout(false);
+            this.ViewPurchasesGrpBx.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1463,8 +1492,8 @@
         private Button SellItemBtn;
         private Button CancelSailBtn;
         private GroupBox SystemControlsAGrpBx;
-        private Button button2;
-        private Button button1;
+        private Button ManageStockBtn;
+        private Button ClearFormBtn;
         private GroupBox ViewRestockRequirementsGrpBx;
         private GroupBox ViewPurchasesGrpBx;
         private GroupBox SystemControlsBGrpBx;
@@ -1479,5 +1508,7 @@
         private ComboBox SelectSupplyerCmb;
         private DataGridView ViewRestockDgv;
         private Button AddSupplyerBtn;
+        private Button SellStockBtn;
+        private Button ClearSelectionsBtn;
     }
 }

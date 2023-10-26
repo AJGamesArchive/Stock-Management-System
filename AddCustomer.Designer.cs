@@ -167,7 +167,7 @@
             this.Controls.Add(this.AddCustomerGrpBx);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "AddCustomer";
-            this.Text = "AddCustomer";
+            this.Text = "Add Customer";
             this.AddCustomerGrpBx.ResumeLayout(false);
             this.AddCustomerGrpBx.PerformLayout();
             this.ResumeLayout(false);

@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace Stock_Management_System
 {
-    public partial class AddCustomer : Form
+    public partial class AddSupplyer : Form
     {
-
-        // Initialise the 'Add Customer' form
-        public AddCustomer()
+        // Initialise the 'Add Supplyer' form
+        public AddSupplyer()
         {
             InitializeComponent();
         }
 
-        // Close the 'Add Customer' form when the 'Close' button is clicked
-        private void CancelNewCustomerBtn_Click(object sender, EventArgs e)
+        // Close the 'Add Supplyer' form when the 'Close' button is clicked
+        private void CancelNewSupplyerBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             return;
