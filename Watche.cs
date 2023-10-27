@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    internal class Watche : Accessory
+    public class Watche : Accessory
     {
        // Declaring all viable watche types as an enumeration
         public enum WatcheType

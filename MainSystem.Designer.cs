@@ -123,8 +123,13 @@
             this.SellStockBtn = new System.Windows.Forms.Button();
             this.ClearSelectionsBtn = new System.Windows.Forms.Button();
             this.ViewRestockRequirementsGrpBx = new System.Windows.Forms.GroupBox();
+            this.RefreshSuppliersBtn = new System.Windows.Forms.Button();
+            this.SupplierEmailDisplayLbl = new System.Windows.Forms.Label();
             this.AddSupplyerBtn = new System.Windows.Forms.Button();
+            this.SupplierPhoneNumberDisplayLbl = new System.Windows.Forms.Label();
             this.ViewRestockDgv = new System.Windows.Forms.DataGridView();
+            this.SupplierPhoneNumberLbl = new System.Windows.Forms.Label();
+            this.SupplierEmailLbl = new System.Windows.Forms.Label();
             this.SelectSupplyerCmb = new System.Windows.Forms.ComboBox();
             this.SelectSupplyerLbl = new System.Windows.Forms.Label();
             this.ViewPurchasesGrpBx = new System.Windows.Forms.GroupBox();
@@ -135,6 +140,7 @@
             this.VCPCustomerNameLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailCmb = new System.Windows.Forms.ComboBox();
+            this.RefreshCustomersBtn = new System.Windows.Forms.Button();
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
             this.SystemControlsAGrpBx.SuspendLayout();
@@ -206,7 +212,7 @@
             this.ManageStockBtn.TabIndex = 0;
             this.ManageStockBtn.Text = "Manage Stock";
             this.ManageStockBtn.UseVisualStyleBackColor = true;
-            this.ManageStockBtn.Click += new System.EventHandler(this.button2_Click);
+            this.ManageStockBtn.Click += new System.EventHandler(this.ManageStockBtn_Click);
             // 
             // ClearFormBtn
             // 
@@ -247,6 +253,7 @@
             this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlPriceDisplayLbl);
             this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlPriceLbl);
             this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNameLbl);
+            this.SelectedItemDetailsGrpBx.Enabled = false;
             this.SelectedItemDetailsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SelectedItemDetailsGrpBx.Location = new System.Drawing.Point(963, 132);
             this.SelectedItemDetailsGrpBx.Name = "SelectedItemDetailsGrpBx";
@@ -541,6 +548,7 @@
             this.AccessoryFilterGrpBx.Controls.Add(this.SelectAccessoryLbl);
             this.AccessoryFilterGrpBx.Controls.Add(this.SelectItemDLbl);
             this.AccessoryFilterGrpBx.Controls.Add(this.SelectItemDCmb);
+            this.AccessoryFilterGrpBx.Enabled = false;
             this.AccessoryFilterGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AccessoryFilterGrpBx.Location = new System.Drawing.Point(645, 132);
             this.AccessoryFilterGrpBx.Name = "AccessoryFilterGrpBx";
@@ -551,6 +559,7 @@
             // 
             // SelectWatcheTypeCmb
             // 
+            this.SelectWatcheTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectWatcheTypeCmb.FormattingEnabled = true;
             this.SelectWatcheTypeCmb.Items.AddRange(new object[] {
             "Simple",
@@ -574,6 +583,7 @@
             // 
             // SelectNutritionQuantityCmb
             // 
+            this.SelectNutritionQuantityCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectNutritionQuantityCmb.FormattingEnabled = true;
             this.SelectNutritionQuantityCmb.Location = new System.Drawing.Point(160, 256);
             this.SelectNutritionQuantityCmb.Name = "SelectNutritionQuantityCmb";
@@ -592,6 +602,7 @@
             // 
             // SelectNutritionTypeCmb
             // 
+            this.SelectNutritionTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectNutritionTypeCmb.FormattingEnabled = true;
             this.SelectNutritionTypeCmb.Items.AddRange(new object[] {
             "Carbs",
@@ -613,6 +624,7 @@
             // 
             // SelectBagCapacityCmb
             // 
+            this.SelectBagCapacityCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectBagCapacityCmb.FormattingEnabled = true;
             this.SelectBagCapacityCmb.Location = new System.Drawing.Point(125, 161);
             this.SelectBagCapacityCmb.Name = "SelectBagCapacityCmb";
@@ -687,6 +699,7 @@
             // 
             // SelectItemDCmb
             // 
+            this.SelectItemDCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectItemDCmb.FormattingEnabled = true;
             this.SelectItemDCmb.Location = new System.Drawing.Point(98, 350);
             this.SelectItemDCmb.Name = "SelectItemDCmb";
@@ -705,6 +718,7 @@
             this.ShoeItemFilterGrpBx.Controls.Add(this.SelectShoeTypeLbl);
             this.ShoeItemFilterGrpBx.Controls.Add(this.SelectItemCCmb);
             this.ShoeItemFilterGrpBx.Controls.Add(this.SelectItemCLbl);
+            this.ShoeItemFilterGrpBx.Enabled = false;
             this.ShoeItemFilterGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ShoeItemFilterGrpBx.Location = new System.Drawing.Point(329, 132);
             this.ShoeItemFilterGrpBx.Name = "ShoeItemFilterGrpBx";
@@ -715,6 +729,7 @@
             // 
             // SelectShoeSizeCmb
             // 
+            this.SelectShoeSizeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectShoeSizeCmb.FormattingEnabled = true;
             this.SelectShoeSizeCmb.Location = new System.Drawing.Point(145, 209);
             this.SelectShoeSizeCmb.Name = "SelectShoeSizeCmb";
@@ -803,6 +818,7 @@
             // 
             // SelectItemCCmb
             // 
+            this.SelectItemCCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectItemCCmb.FormattingEnabled = true;
             this.SelectItemCCmb.Location = new System.Drawing.Point(98, 350);
             this.SelectItemCCmb.Name = "SelectItemCCmb";
@@ -823,6 +839,7 @@
             // 
             this.ItemSelectionMethodGrpBx.Controls.Add(this.ItemFilterRdBtn);
             this.ItemSelectionMethodGrpBx.Controls.Add(this.ItemNameRdBtn);
+            this.ItemSelectionMethodGrpBx.Enabled = false;
             this.ItemSelectionMethodGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ItemSelectionMethodGrpBx.Location = new System.Drawing.Point(622, 3);
             this.ItemSelectionMethodGrpBx.Name = "ItemSelectionMethodGrpBx";
@@ -871,6 +888,7 @@
             this.ClothingItemFilterGrpBx.Controls.Add(this.LeggingsRdBtn);
             this.ClothingItemFilterGrpBx.Controls.Add(this.ShortsRdBtn);
             this.ClothingItemFilterGrpBx.Controls.Add(this.VestsRdBtn);
+            this.ClothingItemFilterGrpBx.Enabled = false;
             this.ClothingItemFilterGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ClothingItemFilterGrpBx.Location = new System.Drawing.Point(11, 132);
             this.ClothingItemFilterGrpBx.Name = "ClothingItemFilterGrpBx";
@@ -891,6 +909,7 @@
             // 
             // SelectClothingSizeLblCmb
             // 
+            this.SelectClothingSizeLblCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectClothingSizeLblCmb.FormattingEnabled = true;
             this.SelectClothingSizeLblCmb.Location = new System.Drawing.Point(99, 256);
             this.SelectClothingSizeLblCmb.Name = "SelectClothingSizeLblCmb";
@@ -899,6 +918,7 @@
             // 
             // SelectItemBCmb
             // 
+            this.SelectItemBCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectItemBCmb.FormattingEnabled = true;
             this.SelectItemBCmb.Location = new System.Drawing.Point(98, 350);
             this.SelectItemBCmb.Name = "SelectItemBCmb";
@@ -907,6 +927,7 @@
             // 
             // SelectClothingColourCmb
             // 
+            this.SelectClothingColourCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectClothingColourCmb.FormattingEnabled = true;
             this.SelectClothingColourCmb.Location = new System.Drawing.Point(99, 303);
             this.SelectClothingColourCmb.Name = "SelectClothingColourCmb";
@@ -1031,6 +1052,7 @@
             this.SelectItemGrpBx.Controls.Add(this.SelectItemTypeLbl);
             this.SelectItemGrpBx.Controls.Add(this.SelectItemACmb);
             this.SelectItemGrpBx.Controls.Add(this.SelectItemALbl);
+            this.SelectItemGrpBx.Enabled = false;
             this.SelectItemGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SelectItemGrpBx.Location = new System.Drawing.Point(871, 3);
             this.SelectItemGrpBx.Name = "SelectItemGrpBx";
@@ -1041,6 +1063,7 @@
             // 
             // SelectItemTypeCmb
             // 
+            this.SelectItemTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectItemTypeCmb.FormattingEnabled = true;
             this.SelectItemTypeCmb.Items.AddRange(new object[] {
             "Clothing",
@@ -1063,6 +1086,7 @@
             // 
             // SelectItemACmb
             // 
+            this.SelectItemACmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectItemACmb.FormattingEnabled = true;
             this.SelectItemACmb.Location = new System.Drawing.Point(108, 36);
             this.SelectItemACmb.Name = "SelectItemACmb";
@@ -1081,6 +1105,7 @@
             // 
             // SelectCustomerGrpBx
             // 
+            this.SelectCustomerGrpBx.Controls.Add(this.RefreshCustomersBtn);
             this.SelectCustomerGrpBx.Controls.Add(this.AddCustomerBtn);
             this.SelectCustomerGrpBx.Controls.Add(this.CustomerNameDisplayLbl);
             this.SelectCustomerGrpBx.Controls.Add(this.CustomerGDPRDisplayLbl);
@@ -1159,6 +1184,7 @@
             // 
             // CustomerEmailSelectCmb
             // 
+            this.CustomerEmailSelectCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CustomerEmailSelectCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CustomerEmailSelectCmb.FormattingEnabled = true;
             this.CustomerEmailSelectCmb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -1217,8 +1243,13 @@
             // 
             // ViewRestockRequirementsGrpBx
             // 
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.RefreshSuppliersBtn);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierEmailDisplayLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.AddSupplyerBtn);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierPhoneNumberDisplayLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.ViewRestockDgv);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierPhoneNumberLbl);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierEmailLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerCmb);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerLbl);
             this.ViewRestockRequirementsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -1228,6 +1259,26 @@
             this.ViewRestockRequirementsGrpBx.TabIndex = 1;
             this.ViewRestockRequirementsGrpBx.TabStop = false;
             this.ViewRestockRequirementsGrpBx.Text = "View Restock Requirements by Supplyer";
+            // 
+            // RefreshSuppliersBtn
+            // 
+            this.RefreshSuppliersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RefreshSuppliersBtn.Location = new System.Drawing.Point(520, 62);
+            this.RefreshSuppliersBtn.Name = "RefreshSuppliersBtn";
+            this.RefreshSuppliersBtn.Size = new System.Drawing.Size(89, 32);
+            this.RefreshSuppliersBtn.TabIndex = 14;
+            this.RefreshSuppliersBtn.Text = "Refresh";
+            this.RefreshSuppliersBtn.UseVisualStyleBackColor = true;
+            this.RefreshSuppliersBtn.Click += new System.EventHandler(this.RefreshSuppliersBtn_Click);
+            // 
+            // SupplierEmailDisplayLbl
+            // 
+            this.SupplierEmailDisplayLbl.AutoSize = true;
+            this.SupplierEmailDisplayLbl.Location = new System.Drawing.Point(232, 68);
+            this.SupplierEmailDisplayLbl.Name = "SupplierEmailDisplayLbl";
+            this.SupplierEmailDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.SupplierEmailDisplayLbl.TabIndex = 10;
+            this.SupplierEmailDisplayLbl.Text = "------";
             // 
             // AddSupplyerBtn
             // 
@@ -1239,6 +1290,16 @@
             this.AddSupplyerBtn.Text = "Add New";
             this.AddSupplyerBtn.UseVisualStyleBackColor = true;
             this.AddSupplyerBtn.Click += new System.EventHandler(this.AddSupplyerBtn_Click);
+            // 
+            // SupplierPhoneNumberDisplayLbl
+            // 
+            this.SupplierPhoneNumberDisplayLbl.AutoSize = true;
+            this.SupplierPhoneNumberDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SupplierPhoneNumberDisplayLbl.Location = new System.Drawing.Point(232, 97);
+            this.SupplierPhoneNumberDisplayLbl.Name = "SupplierPhoneNumberDisplayLbl";
+            this.SupplierPhoneNumberDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.SupplierPhoneNumberDisplayLbl.TabIndex = 11;
+            this.SupplierPhoneNumberDisplayLbl.Text = "------";
             // 
             // ViewRestockDgv
             // 
@@ -1252,8 +1313,29 @@
             this.ViewRestockDgv.Size = new System.Drawing.Size(603, 377);
             this.ViewRestockDgv.TabIndex = 2;
             // 
+            // SupplierPhoneNumberLbl
+            // 
+            this.SupplierPhoneNumberLbl.AutoSize = true;
+            this.SupplierPhoneNumberLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierPhoneNumberLbl.Location = new System.Drawing.Point(48, 97);
+            this.SupplierPhoneNumberLbl.Name = "SupplierPhoneNumberLbl";
+            this.SupplierPhoneNumberLbl.Size = new System.Drawing.Size(181, 21);
+            this.SupplierPhoneNumberLbl.TabIndex = 12;
+            this.SupplierPhoneNumberLbl.Text = "Supplier Phone Number:";
+            // 
+            // SupplierEmailLbl
+            // 
+            this.SupplierEmailLbl.AutoSize = true;
+            this.SupplierEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierEmailLbl.Location = new System.Drawing.Point(116, 68);
+            this.SupplierEmailLbl.Name = "SupplierEmailLbl";
+            this.SupplierEmailLbl.Size = new System.Drawing.Size(113, 21);
+            this.SupplierEmailLbl.TabIndex = 13;
+            this.SupplierEmailLbl.Text = "Supplier Email:";
+            // 
             // SelectSupplyerCmb
             // 
+            this.SelectSupplyerCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectSupplyerCmb.FormattingEnabled = true;
             this.SelectSupplyerCmb.Location = new System.Drawing.Point(232, 31);
             this.SelectSupplyerCmb.Name = "SelectSupplyerCmb";
@@ -1351,6 +1433,7 @@
             // 
             // VCPCustomerEmailCmb
             // 
+            this.VCPCustomerEmailCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.VCPCustomerEmailCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.VCPCustomerEmailCmb.FormattingEnabled = true;
             this.VCPCustomerEmailCmb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -1360,6 +1443,17 @@
             this.VCPCustomerEmailCmb.Size = new System.Drawing.Size(282, 29);
             this.VCPCustomerEmailCmb.Sorted = true;
             this.VCPCustomerEmailCmb.TabIndex = 3;
+            // 
+            // RefreshCustomersBtn
+            // 
+            this.RefreshCustomersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RefreshCustomersBtn.Location = new System.Drawing.Point(504, 60);
+            this.RefreshCustomersBtn.Name = "RefreshCustomersBtn";
+            this.RefreshCustomersBtn.Size = new System.Drawing.Size(89, 32);
+            this.RefreshCustomersBtn.TabIndex = 15;
+            this.RefreshCustomersBtn.Text = "Refresh";
+            this.RefreshCustomersBtn.UseVisualStyleBackColor = true;
+            this.RefreshCustomersBtn.Click += new System.EventHandler(this.RefreshCustomersBtn_Click);
             // 
             // MainSystem
             // 
@@ -1510,5 +1604,11 @@
         private Button AddSupplyerBtn;
         private Button SellStockBtn;
         private Button ClearSelectionsBtn;
+        private Label SupplierEmailDisplayLbl;
+        private Label SupplierPhoneNumberDisplayLbl;
+        private Label SupplierPhoneNumberLbl;
+        private Label SupplierEmailLbl;
+        private Button RefreshSuppliersBtn;
+        private Button RefreshCustomersBtn;
     }
 }

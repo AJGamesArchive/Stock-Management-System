@@ -12,17 +12,48 @@ namespace Stock_Management_System
 {
     public partial class AddCustomer : Form
     {
+        // Declaring the Entity Manager object
+        private EntityManager em;
 
-        // Initialise the 'Add Customer' form
-        public AddCustomer()
+        // Initialise the 'Add Customer' form, retrieve current instence of entity manager class
+        public AddCustomer(EntityManager em)
         {
             InitializeComponent();
+            this.em = em;
         }
 
         // Close the 'Add Customer' form when the 'Close' button is clicked
         private void CancelNewCustomerBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            return;
+        }
+
+        // Add a new customer to the system when the 'Add Customer' button is clicked
+        private void AddNewCustomerBtn_Click(object sender, EventArgs e)
+        {
+            // Gard statements to ensure all required data has been entered
+            if(CustomerNameTxt.Text == "") { invalidInput("Name"); return; }
+            if(CustomerEmailTxt.Text == "") { invalidInput("Email"); return; }
+            if(CustomerGDPRConcentRdBtn.Checked == false && CustomerGDPRNoConcentRdBtn.Checked == false) { invalidInput("GDPR State"); return; }
+
+            // Check the GDPR State
+            bool GDPR = true;
+            if(!CustomerGDPRConcentRdBtn.Checked) { GDPR = false; }
+
+            // Attempt to add the new customer to the system
+            if(!em.addNewCustomer(CustomerNameTxt.Text, CustomerEmailTxt.Text, GDPR)) { invalidInput("Email"); return; }
+
+            // Display confirmation message
+            MessageBox.Show("New customer added successfully!", "Success");
+            this.Close();
+            return;
+        }
+
+        // Function that displays an error to the user if an input is invalid
+        private void invalidInput(string invalidField)
+        {
+            MessageBox.Show($"An invalid Customer {invalidField} was entered. Please enter a valid {invalidField} and then try again.", "Error Adding Customer");
             return;
         }
     }

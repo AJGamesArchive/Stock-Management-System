@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    internal class Purchase
+    public class Purchase
     {
         // Class Attributes
         private DateTime SaleDate { get; set; }

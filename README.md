@@ -10,10 +10,10 @@
 ## System Requirements
 
 - Add a new item to the inventory (list of items sold)
-- Add a new supplier
+- ~~Add a new supplier~~
 - Get a list of items requiring restock by from a given supplier
-- Sell an item to a new customer
-- Sell and item to an existing customer
+- Sell an item ~~to a new customer~~
+- Sell and item ~~to an existing customer~~
 - Get a list of all purchases by a customer
 
 ## GUI Design Information

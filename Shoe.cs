@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    internal class Shoe : Item
+    public class Shoe : Item
     {
         // Class Attributes
         public enum ShoeType

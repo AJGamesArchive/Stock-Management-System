@@ -64,6 +64,7 @@
             // 
             // CancelNewCustomerBtn
             // 
+            this.CancelNewCustomerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CancelNewCustomerBtn.Location = new System.Drawing.Point(211, 260);
             this.CancelNewCustomerBtn.Name = "CancelNewCustomerBtn";
             this.CancelNewCustomerBtn.Size = new System.Drawing.Size(75, 29);
@@ -74,12 +75,14 @@
             // 
             // AddNewCustomerBtn
             // 
+            this.AddNewCustomerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddNewCustomerBtn.Location = new System.Drawing.Point(183, 225);
             this.AddNewCustomerBtn.Name = "AddNewCustomerBtn";
             this.AddNewCustomerBtn.Size = new System.Drawing.Size(131, 29);
             this.AddNewCustomerBtn.TabIndex = 4;
             this.AddNewCustomerBtn.Text = "Add Customer";
             this.AddNewCustomerBtn.UseVisualStyleBackColor = true;
+            this.AddNewCustomerBtn.Click += new System.EventHandler(this.AddNewCustomerBtn_Click);
             // 
             // CustomerGDPRNoConcentRdBtn
             // 

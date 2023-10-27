@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    internal class Nutrition : Accessory
+    public class Nutrition : Accessory
     {
         // Declaring all viable nutrition types as an enumeration
         public enum NutritionType

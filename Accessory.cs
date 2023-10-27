@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Stock_Management_System
 {
     // Class Attributes
-    internal class Accessory : Item
+    public class Accessory : Item
     {
         // Remove later if no functions are needed here
         // If removed, change inheritents of Bag, Nutrition, and Watche classes to inherit from Item

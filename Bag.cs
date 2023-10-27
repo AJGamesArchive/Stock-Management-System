@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    internal class Bag : Accessory
+    public class Bag : Accessory
     {
         // Class Attributes
         private int Capacity { get; set; }

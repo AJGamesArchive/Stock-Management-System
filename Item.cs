@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    internal class Item
+    public class Item
     {
         // Class Attributes
         private string Name { get; set; }

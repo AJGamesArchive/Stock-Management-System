@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.AddSupplyerGrpBx = new System.Windows.Forms.GroupBox();
+            this.SupplyerPhoneNumTxt = new System.Windows.Forms.TextBox();
+            this.SupplyerPhoneNumLbl = new System.Windows.Forms.Label();
             this.CancelNewSupplyerBtn = new System.Windows.Forms.Button();
             this.AddNewSupplyerBtn = new System.Windows.Forms.Button();
             this.SupplyerEmailTxt = new System.Windows.Forms.TextBox();
@@ -36,8 +38,6 @@
             this.SupplyerEmailLbl = new System.Windows.Forms.Label();
             this.SupplyerNameLbl = new System.Windows.Forms.Label();
             this.EnterSupplyerDetailsLbl = new System.Windows.Forms.Label();
-            this.SupplyerPhoneNumTxt = new System.Windows.Forms.TextBox();
-            this.SupplyerPhoneNumLbl = new System.Windows.Forms.Label();
             this.AddSupplyerGrpBx.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,8 +60,26 @@
             this.AddSupplyerGrpBx.TabStop = false;
             this.AddSupplyerGrpBx.Text = "Register New Supplyer";
             // 
+            // SupplyerPhoneNumTxt
+            // 
+            this.SupplyerPhoneNumTxt.Location = new System.Drawing.Point(185, 143);
+            this.SupplyerPhoneNumTxt.Name = "SupplyerPhoneNumTxt";
+            this.SupplyerPhoneNumTxt.Size = new System.Drawing.Size(291, 29);
+            this.SupplyerPhoneNumTxt.TabIndex = 6;
+            // 
+            // SupplyerPhoneNumLbl
+            // 
+            this.SupplyerPhoneNumLbl.AutoSize = true;
+            this.SupplyerPhoneNumLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplyerPhoneNumLbl.Location = new System.Drawing.Point(15, 146);
+            this.SupplyerPhoneNumLbl.Name = "SupplyerPhoneNumLbl";
+            this.SupplyerPhoneNumLbl.Size = new System.Drawing.Size(162, 21);
+            this.SupplyerPhoneNumLbl.TabIndex = 5;
+            this.SupplyerPhoneNumLbl.Text = "Supplyer Phone Num:";
+            // 
             // CancelNewSupplyerBtn
             // 
+            this.CancelNewSupplyerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CancelNewSupplyerBtn.Location = new System.Drawing.Point(211, 260);
             this.CancelNewSupplyerBtn.Name = "CancelNewSupplyerBtn";
             this.CancelNewSupplyerBtn.Size = new System.Drawing.Size(75, 29);
@@ -72,12 +90,14 @@
             // 
             // AddNewSupplyerBtn
             // 
+            this.AddNewSupplyerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddNewSupplyerBtn.Location = new System.Drawing.Point(183, 225);
             this.AddNewSupplyerBtn.Name = "AddNewSupplyerBtn";
             this.AddNewSupplyerBtn.Size = new System.Drawing.Size(131, 29);
             this.AddNewSupplyerBtn.TabIndex = 4;
             this.AddNewSupplyerBtn.Text = "Add Supplyer";
             this.AddNewSupplyerBtn.UseVisualStyleBackColor = true;
+            this.AddNewSupplyerBtn.Click += new System.EventHandler(this.AddNewSupplyerBtn_Click);
             // 
             // SupplyerEmailTxt
             // 
@@ -122,23 +142,6 @@
             this.EnterSupplyerDetailsLbl.Size = new System.Drawing.Size(166, 21);
             this.EnterSupplyerDetailsLbl.TabIndex = 0;
             this.EnterSupplyerDetailsLbl.Text = "Enter Supplyer Details:";
-            // 
-            // SupplyerPhoneNumTxt
-            // 
-            this.SupplyerPhoneNumTxt.Location = new System.Drawing.Point(185, 143);
-            this.SupplyerPhoneNumTxt.Name = "SupplyerPhoneNumTxt";
-            this.SupplyerPhoneNumTxt.Size = new System.Drawing.Size(291, 29);
-            this.SupplyerPhoneNumTxt.TabIndex = 6;
-            // 
-            // SupplyerPhoneNumLbl
-            // 
-            this.SupplyerPhoneNumLbl.AutoSize = true;
-            this.SupplyerPhoneNumLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplyerPhoneNumLbl.Location = new System.Drawing.Point(15, 146);
-            this.SupplyerPhoneNumLbl.Name = "SupplyerPhoneNumLbl";
-            this.SupplyerPhoneNumLbl.Size = new System.Drawing.Size(162, 21);
-            this.SupplyerPhoneNumLbl.TabIndex = 5;
-            this.SupplyerPhoneNumLbl.Text = "Supplyer Phone Num:";
             // 
             // AddSupplyer
             // 
