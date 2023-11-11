@@ -21,5 +21,47 @@ namespace Stock_Management_System
             Email = email;
             PhoneNumber = phoneNumber;
         }
+
+        // Function to generate a list of all the items needing restocking from a given supplier
+        public string[] needingRestock(Clothing[] clothing, Shoe[] shoes, Bag[] bags, Nutrition[] nutritions, Watche[] watches)
+        {
+            List<string> itemIdentifiers = new List<string>();
+            foreach(Clothing c in clothing)
+            {
+                if(c.Name != Name) { continue; }
+                if(c.OrderStockLevel < c.StockLevel) { continue; }
+                string identifier = $"{c.Name} (Clothing)";
+                itemIdentifiers.Add(identifier);
+            }
+            foreach(Shoe s in shoes)
+            {
+                if (s.Name != Name) { continue; }
+                if (s.OrderStockLevel < s.StockLevel) { continue; }
+                string identifier = $"{s.Name} (Shoe)";
+                itemIdentifiers.Add(identifier);
+            }
+            foreach(Bag b in bags)
+            {
+                if (b.Name != Name) { continue; }
+                if (b.OrderStockLevel < b.StockLevel) { continue; }
+                string identifier = $"{b.Name} (Bag)";
+                itemIdentifiers.Add(identifier);
+            }
+            foreach(Nutrition n in nutritions)
+            {
+                if (n.Name != Name) { continue; }
+                if (n.OrderStockLevel < n.StockLevel) { continue; }
+                string identifier = $"{n.Name} (Nutrition)";
+                itemIdentifiers.Add(identifier);
+            }
+            foreach(Watche w in watches)
+            {
+                if (w.Name != Name) { continue; }
+                if (w.OrderStockLevel < w.StockLevel) { continue; }
+                string identifier = $"{w.Name} (Watche)";
+                itemIdentifiers.Add(identifier);
+            }
+            return itemIdentifiers.ToArray();
+        }
     }
 }

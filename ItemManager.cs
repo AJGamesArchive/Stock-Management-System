@@ -79,5 +79,39 @@ namespace Stock_Management_System
         }
 
         #endregion
+
+        #region Retrieve Data Functions
+
+        // Function to retreive all clothing items
+        public Clothing[] getClothing()
+        {
+            return ClothingItems.ToArray();
+        }
+
+        // Function to retreive all shoe items
+        public Shoe[] getShoes()
+        {
+            return ShoeItems.ToArray();
+        }
+
+        // Function to retreive all bag items
+        public Bag[] getBags()
+        {
+            return BagItems.ToArray();
+        }
+
+        // Function to retreive all nutrition items
+        public Nutrition[] getNutrition()
+        {
+            return NutritionItems.ToArray();
+        }
+
+        // Function to retreive all watche items
+        public Watche[] getWatches()
+        {
+            return WatcheItems.ToArray();
+        }
+
+        #endregion
     }
 }

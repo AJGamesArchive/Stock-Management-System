@@ -11,11 +11,11 @@ namespace Stock_Management_System
     public abstract class Item
     {
         // Class Attributes
-        private string Name;
-        private decimal Price;
-        private int StockLevel;
-        private int OrderStockLevel;
-        private Supplier SupplierDetails;
+        public string Name { get; private set; }
+        public decimal Price { get; private set; }
+        public int StockLevel { get; private set; }
+        public int OrderStockLevel { get; private set; }
+        public Supplier SupplierDetails { get; private set; }
 
         // Class Constructor
         public Item(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier)
@@ -37,21 +37,5 @@ namespace Stock_Management_System
             StockLevel -= 1;
             return true;
         }
-
-        #region Get Single Attribute Value Functions
-
-        // Function to get the item name
-        public string getName()
-        {
-            return Name;
-        }
-
-        // Function to get the item price
-        public decimal getPrice()
-        {
-            return Price;
-        }
-
-        #endregion
     }
 }
