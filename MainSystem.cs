@@ -1,16 +1,26 @@
+using System.ComponentModel;
+
 namespace Stock_Management_System
 {
     public partial class MainSystem : Form
     {
-        // Declaring the Entity Manager object
+        // Class Attributeese
         private EntityManager em;
+        private ItemManager im;
 
-        // Initialise the Main System form, retrieving the entity manager instence, populateing certain combo boxing with data
-        public MainSystem(EntityManager em)
+        // Class Constructor
+        public MainSystem(EntityManager entityManager, ItemManager itemManager)
         {
+            em = entityManager;
+            im = itemManager;
             InitializeComponent();
-            this.em = em;
+        }
+
+        // Initial GUI setup on form load
+        private void MainSystem_Load(object sender, EventArgs e)
+        {
             updateGUIData();
+            return;
         }
 
         #region Common Functions

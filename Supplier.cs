@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    // Class to construct a list to store all supplier details and create order re-stocking lists based off of a given supplier
     public class Supplier
     {
         // Class Attributes

@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    // Class to construct a list to store all customer details
     public class Customer
     {
         // Class Attributes
         public string Name { get; private set; }
         public string Email { get; private set; }
         public bool GDPR { get; private set; }
-        public List<Purchase> Purchases { get; set; }
+        public List<Purchase> Purchases { get; private set; }
 
         // Class Constructor
         public Customer(string name, string email, bool gdpr)

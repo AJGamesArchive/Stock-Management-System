@@ -11,10 +11,9 @@ namespace Stock_Management_System
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-
-            // Declaring EntityManager object and pass it into form GUI class(s) so manager methods can be accessed by the GUI
             EntityManager em = new EntityManager();
-            Application.Run(new MainSystem(em));
+            ItemManager im = new ItemManager();
+            Application.Run(new MainSystem(em, im));
         }
     }
 }

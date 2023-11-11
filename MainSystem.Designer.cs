@@ -111,6 +111,7 @@
             this.SelectItemACmb = new System.Windows.Forms.ComboBox();
             this.SelectItemALbl = new System.Windows.Forms.Label();
             this.SelectCustomerGrpBx = new System.Windows.Forms.GroupBox();
+            this.RefreshCustomersBtn = new System.Windows.Forms.Button();
             this.AddCustomerBtn = new System.Windows.Forms.Button();
             this.CustomerNameDisplayLbl = new System.Windows.Forms.Label();
             this.CustomerGDPRDisplayLbl = new System.Windows.Forms.Label();
@@ -140,7 +141,6 @@
             this.VCPCustomerNameLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailCmb = new System.Windows.Forms.ComboBox();
-            this.RefreshCustomersBtn = new System.Windows.Forms.Button();
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
             this.SystemControlsAGrpBx.SuspendLayout();
@@ -1121,6 +1121,17 @@
             this.SelectCustomerGrpBx.TabStop = false;
             this.SelectCustomerGrpBx.Text = "Select Customer";
             // 
+            // RefreshCustomersBtn
+            // 
+            this.RefreshCustomersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RefreshCustomersBtn.Location = new System.Drawing.Point(504, 60);
+            this.RefreshCustomersBtn.Name = "RefreshCustomersBtn";
+            this.RefreshCustomersBtn.Size = new System.Drawing.Size(89, 32);
+            this.RefreshCustomersBtn.TabIndex = 15;
+            this.RefreshCustomersBtn.Text = "Refresh";
+            this.RefreshCustomersBtn.UseVisualStyleBackColor = true;
+            this.RefreshCustomersBtn.Click += new System.EventHandler(this.RefreshCustomersBtn_Click);
+            // 
             // AddCustomerBtn
             // 
             this.AddCustomerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1444,17 +1455,6 @@
             this.VCPCustomerEmailCmb.Sorted = true;
             this.VCPCustomerEmailCmb.TabIndex = 3;
             // 
-            // RefreshCustomersBtn
-            // 
-            this.RefreshCustomersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RefreshCustomersBtn.Location = new System.Drawing.Point(504, 60);
-            this.RefreshCustomersBtn.Name = "RefreshCustomersBtn";
-            this.RefreshCustomersBtn.Size = new System.Drawing.Size(89, 32);
-            this.RefreshCustomersBtn.TabIndex = 15;
-            this.RefreshCustomersBtn.Text = "Refresh";
-            this.RefreshCustomersBtn.UseVisualStyleBackColor = true;
-            this.RefreshCustomersBtn.Click += new System.EventHandler(this.RefreshCustomersBtn_Click);
-            // 
             // MainSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1466,6 +1466,7 @@
             this.MaximizeBox = false;
             this.Name = "MainSystem";
             this.Text = "Sarre Running Sports";
+            this.Load += new System.EventHandler(this.MainSystem_Load);
             this.NavSystemMain.ResumeLayout(false);
             this.TabShop.ResumeLayout(false);
             this.SystemControlsAGrpBx.ResumeLayout(false);

@@ -6,49 +6,22 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    // Class to handel all th data processing (adding, updating, retrieving) for all Customers and Suppliers in the system
     public class EntityManager
     {
-        // Declaring list to store all customer details
+        // Declaring list to store all customer & suplier details
         private List<Customer> Customers;
         private List<Supplier> Suppliers;
-        
+
+        // Constructor to create new lists for each data store and add test data to the lists
         public EntityManager()
         {
-            // Initalising the lists
+            TestData testData = new TestData();
             Customers = new List<Customer>();
+            if(!testData.createTestCustomers(this)) { throw new ArgumentException("Invalid Customer Test Data"); }
             Suppliers = new List<Supplier>();
-
-            // Populated some lists with test data
-            createTestData();
+            if(!testData.createTestSuppliers(this)) { throw new ArgumentException("Invalid Supplier Test Data"); }
         }
-
-        #region Create Test Data Functions
-
-        // Function that adds test data to some of the data store lists
-        private void createTestData()
-        {
-            bool validTestData = true;
-
-            // Declaring initial test data to store in the Customers list
-            if(!addNewCustomer("Alex Ward", "AW949@canterbury.ac.uk", true)) { validTestData = false; }
-            if(!addNewCustomer("Jonathan N", "jonathann@gmail.com", false)) { validTestData = false; }
-            if(!addNewCustomer("Ethan", "ethanm@gmail.com", false)) { validTestData = false; }
-
-            // Declaring initial test data to store in the Suppliers list
-            if(!addNewSupplier("ClothingLtd", "clothing.supplys@gmail.com", "01304591665")) { validTestData = false; }
-            if(!addNewSupplier("ShoeWareLtd", "shoeware.supplys@gmail.com", "01304187516")) { validTestData = false; }
-            if(!addNewSupplier("AccessorysLtd", "accessory.supplys@gmail.com", "01304795168")) { validTestData = false; }
-
-            // Ensure all provided test data is valid
-            if (!validTestData)
-            {
-                MessageBox.Show("Some of the provided test data is invalid.");
-            }
-
-            return;
-        }
-
-        #endregion
 
         #region Add Entity Data Functions
 
