@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    // Class to store all clothing item details and handel clothing item seeling
     public class Clothing : Item
     {
         // Class Attributes
@@ -18,9 +19,9 @@ namespace Stock_Management_System
             Top,
             Jacket
         }
-        private int Size { get; set; }
-        private string Colour { get; set; }
-        private ClothingType Style { get; set; }
+        private int Size;
+        private string Colour;
+        private ClothingType Style;
 
         // Class Constructor
         public Clothing(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, int size, string colour, ClothingType clothingType) : base (name, price, stockLevel, orderStockLeevel, supplier)
@@ -28,6 +29,16 @@ namespace Stock_Management_System
             Size = size;
             Colour = colour;
             Style = clothingType;
+        }
+
+        // Declaring a function that will handel the selling of all clothing items
+        public override bool sellItem(Customer customer)
+        {
+            if(!this.updateStockLevel()) { return false; }
+            Purchase purchase = new Purchase();
+            purchase.addClothing(this);
+            customer.Purchases.Add(purchase);
+            return true;
         }
     }
 }

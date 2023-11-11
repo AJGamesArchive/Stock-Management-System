@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    // Class to aggrigate into Customer and store all a customers orders
+    // Class to aggrigate into Customer and store all a customers orders and handel adding items to each order
+    // Future proofed to allow multiple items to be added to one order
     public class Purchase
     {
         // Class Attributes
@@ -15,17 +16,56 @@ namespace Stock_Management_System
         private List<Shoe> ShoeItems;
         private List<Bag> BagItems;
         private List<Nutrition> NutritionItems;
-        private List<Watche> WatcheItems;
+        private List<Watche> WatchItem;
 
         // Class Constructor
-        public Purchase(DateTime saleDate)
+        public Purchase()
         {
-            SaleDate = saleDate;
+            SaleDate = DateTime.Now;
             ClothingItems = new List<Clothing>();
             ShoeItems = new List<Shoe>();
             BagItems = new List<Bag>();
             NutritionItems = new List<Nutrition>();
-            WatcheItems = new List<Watche>();
+            WatchItem = new List<Watche>();
         }
+
+        #region Add Item Functions
+
+        // Function to add a clothing item to the purchase
+        public void addClothing(Clothing clothing)
+        {
+            ClothingItems.Add(clothing);
+            return;
+        }
+
+        // Function to add a shoe item to the purchase
+        public void addShoe(Shoe shoe)
+        {
+            ShoeItems.Add(shoe);
+            return;
+        }
+
+        // Function to add a bag item to the purchase
+        public void addBag(Bag bag)
+        {
+            BagItems.Add(bag);
+            return;
+        }
+
+        // Function to add a nutrition item to the purchase
+        public void addNutrition(Nutrition nutrition)
+        {
+            NutritionItems.Add(nutrition);
+            return;
+        }
+
+        // Function to add a watch to the order
+        public void addWatch(Watche watche)
+        {
+            WatchItem.Add(watche);
+            return;
+        }
+
+        #endregion
     }
 }
