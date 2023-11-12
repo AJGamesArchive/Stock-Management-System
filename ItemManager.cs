@@ -20,10 +20,19 @@ namespace Stock_Management_System
         private List<Nutrition> NutritionItems;
         private List<Watche> WatcheItems;
 
-        // Constructor to create new lists for each data store and add test data to the lists
+        // Class constructor to create new lists for each item data store
         public ItemManager()
         {
-            TestData testData = new TestData();
+            ClothingItems = new List<Clothing>();
+            ShoeItems = new List<Shoe>();
+            BagItems = new List<Bag>();
+            NutritionItems = new List<Nutrition>();
+            WatcheItems = new List<Watche>();
+        }
+
+        // Overloaded Constructor to create new lists for each item data store and add test data to the lists
+        public ItemManager(TestData testData)
+        {
             ClothingItems = new List<Clothing>();
             if (!testData.createTestClothing(this)) { throw new ArgumentException("Invalid Clothing Item Test Data"); }
             ShoeItems = new List<Shoe>();
@@ -38,41 +47,41 @@ namespace Stock_Management_System
 
         #region Add Item Data Functions
 
-        // Function that addsa new clothing item to the system
+        // Overloaded Function that addsa new clothing item to the system
         // Just returns true as there's no data validation needed currently
-        public bool addNewClothingItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, int size, string colour, ClothingType style)
+        public bool addItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, int size, string colour, ClothingType style)
         {
             ClothingItems.Add(new Clothing(name, price, stockLevel, orderStockLevel, supplierDetails, size, colour, style));
             return true;
         }
 
-        // Function that adds new shoe items to the system
+        // Overloaded Function that adds new shoe items to the system
         // Just returns true as there's no data validation needed currently
-        public bool addNewShoeItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, decimal size, ShoeType shoeType)
+        public bool addItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, decimal size, ShoeType shoeType)
         {
             ShoeItems.Add(new Shoe(name, price, stockLevel, orderStockLevel, supplierDetails, size, shoeType));
             return true;
         }
 
-        // Function that adds new bag items to the system
+        // Overloaded Function that adds new bag items to the system
         // Just returns true as there's no data validation needed currently
-        public bool addNewBagItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, int capacity)
+        public bool addItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, int capacity)
         {
             BagItems.Add(new Bag(name, price, stockLevel, orderStockLevel, supplierDetails, capacity));
             return true;
         }
 
-        // Function that adds new nutrition items to the system
+        // Overloaded Function that adds new nutrition items to the system
         // Just returns true as there's no data validation needed currently
-        public bool addNewNutritionItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, double quantity, NutritionType nutritionType)
+        public bool addItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, double quantity, NutritionType nutritionType)
         {
             NutritionItems.Add(new Nutrition(name, price, stockLevel, orderStockLevel, supplierDetails, quantity, nutritionType));
             return true;
         }
 
-        // Function that adds new watch items to the system
+        // Overloaded Function that adds new watch items to the system
         // Just returns true as there's no data validation needed currently
-        public bool addNewWatchItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, WatcheType watchType)
+        public bool addItem(string name, decimal price, int stockLevel, int orderStockLevel, Supplier supplierDetails, WatcheType watchType)
         {
             WatcheItems.Add(new Watche(name, price, stockLevel, orderStockLevel, supplierDetails, watchType));
             return true;
@@ -81,6 +90,8 @@ namespace Stock_Management_System
         #endregion
 
         #region Retrieve Data Functions
+
+        #region Retrieve All Items Of A Given Type
 
         // Function to retreive all clothing items
         public Clothing[] getClothing()
@@ -111,6 +122,73 @@ namespace Stock_Management_System
         {
             return WatcheItems.ToArray();
         }
+
+        #endregion
+
+        #region Retrieve A Single Item Of A Given Type
+
+        // Function to retrieve a single clothing item, if the item exists
+        public bool getClothingItem(string name, out Clothing item)
+        {
+            throw new NotImplementedException();
+        }
+
+        // Function to retrieve a single shoe item, if the item exists
+        public bool getShoeItem(string name, out Shoe item)
+        {
+            throw new NotImplementedException();
+        }
+
+        // Function to retrieve a single bag item, if the item exists
+        public bool getBagItem(string name, out Bag item)
+        {
+            throw new NotImplementedException();
+        }
+
+        // Function to retrieve a single nutrition item, if the item exists
+        public bool getNutritionItem(string name, out Nutrition item)
+        {
+            throw new NotImplementedException();
+        }
+
+        // Function to retrieve a single watche item, if the item exists
+        public bool getWatcheItem(string name, out Watche item)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Retrieve Combinations Of Data
+
+        // Function to retrieve all item names for all item types in the system
+        public string[] getAllItemNames()
+        {
+            List<string> itemNames = new List<string>();
+            foreach(Clothing clothing in ClothingItems)
+            {
+                itemNames.Add(clothing.Name);
+            }
+            foreach(Shoe shoe in ShoeItems)
+            {
+                itemNames.Add(shoe.Name);
+            }
+            foreach(Bag bag in BagItems)
+            {
+                itemNames.Add(bag.Name);
+            }
+            foreach(Nutrition nutrition in NutritionItems)
+            {
+                itemNames.Add(nutrition.Name);
+            }
+            foreach(Watche watche in WatcheItems)
+            {
+                itemNames.Add(watche.Name);
+            }
+            return itemNames.ToArray();
+        }
+
+        #endregion
 
         #endregion
     }

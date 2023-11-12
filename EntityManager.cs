@@ -13,10 +13,16 @@ namespace Stock_Management_System
         private List<Customer> Customers;
         private List<Supplier> Suppliers;
 
-        // Constructor to create new lists for each data store and add test data to the lists
+        // Class constructor to create new lists for each entity data store
         public EntityManager()
         {
-            TestData testData = new TestData();
+            Customers = new List<Customer>();
+            Suppliers = new List<Supplier>();
+        }
+
+        // Overloaded Constructor to create new lists for each entity data store and add test data to the lists
+        public EntityManager(TestData testData)
+        {
             Customers = new List<Customer>();
             if(!testData.createTestCustomers(this)) { throw new ArgumentException("Invalid Customer Test Data"); }
             Suppliers = new List<Supplier>();
@@ -25,18 +31,18 @@ namespace Stock_Management_System
 
         #region Add Entity Data Functions
 
-        // Function that takes a customers; name, email, and GDPR state and adds the new customer to the system
+        // Overloaded Function that takes a customers; name, email, and GDPR state and adds the new customer to the system
         // Returns 'true' if customer was added succesfuly and 'false' if not
-        public bool addNewCustomer(string name, string email, bool GDPR)
+        public bool addEntity(string name, string email, bool GDPR)
         {
             if(!isValidEmail(email)) { return false; } 
             Customers.Add(new Customer(name, email, GDPR));
             return true;
         }
 
-        // Function that takes a suppliers; name, email, and phone number and adds the new supplier to the system
+        // Overloaded Function that takes a suppliers; name, email, and phone number and adds the new supplier to the system
         // Returns 'true' if supplier was added succesfuly and 'false' if not
-        public bool addNewSupplier(string name, string email, string phoneNumber)
+        public bool addEntity(string name, string email, string phoneNumber)
         {
             if(!isValidEmail(email)) { return false; }
             Suppliers.Add(new Supplier(name, email, phoneNumber));
@@ -67,6 +73,20 @@ namespace Stock_Management_System
                 supplierNames.Add(supplier.Name);
             }
             return supplierNames.ToArray();
+        }
+
+        // Function to retreive a customer based off of their email
+        // Will return true if a customer is found, will return false if no customer is found
+        public bool getCustomer(string email, out Customer customer)
+        {
+            foreach(Customer c in Customers)
+            {
+                if(c.Email != email) { continue; }
+                customer = c;
+                return true;
+            }
+            customer = new Customer("An Error Occured", "", false);
+            return false;
         }
 
         #endregion

@@ -92,7 +92,7 @@
             this.ItemNameRdBtn = new System.Windows.Forms.RadioButton();
             this.ClothingItemFilterGrpBx = new System.Windows.Forms.GroupBox();
             this.SelectItemBLbl = new System.Windows.Forms.Label();
-            this.SelectClothingSizeLblCmb = new System.Windows.Forms.ComboBox();
+            this.SelectClothingSizeCmb = new System.Windows.Forms.ComboBox();
             this.SelectItemBCmb = new System.Windows.Forms.ComboBox();
             this.SelectClothingColourCmb = new System.Windows.Forms.ComboBox();
             this.SelectClothingColourLbl = new System.Windows.Forms.Label();
@@ -557,6 +557,7 @@
             // SelectWatcheTypeCmb
             // 
             this.SelectWatcheTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectWatcheTypeCmb.Enabled = false;
             this.SelectWatcheTypeCmb.FormattingEnabled = true;
             this.SelectWatcheTypeCmb.Items.AddRange(new object[] {
             "Simple",
@@ -581,6 +582,7 @@
             // SelectNutritionQuantityCmb
             // 
             this.SelectNutritionQuantityCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectNutritionQuantityCmb.Enabled = false;
             this.SelectNutritionQuantityCmb.FormattingEnabled = true;
             this.SelectNutritionQuantityCmb.Location = new System.Drawing.Point(160, 256);
             this.SelectNutritionQuantityCmb.Name = "SelectNutritionQuantityCmb";
@@ -600,6 +602,7 @@
             // SelectNutritionTypeCmb
             // 
             this.SelectNutritionTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectNutritionTypeCmb.Enabled = false;
             this.SelectNutritionTypeCmb.FormattingEnabled = true;
             this.SelectNutritionTypeCmb.Items.AddRange(new object[] {
             "Carbs",
@@ -622,6 +625,7 @@
             // SelectBagCapacityCmb
             // 
             this.SelectBagCapacityCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectBagCapacityCmb.Enabled = false;
             this.SelectBagCapacityCmb.FormattingEnabled = true;
             this.SelectBagCapacityCmb.Location = new System.Drawing.Point(125, 161);
             this.SelectBagCapacityCmb.Name = "SelectBagCapacityCmb";
@@ -697,6 +701,7 @@
             // SelectItemDCmb
             // 
             this.SelectItemDCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectItemDCmb.Enabled = false;
             this.SelectItemDCmb.FormattingEnabled = true;
             this.SelectItemDCmb.Location = new System.Drawing.Point(98, 350);
             this.SelectItemDCmb.Name = "SelectItemDCmb";
@@ -727,6 +732,7 @@
             // SelectShoeSizeCmb
             // 
             this.SelectShoeSizeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectShoeSizeCmb.Enabled = false;
             this.SelectShoeSizeCmb.FormattingEnabled = true;
             this.SelectShoeSizeCmb.Location = new System.Drawing.Point(145, 209);
             this.SelectShoeSizeCmb.Name = "SelectShoeSizeCmb";
@@ -816,6 +822,7 @@
             // SelectItemCCmb
             // 
             this.SelectItemCCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectItemCCmb.Enabled = false;
             this.SelectItemCCmb.FormattingEnabled = true;
             this.SelectItemCCmb.Location = new System.Drawing.Point(98, 350);
             this.SelectItemCCmb.Name = "SelectItemCCmb";
@@ -856,6 +863,7 @@
             this.ItemFilterRdBtn.TabStop = true;
             this.ItemFilterRdBtn.Text = "Select by Item Filter";
             this.ItemFilterRdBtn.UseVisualStyleBackColor = true;
+            this.ItemFilterRdBtn.CheckedChanged += new System.EventHandler(this.ItemFilterRdBtn_CheckedChanged);
             // 
             // ItemNameRdBtn
             // 
@@ -868,11 +876,12 @@
             this.ItemNameRdBtn.TabStop = true;
             this.ItemNameRdBtn.Text = "Select by Item Name";
             this.ItemNameRdBtn.UseVisualStyleBackColor = true;
+            this.ItemNameRdBtn.CheckedChanged += new System.EventHandler(this.ItemNameRdBtn_CheckedChanged);
             // 
             // ClothingItemFilterGrpBx
             // 
             this.ClothingItemFilterGrpBx.Controls.Add(this.SelectItemBLbl);
-            this.ClothingItemFilterGrpBx.Controls.Add(this.SelectClothingSizeLblCmb);
+            this.ClothingItemFilterGrpBx.Controls.Add(this.SelectClothingSizeCmb);
             this.ClothingItemFilterGrpBx.Controls.Add(this.SelectItemBCmb);
             this.ClothingItemFilterGrpBx.Controls.Add(this.SelectClothingColourCmb);
             this.ClothingItemFilterGrpBx.Controls.Add(this.SelectClothingColourLbl);
@@ -904,18 +913,20 @@
             this.SelectItemBLbl.TabIndex = 4;
             this.SelectItemBLbl.Text = "Select Item:";
             // 
-            // SelectClothingSizeLblCmb
+            // SelectClothingSizeCmb
             // 
-            this.SelectClothingSizeLblCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SelectClothingSizeLblCmb.FormattingEnabled = true;
-            this.SelectClothingSizeLblCmb.Location = new System.Drawing.Point(99, 256);
-            this.SelectClothingSizeLblCmb.Name = "SelectClothingSizeLblCmb";
-            this.SelectClothingSizeLblCmb.Size = new System.Drawing.Size(160, 29);
-            this.SelectClothingSizeLblCmb.TabIndex = 4;
+            this.SelectClothingSizeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectClothingSizeCmb.Enabled = false;
+            this.SelectClothingSizeCmb.FormattingEnabled = true;
+            this.SelectClothingSizeCmb.Location = new System.Drawing.Point(99, 256);
+            this.SelectClothingSizeCmb.Name = "SelectClothingSizeCmb";
+            this.SelectClothingSizeCmb.Size = new System.Drawing.Size(160, 29);
+            this.SelectClothingSizeCmb.TabIndex = 4;
             // 
             // SelectItemBCmb
             // 
             this.SelectItemBCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectItemBCmb.Enabled = false;
             this.SelectItemBCmb.FormattingEnabled = true;
             this.SelectItemBCmb.Location = new System.Drawing.Point(98, 350);
             this.SelectItemBCmb.Name = "SelectItemBCmb";
@@ -925,6 +936,7 @@
             // SelectClothingColourCmb
             // 
             this.SelectClothingColourCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectClothingColourCmb.Enabled = false;
             this.SelectClothingColourCmb.FormattingEnabled = true;
             this.SelectClothingColourCmb.Location = new System.Drawing.Point(99, 303);
             this.SelectClothingColourCmb.Name = "SelectClothingColourCmb";
@@ -1061,11 +1073,12 @@
             // SelectItemTypeCmb
             // 
             this.SelectItemTypeCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectItemTypeCmb.Enabled = false;
             this.SelectItemTypeCmb.FormattingEnabled = true;
             this.SelectItemTypeCmb.Items.AddRange(new object[] {
             "Clothing",
-            "Shoes",
-            "Accessorys"});
+            "Shoe",
+            "Accessory"});
             this.SelectItemTypeCmb.Location = new System.Drawing.Point(143, 73);
             this.SelectItemTypeCmb.Name = "SelectItemTypeCmb";
             this.SelectItemTypeCmb.Size = new System.Drawing.Size(233, 29);
@@ -1084,6 +1097,7 @@
             // SelectItemACmb
             // 
             this.SelectItemACmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectItemACmb.Enabled = false;
             this.SelectItemACmb.FormattingEnabled = true;
             this.SelectItemACmb.Location = new System.Drawing.Point(108, 36);
             this.SelectItemACmb.Name = "SelectItemACmb";
@@ -1202,6 +1216,7 @@
             this.CustomerEmailSelectCmb.Size = new System.Drawing.Size(282, 29);
             this.CustomerEmailSelectCmb.Sorted = true;
             this.CustomerEmailSelectCmb.TabIndex = 0;
+            this.CustomerEmailSelectCmb.SelectedIndexChanged += new System.EventHandler(this.CustomerEmailSelectCmb_SelectedIndexChanged);
             // 
             // TabAdmin
             // 
@@ -1500,7 +1515,7 @@
         private Label SelectClothingSizeColorLbl;
         private Label SelectClothingColourLbl;
         private Label SelectClothingSizeLbl;
-        private ComboBox SelectClothingSizeLblCmb;
+        private ComboBox SelectClothingSizeCmb;
         private ComboBox SelectClothingColourCmb;
         private Label SelectItemDLbl;
         private ComboBox SelectItemDCmb;

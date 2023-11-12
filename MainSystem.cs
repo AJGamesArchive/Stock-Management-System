@@ -32,7 +32,6 @@ namespace Stock_Management_System
             CustomerEmailSelectCmb.Items.Clear();
             VCPCustomerEmailCmb.Items.Clear();
             SelectSupplyerCmb.Items.Clear();
-
             // Update customer data combo boxes
             string[] customerEmails = em.getCustomerEmails();
             foreach(string email in customerEmails)
@@ -40,91 +39,17 @@ namespace Stock_Management_System
                 CustomerEmailSelectCmb.Items.Add(email);
                 VCPCustomerEmailCmb.Items.Add(email);
             }
-
             // Update supplier data combo box
             string[] supplierNames = em.getSupplierNames();
             foreach(string name in supplierNames)
             {
                 SelectSupplyerCmb.Items.Add(name);
             }
-
             return;
         }
 
-        #endregion
-
-        #region Shop Tab
-
-        // Open Add Customer form when the 'Add New' button is clicked
-        // Passes current entity manager instence into the 'Add Customer' form class
-        private void AddCustomerBtn_Click(object sender, EventArgs e)
-        {
-            AddCustomer addCustomer = new AddCustomer(em);
-            addCustomer.Show();
-            return;
-        }
-
-        // Open the Admin pannel when the 'Manage Stock' button is clicked
-        private void ManageStockBtn_Click(object sender, EventArgs e)
-        {
-            NavSystemMain.SelectedIndex = 1;
-            return;
-        }
-
-        // Refresh the data combo boxes when 'Refresh' button is clicked
-        private void RefreshCustomersBtn_Click(object sender, EventArgs e)
-        {
-            updateGUIData();
-            shopTabRese();
-            ItemSelectionMethodGrpBx.Enabled = false;
-            CustomerNameDisplayLbl.Text = "-----";
-            CustomerGDPRDisplayLbl.Text = "-----";
-            return;
-        }
-
-        #endregion
-
-        #region Admin Tab
-
-        // Open Add Customer form when the 'Add New' button is clicked
-        // Passes current entity manager instence into the 'Add Supplier' form class
-        private void AddSupplyerBtn_Click(object sender, EventArgs e)
-        {
-            AddSupplyer addSupplyer = new AddSupplyer(em);
-            addSupplyer.Show();
-            return;
-        }
-
-        // Open the Shop pannel when the 'Sell Stock' button is clicked
-        private void SellStockBtn_Click(object sender, EventArgs e)
-        {
-            NavSystemMain.SelectedIndex = 0;
-            return;
-        }
-
-        // Refresh the data combo boxes when 'Refresh' button is clicked
-        private void RefreshSuppliersBtn_Click(object sender, EventArgs e)
-        {
-            updateGUIData();
-            shopTabRese();
-            ItemSelectionMethodGrpBx.Enabled = false;
-            CustomerNameDisplayLbl.Text = "-----";
-            CustomerGDPRDisplayLbl.Text = "-----";
-            return;
-        }
-
-        #endregion
-
-        #region Reset Functions
-
-        // Reset the shop tab form when the 'Clear Form' button is clicked
-        private void ClearFormBtn_Click(object sender, EventArgs e)
-        {
-            shopTabRese();
-            return;
-        }
-
-        private void shopTabRese()
+        // Function to reset the state(s) and some attribute(s) of the GUI components on the shop tab
+        private void shopTabReset()
         {
             // Selected Item Details Group Box
             DtlNameDisplayLbl.Text = "-----";
@@ -144,11 +69,16 @@ namespace Stock_Management_System
             BagsRdBtn.Checked = false;
             NutritionRdBtn.Checked = false;
             WatchesRdBtn.Checked = false;
-            SelectBagCapacityCmb.Controls.Clear();
-            SelectNutritionTypeCmb.Controls.Clear();
-            SelectNutritionQuantityCmb.Controls.Clear();
-            SelectWatcheTypeCmb.Controls.Clear();
-            SelectItemDCmb.Controls.Clear();
+            SelectBagCapacityCmb.Items.Clear();
+            SelectBagCapacityCmb.Enabled = false;
+            SelectNutritionTypeCmb.Items.Clear();
+            SelectNutritionTypeCmb.Enabled = false;
+            SelectNutritionQuantityCmb.Items.Clear();
+            SelectNutritionQuantityCmb.Enabled = false;
+            SelectWatcheTypeCmb.Items.Clear();
+            SelectWatcheTypeCmb.Enabled = false;
+            SelectItemDCmb.Items.Clear();
+            SelectItemDCmb.Enabled = false;
             AccessoryFilterGrpBx.Enabled = false;
             // Shoe Item Filter Group Box
             RacerRdBtn.Checked = false;
@@ -156,8 +86,10 @@ namespace Stock_Management_System
             NeutralRdBtn.Checked = false;
             TrailRdBtn.Checked = false;
             TrackRdBtn.Checked = false;
-            SelectShoeSizeCmb.Controls.Clear();
-            SelectItemCCmb.Controls.Clear();
+            SelectShoeSizeCmb.Items.Clear();
+            SelectShoeSizeCmb.Enabled = false;
+            SelectItemCCmb.Items.Clear();
+            SelectItemCCmb.Enabled = false;
             ShoeItemFilterGrpBx.Enabled = false;
             // Clothing Item Filter Group Box
             ShortsRdBtn.Checked = false;
@@ -166,17 +98,168 @@ namespace Stock_Management_System
             TopsRdBtn.Checked = false;
             LeggingsRdBtn.Checked = false;
             JacketsRdBtn.Checked = false;
-            SelectClothingSizeColorLbl.Controls.Clear();
-            SelectClothingColourCmb.Controls.Clear();
-            SelectItemBCmb.Controls.Clear();
+            SelectClothingSizeCmb.Items.Clear();
+            SelectClothingSizeCmb.Enabled = false;
+            SelectClothingColourCmb.Items.Clear();
+            SelectClothingColourCmb.Enabled = false;
+            SelectItemBCmb.Items.Clear();
+            SelectItemBCmb.Enabled = false;
             ClothingItemFilterGrpBx.Enabled = false;
             // Select Item Group Box
-            SelectItemACmb.Controls.Clear();
-            SelectItemTypeCmb.Controls.Clear();
+            SelectItemACmb.Items.Clear();
+            SelectItemACmb.Enabled = false;
+            SelectItemTypeCmb.SelectedIndex = -1;
+            SelectItemTypeCmb.Enabled = false;
             SelectItemGrpBx.Enabled = false;
-            // Item Selection Method Group Box
+        }
+
+        #endregion
+
+        #region Shop Tab
+
+        #region Select Customer Group Box
+
+        // Open Add Customer form when the 'Add New' button is clicked
+        // Passes current entity manager instence into the 'Add Customer' form class
+        private void AddCustomerBtn_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer(em);
+            addCustomer.Show();
+            return;
+        }
+
+        // Refresh the data combo boxes when 'Refresh' button is clicked
+        private void RefreshCustomersBtn_Click(object sender, EventArgs e)
+        {
+            updateGUIData();
+            shopTabReset();
             ItemNameRdBtn.Checked = false;
             ItemFilterRdBtn.Checked = false;
+            ItemSelectionMethodGrpBx.Enabled = false;
+            CustomerNameDisplayLbl.Text = "-----";
+            CustomerGDPRDisplayLbl.Text = "-----";
+            return;
+        }
+
+        // Display the selected customers details to the GUI and unlock the item method selection system, if a customer is found
+        private void CustomerEmailSelectCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(!em.getCustomer(CustomerEmailSelectCmb.Text, out Customer customer))
+            {
+                shopUnaccpectedError();
+                CustomerNameDisplayLbl.Text = customer.Name;
+                return;
+            }
+            CustomerNameDisplayLbl.Text = customer.Name;
+            CustomerGDPRDisplayLbl.Text = customer.GDPR.ToString();
+            ItemSelectionMethodGrpBx.Enabled = true;
+        }
+
+        #endregion
+
+        #region Item Selection Method Group Box
+
+        // Allow the user to select an item from the system by name if this selection method is chosen
+        private void ItemNameRdBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if(!ItemNameRdBtn.Checked) { return; }
+            shopTabReset();
+            string[] itemNames = im.getAllItemNames();
+            foreach(string name in itemNames)
+            {
+                SelectItemACmb.Items.Add(name);
+            }
+            SelectItemGrpBx.Enabled = true;
+            SelectItemACmb.Enabled = true;
+            return;
+        }
+
+        // Allow the user to select an item type from the system if this selection method is chosen
+        private void ItemFilterRdBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if(!ItemFilterRdBtn.Checked) { return; }
+            shopTabReset();
+            SelectItemGrpBx.Enabled = true;
+            SelectItemTypeCmb.Enabled = true;
+            return;
+        }
+
+        #endregion
+
+        #region System Controls Group Box
+
+        // Open the Admin pannel when the 'Manage Stock' button is clicked
+        private void ManageStockBtn_Click(object sender, EventArgs e)
+        {
+            NavSystemMain.SelectedIndex = 1;
+            return;
+        }
+
+        // Reset the shop tab form when the 'Clear Form' button is clicked
+        private void ClearFormBtn_Click(object sender, EventArgs e)
+        {
+            shopTabReset();
+            ItemNameRdBtn.Checked = false;
+            ItemFilterRdBtn.Checked = false;
+            return;
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Admin Tab
+
+        #region View Restock Requirements By Supplier Group Box
+
+        // Open Add Customer form when the 'Add New' button is clicked
+        // Passes current entity manager instence into the 'Add Supplier' form class
+        private void AddSupplyerBtn_Click(object sender, EventArgs e)
+        {
+            AddSupplyer addSupplyer = new AddSupplyer(em);
+            addSupplyer.Show();
+            return;
+        }
+
+        // Refresh the data combo boxes when 'Refresh' button is clicked
+        private void RefreshSuppliersBtn_Click(object sender, EventArgs e)
+        {
+            updateGUIData();
+            shopTabReset();
+            ItemNameRdBtn.Checked = false;
+            ItemFilterRdBtn.Checked = false;
+            ItemSelectionMethodGrpBx.Enabled = false;
+            CustomerNameDisplayLbl.Text = "-----";
+            CustomerGDPRDisplayLbl.Text = "-----";
+            return;
+        }
+
+        #endregion
+
+        #region System Controls Group Box
+
+        // Open the Shop pannel when the 'Sell Stock' button is clicked
+        private void SellStockBtn_Click(object sender, EventArgs e)
+        {
+            NavSystemMain.SelectedIndex = 0;
+            return;
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Unaccpected Error Occured
+
+        // Function to handel unaccpected errors
+        private void shopUnaccpectedError()
+        {
+            shopTabReset();
+            ItemSelectionMethodGrpBx.Enabled = false;
+            CustomerNameDisplayLbl.Text = "-----";
+            CustomerGDPRDisplayLbl.Text = "-----";
+            MessageBox.Show("An unaccpected error has occured. Please try again or reset the form.", "Unaccpected Error");
+            return;
         }
 
         #endregion

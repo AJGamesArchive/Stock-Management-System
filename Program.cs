@@ -13,8 +13,8 @@ namespace Stock_Management_System
             ApplicationConfiguration.Initialize();
 
             // Creating main instences of the Entity Manager and Item Manager classes to act as the main data stores and data managers within the system
-            EntityManager em = new EntityManager();
-            ItemManager im = new ItemManager();
+            EntityManager em = new EntityManager(new TestData());
+            ItemManager im = new ItemManager(new TestData());
             Application.Run(new MainSystem(em, im));
         }
     }
