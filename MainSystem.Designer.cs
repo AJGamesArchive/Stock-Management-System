@@ -128,13 +128,11 @@
             this.SupplierEmailDisplayLbl = new System.Windows.Forms.Label();
             this.AddSupplyerBtn = new System.Windows.Forms.Button();
             this.SupplierPhoneNumberDisplayLbl = new System.Windows.Forms.Label();
-            this.ViewRestockDgv = new System.Windows.Forms.DataGridView();
             this.SupplierPhoneNumberLbl = new System.Windows.Forms.Label();
             this.SupplierEmailLbl = new System.Windows.Forms.Label();
             this.SelectSupplyerCmb = new System.Windows.Forms.ComboBox();
             this.SelectSupplyerLbl = new System.Windows.Forms.Label();
             this.ViewPurchasesGrpBx = new System.Windows.Forms.GroupBox();
-            this.ViewCustomerPurchasesDgv = new System.Windows.Forms.DataGridView();
             this.VCPCustomerNameDisplayLbl = new System.Windows.Forms.Label();
             this.VCPCustomerGDPRDisplayLbl = new System.Windows.Forms.Label();
             this.VCPCustomerGDPRLbl = new System.Windows.Forms.Label();
@@ -154,9 +152,7 @@
             this.TabAdmin.SuspendLayout();
             this.SystemControlsBGrpBx.SuspendLayout();
             this.ViewRestockRequirementsGrpBx.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewRestockDgv)).BeginInit();
             this.ViewPurchasesGrpBx.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // NavSystemMain
@@ -223,6 +219,7 @@
             this.ClearFormBtn.TabIndex = 0;
             this.ClearFormBtn.Text = "Clear Form";
             this.ClearFormBtn.UseVisualStyleBackColor = true;
+            this.ClearFormBtn.Click += new System.EventHandler(this.ClearFormBtn_Click);
             // 
             // SelectedItemDetailsGrpBx
             // 
@@ -1258,7 +1255,6 @@
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierEmailDisplayLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.AddSupplyerBtn);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierPhoneNumberDisplayLbl);
-            this.ViewRestockRequirementsGrpBx.Controls.Add(this.ViewRestockDgv);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierPhoneNumberLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierEmailLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerCmb);
@@ -1312,18 +1308,6 @@
             this.SupplierPhoneNumberDisplayLbl.TabIndex = 11;
             this.SupplierPhoneNumberDisplayLbl.Text = "------";
             // 
-            // ViewRestockDgv
-            // 
-            this.ViewRestockDgv.AllowUserToAddRows = false;
-            this.ViewRestockDgv.AllowUserToDeleteRows = false;
-            this.ViewRestockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewRestockDgv.Location = new System.Drawing.Point(6, 137);
-            this.ViewRestockDgv.Name = "ViewRestockDgv";
-            this.ViewRestockDgv.ReadOnly = true;
-            this.ViewRestockDgv.RowTemplate.Height = 25;
-            this.ViewRestockDgv.Size = new System.Drawing.Size(603, 377);
-            this.ViewRestockDgv.TabIndex = 2;
-            // 
             // SupplierPhoneNumberLbl
             // 
             this.SupplierPhoneNumberLbl.AutoSize = true;
@@ -1365,7 +1349,6 @@
             // 
             // ViewPurchasesGrpBx
             // 
-            this.ViewPurchasesGrpBx.Controls.Add(this.ViewCustomerPurchasesDgv);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerNameDisplayLbl);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerGDPRDisplayLbl);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerGDPRLbl);
@@ -1379,18 +1362,6 @@
             this.ViewPurchasesGrpBx.TabIndex = 0;
             this.ViewPurchasesGrpBx.TabStop = false;
             this.ViewPurchasesGrpBx.Text = "View Purchases by Customer";
-            // 
-            // ViewCustomerPurchasesDgv
-            // 
-            this.ViewCustomerPurchasesDgv.AllowUserToAddRows = false;
-            this.ViewCustomerPurchasesDgv.AllowUserToDeleteRows = false;
-            this.ViewCustomerPurchasesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewCustomerPurchasesDgv.Location = new System.Drawing.Point(6, 137);
-            this.ViewCustomerPurchasesDgv.Name = "ViewCustomerPurchasesDgv";
-            this.ViewCustomerPurchasesDgv.ReadOnly = true;
-            this.ViewCustomerPurchasesDgv.RowTemplate.Height = 25;
-            this.ViewCustomerPurchasesDgv.Size = new System.Drawing.Size(604, 377);
-            this.ViewCustomerPurchasesDgv.TabIndex = 9;
             // 
             // VCPCustomerNameDisplayLbl
             // 
@@ -1488,10 +1459,8 @@
             this.SystemControlsBGrpBx.ResumeLayout(false);
             this.ViewRestockRequirementsGrpBx.ResumeLayout(false);
             this.ViewRestockRequirementsGrpBx.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewRestockDgv)).EndInit();
             this.ViewPurchasesGrpBx.ResumeLayout(false);
             this.ViewPurchasesGrpBx.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewCustomerPurchasesDgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1598,10 +1567,8 @@
         private Label VCPCustomerNameLbl;
         private Label VCPCustomerEmailLbl;
         private ComboBox VCPCustomerEmailCmb;
-        private DataGridView ViewCustomerPurchasesDgv;
         private Label SelectSupplyerLbl;
         private ComboBox SelectSupplyerCmb;
-        private DataGridView ViewRestockDgv;
         private Button AddSupplyerBtn;
         private Button SellStockBtn;
         private Button ClearSelectionsBtn;

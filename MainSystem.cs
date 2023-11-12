@@ -68,7 +68,6 @@ namespace Stock_Management_System
         private void ManageStockBtn_Click(object sender, EventArgs e)
         {
             NavSystemMain.SelectedIndex = 1;
-            // Add the clear form function here as well
             return;
         }
 
@@ -76,6 +75,10 @@ namespace Stock_Management_System
         private void RefreshCustomersBtn_Click(object sender, EventArgs e)
         {
             updateGUIData();
+            shopTabRese();
+            ItemSelectionMethodGrpBx.Enabled = false;
+            CustomerNameDisplayLbl.Text = "-----";
+            CustomerGDPRDisplayLbl.Text = "-----";
             return;
         }
 
@@ -96,7 +99,6 @@ namespace Stock_Management_System
         private void SellStockBtn_Click(object sender, EventArgs e)
         {
             NavSystemMain.SelectedIndex = 0;
-            // Add the clear form function here as well
             return;
         }
 
@@ -104,7 +106,77 @@ namespace Stock_Management_System
         private void RefreshSuppliersBtn_Click(object sender, EventArgs e)
         {
             updateGUIData();
+            shopTabRese();
+            ItemSelectionMethodGrpBx.Enabled = false;
+            CustomerNameDisplayLbl.Text = "-----";
+            CustomerGDPRDisplayLbl.Text = "-----";
             return;
+        }
+
+        #endregion
+
+        #region Reset Functions
+
+        // Reset the shop tab form when the 'Clear Form' button is clicked
+        private void ClearFormBtn_Click(object sender, EventArgs e)
+        {
+            shopTabRese();
+            return;
+        }
+
+        private void shopTabRese()
+        {
+            // Selected Item Details Group Box
+            DtlNameDisplayLbl.Text = "-----";
+            DtlPriceDisplayLbl.Text = "-----";
+            DtlStockLevelDisplayLbl.Text = "-----";
+            DtlSizeDisplayLbl.Text = "-----";
+            DtlColourDisplayLbl.Text = "-----";
+            DtlClothingStyleDisplayLbl.Text = "-----";
+            DtlShoeTypeDisplayLbl.Text = "-----";
+            DtlAccessoryDisplayLbl.Text = "-----";
+            DtlBagCapacityDisplayLbl.Text = "-----";
+            DtlNutritionTypeDisplayLbl.Text = "-----";
+            DtlNutritionQuantityDisplayLbl.Text = "-----";
+            DtlWatcheTypeDisplayLbl.Text = "-----";
+            SelectedItemDetailsGrpBx.Enabled = false;
+            // Accessory Filter Group Box
+            BagsRdBtn.Checked = false;
+            NutritionRdBtn.Checked = false;
+            WatchesRdBtn.Checked = false;
+            SelectBagCapacityCmb.Controls.Clear();
+            SelectNutritionTypeCmb.Controls.Clear();
+            SelectNutritionQuantityCmb.Controls.Clear();
+            SelectWatcheTypeCmb.Controls.Clear();
+            SelectItemDCmb.Controls.Clear();
+            AccessoryFilterGrpBx.Enabled = false;
+            // Shoe Item Filter Group Box
+            RacerRdBtn.Checked = false;
+            StabilityRdBtn.Checked = false;
+            NeutralRdBtn.Checked = false;
+            TrailRdBtn.Checked = false;
+            TrackRdBtn.Checked = false;
+            SelectShoeSizeCmb.Controls.Clear();
+            SelectItemCCmb.Controls.Clear();
+            ShoeItemFilterGrpBx.Enabled = false;
+            // Clothing Item Filter Group Box
+            ShortsRdBtn.Checked = false;
+            VestsRdBtn.Checked = false;
+            CaprisRdBtn.Checked = false;
+            TopsRdBtn.Checked = false;
+            LeggingsRdBtn.Checked = false;
+            JacketsRdBtn.Checked = false;
+            SelectClothingSizeColorLbl.Controls.Clear();
+            SelectClothingColourCmb.Controls.Clear();
+            SelectItemBCmb.Controls.Clear();
+            ClothingItemFilterGrpBx.Enabled = false;
+            // Select Item Group Box
+            SelectItemACmb.Controls.Clear();
+            SelectItemTypeCmb.Controls.Clear();
+            SelectItemGrpBx.Enabled = false;
+            // Item Selection Method Group Box
+            ItemNameRdBtn.Checked = false;
+            ItemFilterRdBtn.Checked = false;
         }
 
         #endregion
