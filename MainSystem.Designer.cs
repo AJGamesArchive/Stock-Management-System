@@ -268,6 +268,7 @@
             this.CancelSailBtn.TabIndex = 3;
             this.CancelSailBtn.Text = "Cancel Sail";
             this.CancelSailBtn.UseVisualStyleBackColor = true;
+            this.CancelSailBtn.Click += new System.EventHandler(this.CancelSailBtn_Click);
             // 
             // SellItemBtn
             // 
@@ -1103,6 +1104,7 @@
             this.SelectItemACmb.Name = "SelectItemACmb";
             this.SelectItemACmb.Size = new System.Drawing.Size(268, 29);
             this.SelectItemACmb.TabIndex = 1;
+            this.SelectItemACmb.SelectedIndexChanged += new System.EventHandler(this.SelectItemACmb_SelectedIndexChanged);
             // 
             // SelectItemALbl
             // 

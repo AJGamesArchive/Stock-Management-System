@@ -17,8 +17,8 @@ namespace Stock_Management_System
         }
 
         // Class Attributes
-        private double Quantity;
-        private NutritionType Type;
+        public double Quantity { get; private set; }
+        public NutritionType Type { get; private set; }
 
         // Class Constructor
         public Nutrition(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, double quantity, NutritionType nutritionType) : base(name, price, stockLevel, orderStockLeevel, supplier)

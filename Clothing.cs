@@ -19,9 +19,9 @@ namespace Stock_Management_System
             Top,
             Jacket
         }
-        private int Size;
-        private string Colour;
-        private ClothingType Style;
+        public int Size { get; private set; }
+        public string Colour { get; private set; }
+        public ClothingType Style { get; private set; }
 
         // Class Constructor
         public Clothing(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, int size, string colour, ClothingType clothingType) : base (name, price, stockLevel, orderStockLeevel, supplier)

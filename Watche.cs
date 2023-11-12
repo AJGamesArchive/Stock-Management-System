@@ -19,7 +19,7 @@ namespace Stock_Management_System
         }
 
         // Class Attributes
-        private WatcheType Type;
+        public WatcheType Type { get; private set; }
 
         // Class Constructor
         public Watche(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, WatcheType watcheType) : base(name, price, stockLevel, orderStockLeevel, supplier)

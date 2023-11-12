@@ -121,3 +121,5 @@ namespace Stock_Management_System
         #endregion
     }
 }
+
+// Add validation checks here to ensure no 2 customer emails or supplier names are the same

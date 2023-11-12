@@ -113,6 +113,96 @@ namespace Stock_Management_System
             SelectItemGrpBx.Enabled = false;
         }
 
+        // Overloaded Function to output clothing item details to the GUI
+        private void shopOutputItem(Clothing item)
+        {
+            DtlNameDisplayLbl.Text = item.Name;
+            DtlPriceDisplayLbl.Text = item.Price.ToString();
+            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
+            DtlSizeDisplayLbl.Text = item.Size.ToString();
+            DtlColourDisplayLbl.Text = item.Colour;
+            DtlClothingStyleDisplayLbl.Text = item.Style.ToString();
+            DtlShoeTypeDisplayLbl.Text = "-----";
+            DtlAccessoryDisplayLbl.Text = "-----";
+            DtlBagCapacityDisplayLbl.Text = "-----";
+            DtlNutritionTypeDisplayLbl.Text = "-----";
+            DtlNutritionQuantityDisplayLbl.Text = "-----";
+            DtlWatcheTypeDisplayLbl.Text = "-----";
+            return;
+        }
+
+        // Overloaded Function to output shoe item details to the GUI
+        private void shopOutputItem(Shoe item)
+        {
+            DtlNameDisplayLbl.Text = item.Name;
+            DtlPriceDisplayLbl.Text = item.Price.ToString();
+            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
+            DtlSizeDisplayLbl.Text = item.Size.ToString();
+            DtlColourDisplayLbl.Text = "-----";
+            DtlClothingStyleDisplayLbl.Text = "-----";
+            DtlShoeTypeDisplayLbl.Text = item.Type.ToString();
+            DtlAccessoryDisplayLbl.Text = "-----";
+            DtlBagCapacityDisplayLbl.Text = "-----";
+            DtlNutritionTypeDisplayLbl.Text = "-----";
+            DtlNutritionQuantityDisplayLbl.Text = "-----";
+            DtlWatcheTypeDisplayLbl.Text = "-----";
+            return;
+        }
+
+        // Overloaded Function to output bag item details to the GUI
+        private void shopOutputItem(Bag item)
+        {
+            DtlNameDisplayLbl.Text = item.Name;
+            DtlPriceDisplayLbl.Text = item.Price.ToString();
+            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
+            DtlSizeDisplayLbl.Text = "-----";
+            DtlColourDisplayLbl.Text = "-----";
+            DtlClothingStyleDisplayLbl.Text = "-----";
+            DtlShoeTypeDisplayLbl.Text = "-----";
+            DtlAccessoryDisplayLbl.Text = "Bag";
+            DtlBagCapacityDisplayLbl.Text = item.Capacity.ToString();
+            DtlNutritionTypeDisplayLbl.Text = "-----";
+            DtlNutritionQuantityDisplayLbl.Text = "-----";
+            DtlWatcheTypeDisplayLbl.Text = "-----";
+            return;
+        }
+
+        // Overloaded Function to output nutrition item details to the GUI
+        private void shopOutputItem(Nutrition item)
+        {
+            DtlNameDisplayLbl.Text = item.Name;
+            DtlPriceDisplayLbl.Text = item.Price.ToString();
+            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
+            DtlSizeDisplayLbl.Text = "-----";
+            DtlColourDisplayLbl.Text = "-----";
+            DtlClothingStyleDisplayLbl.Text = "-----";
+            DtlShoeTypeDisplayLbl.Text = "-----";
+            DtlAccessoryDisplayLbl.Text = "Nutrition";
+            DtlBagCapacityDisplayLbl.Text = "-----";
+            DtlNutritionTypeDisplayLbl.Text = item.Type.ToString();
+            DtlNutritionQuantityDisplayLbl.Text = item.Quantity.ToString();
+            DtlWatcheTypeDisplayLbl.Text = "-----";
+            return;
+        }
+
+        // Overloaded Function to output watche item details to the GUI
+        private void shopOutputItem(Watche item)
+        {
+            DtlNameDisplayLbl.Text = item.Name;
+            DtlPriceDisplayLbl.Text = item.Price.ToString();
+            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
+            DtlSizeDisplayLbl.Text = "-----";
+            DtlColourDisplayLbl.Text = "-----";
+            DtlClothingStyleDisplayLbl.Text = "-----";
+            DtlShoeTypeDisplayLbl.Text = "-----";
+            DtlAccessoryDisplayLbl.Text = "Watche";
+            DtlBagCapacityDisplayLbl.Text = "-----";
+            DtlNutritionTypeDisplayLbl.Text = "-----";
+            DtlNutritionQuantityDisplayLbl.Text = "-----";
+            DtlWatcheTypeDisplayLbl.Text = item.Type.ToString();
+            return;
+        }
+
         #endregion
 
         #region Shop Tab
@@ -181,6 +271,36 @@ namespace Stock_Management_System
             shopTabReset();
             SelectItemGrpBx.Enabled = true;
             SelectItemTypeCmb.Enabled = true;
+            return;
+        }
+
+        #endregion
+
+        #region Select Item Group Box
+
+        // Output the selected items details to the GUI when an item is selected
+        private void SelectItemACmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedItemDetailsGrpBx.Enabled = true;
+            if(im.getClothingItem(SelectItemACmb.Text, out Clothing clothing)) { shopOutputItem(clothing); return; }
+            if(im.getShoeItem(SelectItemACmb.Text, out Shoe shoe)) { shopOutputItem(shoe); return; }
+            if(im.getBagItem(SelectItemACmb.Text, out Bag bag)) { shopOutputItem(bag); return; }
+            if(im.getNutritionItem(SelectItemACmb.Text, out Nutrition nutrition)) { shopOutputItem(nutrition); return; }
+            if(im.getWatcheItem(SelectItemACmb.Text, out Watche watche)) { shopOutputItem(watche); return; }
+            shopUnaccpectedError();
+            return;
+        }
+
+        #endregion
+
+        #region Selected Item Details Group Box
+
+        // Cancel the current sail when the 'Cancel Sail' button is clicked
+        private void CancelSailBtn_Click(object sender, EventArgs e)
+        {
+            shopTabReset();
+            ItemNameRdBtn.Checked = false;
+            ItemFilterRdBtn.Checked = false;
             return;
         }
 
@@ -258,6 +378,7 @@ namespace Stock_Management_System
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
+            CustomerEmailSelectCmb.SelectedIndex = -1;
             MessageBox.Show("An unaccpected error has occured. Please try again or reset the form.", "Unaccpected Error");
             return;
         }

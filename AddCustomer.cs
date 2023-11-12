@@ -42,7 +42,7 @@ namespace Stock_Management_System
             if(!CustomerGDPRConcentRdBtn.Checked) { GDPR = false; }
 
             // Attempt to add the new customer to the system
-            if(!em.addNewCustomer(CustomerNameTxt.Text, CustomerEmailTxt.Text, GDPR)) { invalidInput("Email"); return; }
+            if(!em.addEntity(CustomerNameTxt.Text, CustomerEmailTxt.Text, GDPR)) { invalidInput("Email"); return; }
 
             // Display confirmation message
             MessageBox.Show("New customer added successfully!", "Success");

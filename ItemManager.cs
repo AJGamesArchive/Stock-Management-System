@@ -130,31 +130,76 @@ namespace Stock_Management_System
         // Function to retrieve a single clothing item, if the item exists
         public bool getClothingItem(string name, out Clothing item)
         {
-            throw new NotImplementedException();
+            foreach(Clothing clothing in ClothingItems)
+            {
+                if(clothing.Name == name)
+                {
+                    item = clothing;
+                    return true;
+                }
+            }
+            item = new Clothing("No Clothing Found", -1, -1, -1, new Supplier("", "", ""), -1, "", ClothingType.Shorts);
+            return false;
         }
 
         // Function to retrieve a single shoe item, if the item exists
         public bool getShoeItem(string name, out Shoe item)
         {
-            throw new NotImplementedException();
+            foreach(Shoe shoe in ShoeItems)
+            {
+                if(shoe.Name == name)
+                {
+                    item = shoe;
+                    return true;
+                }
+            }
+            item = new Shoe("No Shoe Found", -1, -1, -1, new Supplier("", "", ""), -1, ShoeType.Racer);
+            return false;
         }
 
         // Function to retrieve a single bag item, if the item exists
         public bool getBagItem(string name, out Bag item)
         {
-            throw new NotImplementedException();
+            foreach(Bag bag in BagItems)
+            {
+                if(bag.Name == name)
+                {
+                    item = bag;
+                    return true;
+                }
+            }
+            item = new Bag("No Bag Found", -1, -1, -1, new Supplier("", "", ""), -1);
+            return false;
         }
 
         // Function to retrieve a single nutrition item, if the item exists
         public bool getNutritionItem(string name, out Nutrition item)
         {
-            throw new NotImplementedException();
+            foreach(Nutrition nutrition in NutritionItems)
+            {
+                if(nutrition.Name == name)
+                {
+                    item = nutrition;
+                    return true;
+                }
+            }
+            item = new Nutrition("No Nutrition Found", -1, -1, -1, new Supplier("", "", ""), -1, NutritionType.Protein);
+            return false;
         }
 
         // Function to retrieve a single watche item, if the item exists
         public bool getWatcheItem(string name, out Watche item)
         {
-            throw new NotImplementedException();
+            foreach(Watche watche in WatcheItems)
+            {
+                if(watche.Name == name)
+                {
+                    item = watche;
+                    return true;
+                }
+            }
+            item = new Watche("No Watche Found", -1, -1, -1, new Supplier("", "", ""), WatcheType.Simple);
+            return false;
         }
 
         #endregion
@@ -193,3 +238,5 @@ namespace Stock_Management_System
         #endregion
     }
 }
+
+// Add validation here to ensure no 2 item names are the same

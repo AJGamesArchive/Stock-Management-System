@@ -18,8 +18,8 @@ namespace Stock_Management_System
             Trail,
             Track
         }
-        private decimal Size;
-        private ShoeType Type;
+        public decimal Size { get; private set; }
+        public ShoeType Type { get; private set; }
 
         // Class Constructor
         public Shoe(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, decimal size, ShoeType shoeType) : base(name, price, stockLevel, orderStockLeevel, supplier)

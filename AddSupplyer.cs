@@ -38,7 +38,7 @@ namespace Stock_Management_System
             if (SupplyerPhoneNumTxt.Text == "") { invalidInput("Phone Number"); return; }
 
             // Attempt to add the new supplier to the system
-            if(!em.addNewSupplier(SupplyerNameTxt.Text, SupplyerEmailTxt.Text, SupplyerPhoneNumTxt.Text)) { invalidInput("Email"); return; }
+            if(!em.addEntity(SupplyerNameTxt.Text, SupplyerEmailTxt.Text, SupplyerPhoneNumTxt.Text)) { invalidInput("Email"); return; }
 
             // Display confirmation message
             MessageBox.Show("New supplier added successfully!", "Success");
