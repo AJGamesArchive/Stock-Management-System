@@ -29,38 +29,49 @@ namespace Stock_Management_System
             WatchItem = new List<Watche>();
         }
 
+        // Overloaded constructor that allows you to spesify an order time
+        public Purchase(DateTime orderTimestamp)
+        {
+            SaleDate = orderTimestamp;
+            ClothingItems = new List<Clothing>();
+            ShoeItems = new List<Shoe>();
+            BagItems = new List<Bag>();
+            NutritionItems = new List<Nutrition>();
+            WatchItem = new List<Watche>();
+        }
+
         #region Add Item Functions
 
-        // Function to add a clothing item to the purchase
-        public void addClothing(Clothing clothing)
+        // Overloaded Function to add a clothing item to the purchase
+        public void addPurchasedItem(Clothing clothing)
         {
             ClothingItems.Add(clothing);
             return;
         }
 
-        // Function to add a shoe item to the purchase
-        public void addShoe(Shoe shoe)
+        // Overloaded Function to add a shoe item to the purchase
+        public void addPurchasedItem(Shoe shoe)
         {
             ShoeItems.Add(shoe);
             return;
         }
 
-        // Function to add a bag item to the purchase
-        public void addBag(Bag bag)
+        // Overloaded Function to add a bag item to the purchase
+        public void addPurchasedItem(Bag bag)
         {
             BagItems.Add(bag);
             return;
         }
 
-        // Function to add a nutrition item to the purchase
-        public void addNutrition(Nutrition nutrition)
+        // Overloaded Function to add a nutrition item to the purchase
+        public void addPurchasedItem(Nutrition nutrition)
         {
             NutritionItems.Add(nutrition);
             return;
         }
 
-        // Function to add a watch to the order
-        public void addWatch(Watche watche)
+        // Overloaded Function to add a watch to the order
+        public void addPurchasedItem(Watche watche)
         {
             WatchItem.Add(watche);
             return;

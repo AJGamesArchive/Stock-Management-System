@@ -32,7 +32,7 @@ namespace Stock_Management_System
         {
             if (!this.updateStockLevel()) { return false; }
             Purchase purchase = new Purchase();
-            purchase.addNutrition(this);
+            purchase.addPurchasedItem(this);
             customer.Purchases.Add(purchase);
             return true;
         }
