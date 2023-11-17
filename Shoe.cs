@@ -7,35 +7,17 @@ using System.Threading.Tasks;
 namespace Stock_Management_System
 {
     // Class to store all shoe item details and handel shoe item seeling
-    public class Shoe : Item
+    public class Shoe : Item, ICharacteristics
     {
         // Class Attributes
-        public enum ShoeType
-        {
-            Racer,
-            Stability,
-            Nutral,
-            Trail,
-            Track
-        }
-        public decimal Size { get; private set; }
-        public ShoeType Type { get; private set; }
+        public string Type { get; private set; }
+        public Dictionary<string, string[]> Characteristics { get; private set; }
 
         // Class Constructor
-        public Shoe(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, decimal size, ShoeType shoeType) : base(name, price, stockLevel, orderStockLeevel, supplier)
+        public Shoe(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, string type, Dictionary<string, string[]> characteristics) : base(name, price, stockLevel, orderStockLeevel, supplier)
         {
-            Size = size;
-            Type = shoeType;
-        }
-
-        // Declaring a function that will handel the selling of all shoe items
-        public override bool sellItem(Customer customer)
-        {
-            if (!this.updateStockLevel()) { return false; }
-            Purchase purchase = new Purchase();
-            purchase.addPurchasedItem(this);
-            customer.Purchases.Add(purchase);
-            return true;
+            Type = type;
+            Characteristics = characteristics;
         }
     }
 }

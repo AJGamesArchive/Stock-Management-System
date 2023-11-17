@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Stock_Management_System.Clothing;
-using static Stock_Management_System.Nutrition;
 using static Stock_Management_System.Shoe;
-using static Stock_Management_System.Watche;
 
 namespace Stock_Management_System
 {

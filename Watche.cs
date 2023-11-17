@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    /*
     // Class to store all watche item details and handel watche item seeling
     public class Watche : Item
     {
@@ -37,4 +38,5 @@ namespace Stock_Management_System
             return true;
         }
     }
+    */
 }

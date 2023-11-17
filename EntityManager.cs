@@ -19,7 +19,7 @@ namespace Stock_Management_System
             Customers = new List<Customer>();
             Suppliers = new List<Supplier>();
         }
-
+        
         // Overloaded Constructor to create new lists for each entity data store and add test data to the lists
         public EntityManager(TestData testData)
         {
@@ -35,7 +35,7 @@ namespace Stock_Management_System
         // Returns 'true' if customer was added succesfuly and 'false' if not
         public bool addEntity(string name, string email, bool GDPR)
         {
-            if(!isValidEmail(email)) { return false; } 
+            if(!Tools.validEmail(email)) { return false; } 
             Customers.Add(new Customer(name, email, GDPR));
             return true;
         }
@@ -44,7 +44,7 @@ namespace Stock_Management_System
         // Returns 'true' if supplier was added succesfuly and 'false' if not
         public bool addEntity(string name, string email, string phoneNumber)
         {
-            if(!isValidEmail(email)) { return false; }
+            if(!Tools.validEmail(email)) { return false; }
             Suppliers.Add(new Supplier(name, email, phoneNumber));
             return true;
         }
@@ -87,35 +87,6 @@ namespace Stock_Management_System
             }
             customer = new Customer("An Error Occured", "", false);
             return false;
-        }
-
-        #endregion
-
-        #region Entity Data Validation Functions
-
-        // Function that takes an email address as a string and checks that it's a valid email address
-        private bool isValidEmail(string email)
-        {
-            // Gard statment to ensure the string is not empty or null
-            if (string.IsNullOrWhiteSpace(email)) { return false; }
-
-            // Split the email address at the '@' symbol
-            string[] parts = email.Split('@');
-
-            // Gard statment to ensure there's only one '@' symbol in the email
-            if (parts.Length != 2) { return false; }
-
-            // Extract the domain part of the email
-            string domain = parts[1];
-
-            // Split the domain at the '.' symbol
-            string[] domainParts = domain.Split('.');
-
-            // Gard statment to ensure there's at least one '.' symbol in the domain section of the email
-            if (!(domainParts.Length >= 2)) { return false; }
-
-            // Returns true as the email is valid
-            return true;
         }
 
         #endregion

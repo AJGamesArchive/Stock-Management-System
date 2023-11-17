@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    /*
     // Class to store all nutrition item details and handel nutrition item seeling
     public class Nutrition : Item
     {
@@ -37,4 +38,5 @@ namespace Stock_Management_System
             return true;
         }
     }
+    */
 }

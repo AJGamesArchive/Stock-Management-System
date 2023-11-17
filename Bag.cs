@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
+    /*
     // Class to store all bag item details and handel bag item seeling
     public class Bag : Item
     {
@@ -28,4 +29,5 @@ namespace Stock_Management_System
             return true;
         }
     }
+    */
 }
