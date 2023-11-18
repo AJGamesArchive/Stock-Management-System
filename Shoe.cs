@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    // Class to store all shoe item details and handel shoe item seeling
+    // Class to store all shoe item details
     public class Shoe : Item, ICharacteristics
     {
         // Class Attributes
@@ -14,7 +14,7 @@ namespace Stock_Management_System
         public Dictionary<string, string[]> Characteristics { get; private set; }
 
         // Class Constructor
-        public Shoe(string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, string type, Dictionary<string, string[]> characteristics) : base(name, price, stockLevel, orderStockLeevel, supplier)
+        public Shoe(int id, string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, string type, Dictionary<string, string[]> characteristics) : base(id, name, price, stockLevel, orderStockLeevel, supplier)
         {
             Type = type;
             Characteristics = characteristics;
