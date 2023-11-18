@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,14 @@ namespace Stock_Management_System
 {
     public class StockSystem
     {
+        // Enumeration to state the type of an item being added to the system
+        public enum ItemType
+        {
+            Clothing,
+            Shoe,
+            Accessory
+        }
+
         // Class Attributes
         private EntityManager entityManager;
         private ItemManager itemManager;
@@ -44,6 +53,47 @@ namespace Stock_Management_System
         {
             if (!entityManager.getCustomer(customerId, out Customer customer)) { purchaseList = new Dictionary<string, string>[0]; return false; }
             purchaseList = customer.getPurchases();
+            return true;
+        }
+
+        // Function to enter a new customers details into the system
+        public void enterNewCustomer(string name, string email, bool GDPR)
+        {
+            int id = entityManager.getNumCustomers() + 1;
+            Customer customer = new Customer(id, name, email, GDPR);
+            entityManager.addEntity(customer);
+            return;
+        }
+
+        // Function to enter a new suppliers details into the system
+        public void enterNewSupplier(string name, string email, string phoneNumber)
+        {
+            int id = entityManager.getNumSuppliers() + 1;
+            Supplier supplier = new Supplier(id, name, email, phoneNumber);
+            entityManager.addEntity(supplier);
+            return;
+        }
+
+        // Function to enter a new items details into the systetm
+        public bool enterNewItem(ItemType type, string name, decimal price, int stockLevel, int orderStockLevel, int supplierId, string make, Dictionary<string, string[]> characteristics)
+        {
+            if (!entityManager.getSupplier(supplierId, out Supplier supplier)) { return false; }
+            int id = itemManager.getNumItems() + 1;
+            switch(type)
+            {
+                case ItemType.Clothing:
+                    Clothing clothing = new Clothing(id, name, price, stockLevel, orderStockLevel, supplier, make, characteristics);
+                    itemManager.addItem(clothing);
+                    break;
+                case ItemType.Shoe:
+                    Shoe shoe = new Shoe(id, name, price, stockLevel, orderStockLevel, supplier, make, characteristics);
+                    itemManager.addItem(shoe);
+                    break;
+                case ItemType.Accessory:
+                    Accessary accessary = new Accessary(id, name, price, stockLevel, orderStockLevel, supplier, make, characteristics);
+                    itemManager.addItem(accessary);
+                    break;
+            }
             return true;
         }
 

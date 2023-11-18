@@ -57,6 +57,12 @@ namespace Stock_Management_System
             return true;
         }
 
+        // Overriden Function to create a string identifier for an item
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         #region Class Responsibilities

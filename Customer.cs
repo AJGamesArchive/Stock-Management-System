@@ -53,6 +53,12 @@ namespace Stock_Management_System
             return purchases.ToArray();
         }
 
+        // Overriden Function to create a string identifier for a customer
+        public override string ToString()
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

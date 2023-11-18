@@ -48,6 +48,36 @@ namespace Stock_Management_System
             return false;
         }
 
+        // Function to retrieve the number of customers in the system
+        public int getNumCustomers()
+        {
+            return Customers.Count;
+        }
+
+        // Function to retrieve the number of suppliers in the system
+        public int getNumSuppliers()
+        {
+            return Suppliers.Count;
+        }
+
+        #endregion
+
+        #region Add Data
+
+        // Overloaded Function to add a customer to the system
+        public void addEntity(Customer customer)
+        {
+            Customers.Add(customer);
+            return;
+        }
+
+        // Overloaded Function to add a supplier to the system
+        public void addEntity(Supplier supplier)
+        {
+            Suppliers.Add(supplier);
+            return;
+        }
+
         #endregion
     }
 }

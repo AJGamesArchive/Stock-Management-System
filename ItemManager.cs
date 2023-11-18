@@ -47,6 +47,23 @@ namespace Stock_Management_System
             return filteredItems.ToArray();
         }
 
+        // Function to retrieve the number of items in the system
+        public int getNumItems()
+        {
+            return Items.Count;
+        }
+
+        #endregion
+
+        #region Add Data
+
+        // Function to add a new item to the system
+        public void addItem(Item item)
+        {
+            Items.Add(item);
+            return;
+        }
+
         #endregion
     }
 }
