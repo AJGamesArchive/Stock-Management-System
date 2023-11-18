@@ -60,7 +60,7 @@ namespace Stock_Management_System
         // Overriden Function to create a string identifier for an item
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"({Id}) {this.GetType()} - {Name}";
         }
 
         #endregion

@@ -56,7 +56,7 @@ namespace Stock_Management_System
         // Overriden Function to create a string identifier for a customer
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"({Id}) {Name} - {Email}";
         }
 
         #endregion
