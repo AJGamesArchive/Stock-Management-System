@@ -42,6 +42,17 @@ namespace Stock_Management_System
             return false;
         }
 
+        // Functioon to retrieve all purchases by the given customer
+        public Dictionary<string, string>[] getPurchases()
+        {
+            List<Dictionary<string, string>> purchases = new List<Dictionary<string, string>>();
+            foreach(Purchase p in Purchases)
+            {
+                purchases.Add(p.getPurchaseDetails());
+            }
+            return purchases.ToArray();
+        }
+
         #endregion
     }
 }

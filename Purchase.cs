@@ -29,5 +29,20 @@ namespace Stock_Management_System
             Name = name;
             Price = price;
         }
+
+        #region Manage Purchase Data
+
+        public Dictionary<string, string> getPurchaseDetails()
+        {
+            Dictionary<string, string> purchaseDetails = new Dictionary<string, string>
+            {
+                {"Purchase Date", SaleDate.ToString()},
+                {"Item Purchased", Name},
+                {"Item Pricec", Price.ToString()}
+            };
+            return purchaseDetails;
+        }
+
+        #endregion
     }
 }

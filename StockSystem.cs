@@ -19,6 +19,8 @@ namespace Stock_Management_System
             itemManager = new ItemManager();
         }
 
+        #region Core Functions
+
         // Function to complete a purchase
         public bool completePurchase(int customerId, int itemid)
         {
@@ -36,5 +38,21 @@ namespace Stock_Management_System
             restockList = supplier.generateRestockList(items);
             return true;
         }
+
+        // Function to return a generated list of all purchases for a given customoer
+        public bool getCustomerPurchases(int customerId, out Dictionary<string, string>[] purchaseList)
+        {
+            if (!entityManager.getCustomer(customerId, out Customer customer)) { purchaseList = new Dictionary<string, string>[0]; return false; }
+            purchaseList = customer.getPurchases();
+            return true;
+        }
+
+        #endregion
+
+        #region Data Processing
+
+
+
+        #endregion
     }
 }
