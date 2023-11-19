@@ -101,7 +101,17 @@ namespace Stock_Management_System
 
         #region Data Processing
 
+        // Function to retrieve the generated customer identifier strings
+        public string[] retrieveCustomerIdentifiers()
+        {
+            return entityManager.generateCustomerIdentifierAll();
+        }
 
+        // Function to retrieve the generated supplier identifier strings
+        public string[] retrieveSupplierIdentifiers()
+        {
+            return entityManager.generateSupplierIdentifierAll();
+        }
 
         #endregion
     }

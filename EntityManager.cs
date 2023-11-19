@@ -60,6 +60,28 @@ namespace Stock_Management_System
             return Suppliers.Count;
         }
 
+        // Function to retrieve an identifier string for every customer in the system
+        public string[] generateCustomerIdentifierAll()
+        {
+            List<string> identifiers = new List<string>();
+            foreach(Customer c in Customers)
+            {
+                identifiers.Add(c.ToString());
+            }
+            return identifiers.ToArray();
+        }
+
+        // Function to retrieve an identifier string for every supplier in the system
+        public string[] generateSupplierIdentifierAll()
+        {
+            List<string> identifiers = new List<string>();
+            foreach (Supplier s in Suppliers)
+            {
+                identifiers.Add(s.ToString());
+            }
+            return identifiers.ToArray();
+        }
+
         #endregion
 
         #region Add Data
