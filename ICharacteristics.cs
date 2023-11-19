@@ -10,7 +10,7 @@ namespace Stock_Management_System
     public interface ICharacteristics
     {
         // Interface attributes
-        public string Type { get; }
+        public string Make { get; }
         public Dictionary<string, string[]> Characteristics { get; }
     }
 }

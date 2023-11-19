@@ -10,13 +10,13 @@ namespace Stock_Management_System
     public class Clothing : Item, ICharacteristics
     {
         // Class Attributes
-        public string Type { get; private set; }
+        public string Make { get; private set; }
         public Dictionary<string, string[]> Characteristics { get; private set; }
 
         // Class Constructor
-        public Clothing(int id, string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, string type, Dictionary<string, string[]> characteristics) : base (id, name, price, stockLevel, orderStockLeevel, supplier)
+        public Clothing(int id, string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, string make, Dictionary<string, string[]> characteristics) : base (id, name, price, stockLevel, orderStockLeevel, supplier)
         {
-            Type = type;
+            Make = make;
             Characteristics = characteristics;
         }
     }
