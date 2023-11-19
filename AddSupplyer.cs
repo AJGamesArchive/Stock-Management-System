@@ -12,10 +12,10 @@ namespace Stock_Management_System
 {
     public partial class AddSupplyer : Form
     {
-        // Declaring the Entity Manager object
+        // Declaring the Stock System object
         private StockSystem stockSystem;
 
-        // Initialise the 'Add Supplyer' form, retriving current instence of entity manager class
+        // Initialise the 'Add Supplyer' form, retriving current instence of stock system object
         public AddSupplyer(StockSystem ss)
         {
             InitializeComponent();
@@ -32,13 +32,14 @@ namespace Stock_Management_System
         // Add a new supplier to the system when the 'Add Supplier' button is clicked
         private void AddNewSupplyerBtn_Click(object sender, EventArgs e)
         {
-            // Gard statements to ensure all required data has been entered
+            // Gard statements to ensure all required data has been entered and is valid
             if (SupplyerNameTxt.Text == "") { invalidInput("Name"); return; }
             if (SupplyerEmailTxt.Text == "") { invalidInput("Email"); return; }
+            if (!Tools.validEmail(SupplyerEmailTxt.Text)) { invalidInput("Email"); return; }
             if (SupplyerPhoneNumTxt.Text == "") { invalidInput("Phone Number"); return; }
 
-            // Attempt to add the new supplier to the system
-            if(!em.addEntity(SupplyerNameTxt.Text, SupplyerEmailTxt.Text, SupplyerPhoneNumTxt.Text)) { invalidInput("Email"); return; }
+            // Add a new supplier to the system
+            stockSystem.enterNewSupplier(SupplyerNameTxt.Text, SupplyerEmailTxt.Text, SupplyerPhoneNumTxt.Text);
 
             // Display confirmation message
             MessageBox.Show("New supplier added successfully!", "Success");

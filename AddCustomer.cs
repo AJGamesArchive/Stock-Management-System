@@ -12,10 +12,10 @@ namespace Stock_Management_System
 {
     public partial class AddCustomer : Form
     {
-        // Declaring the Entity Manager object
+        // Declaring the Stock System object
         private StockSystem stockSystem;
 
-        // Initialise the 'Add Customer' form, retrieve current instence of entity manager class
+        // Initialise the 'Add Customer' form, retrieve current instence of stock system object
         public AddCustomer(StockSystem ss)
         {
             InitializeComponent();
@@ -35,14 +35,14 @@ namespace Stock_Management_System
             // Gard statements to ensure all required data has been entered
             if(CustomerNameTxt.Text == "") { invalidInput("Name"); return; }
             if(CustomerEmailTxt.Text == "") { invalidInput("Email"); return; }
-            if(CustomerGDPRConcentRdBtn.Checked == false && CustomerGDPRNoConcentRdBtn.Checked == false) { invalidInput("GDPR State"); return; }
+            if(!Tools.validEmail(CustomerEmailTxt.Text)) { invalidInput("Email"); return; }
+            if (CustomerGDPRConcentRdBtn.Checked == false && CustomerGDPRNoConcentRdBtn.Checked == false) { invalidInput("GDPR State"); return; }
 
             // Check the GDPR State
-            bool GDPR = true;
-            if(!CustomerGDPRConcentRdBtn.Checked) { GDPR = false; }
+            bool GDPR = (CustomerGDPRConcentRdBtn.Checked) ? true : false;
 
-            // Attempt to add the new customer to the system
-            if(!em.addEntity(CustomerNameTxt.Text, CustomerEmailTxt.Text, GDPR)) { invalidInput("Email"); return; }
+            // Add new customer to the system
+            stockSystem.enterNewCustomer(CustomerNameTxt.Text, CustomerEmailTxt.Text, GDPR);
 
             // Display confirmation message
             MessageBox.Show("New customer added successfully!", "Success");
