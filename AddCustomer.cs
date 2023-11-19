@@ -13,13 +13,13 @@ namespace Stock_Management_System
     public partial class AddCustomer : Form
     {
         // Declaring the Entity Manager object
-        private EntityManager em;
+        private StockSystem stockSystem;
 
         // Initialise the 'Add Customer' form, retrieve current instence of entity manager class
-        public AddCustomer(EntityManager em)
+        public AddCustomer(StockSystem ss)
         {
             InitializeComponent();
-            this.em = em;
+            stockSystem = ss;
         }
 
         // Close the 'Add Customer' form when the 'Close' button is clicked

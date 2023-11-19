@@ -13,13 +13,13 @@ namespace Stock_Management_System
     public partial class AddSupplyer : Form
     {
         // Declaring the Entity Manager object
-        private EntityManager em;
+        private StockSystem stockSystem;
 
         // Initialise the 'Add Supplyer' form, retriving current instence of entity manager class
-        public AddSupplyer(EntityManager em)
+        public AddSupplyer(StockSystem ss)
         {
             InitializeComponent();
-            this.em = em;
+            stockSystem = ss;
         }
 
         // Close the 'Add Supplyer' form when the 'Close' button is clicked

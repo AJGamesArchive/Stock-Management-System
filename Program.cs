@@ -17,7 +17,9 @@ namespace Stock_Management_System
             
             // Adding test data to the system
             TestData testData = new TestData();
-            // Insert all test data functions here
+            testData.createTestCustomers(stockSystem);
+            testData.createTestSuppliers(stockSystem);
+            testData.createTestItems(stockSystem);
 
             // Starting the application
             Application.Run(new MainSystem(stockSystem));

@@ -5,14 +5,11 @@ namespace Stock_Management_System
     public partial class MainSystem : Form
     {
         // Class Attributeese
-        private EntityManager em;
-        private ItemManager im;
-
+        private StockSystem stockSystem;
         // Class Constructor
-        public MainSystem(EntityManager entityManager, ItemManager itemManager)
+        public MainSystem(StockSystem ss)
         {
-            em = entityManager;
-            im = itemManager;
+            stockSystem = ss;
             InitializeComponent();
         }
 
