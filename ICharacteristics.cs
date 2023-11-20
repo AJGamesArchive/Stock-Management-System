@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    // Interface to force all item child classes to have a type and dictionary of unique characteristics to the item
-    public interface ICharacteristics
+    // Interface to force item child classes to have a type and dictionary of unique characteristics to the item
+    interface ICharacteristics
     {
         // Interface attributes
-        public string Make { get; }
-        public Dictionary<string, string[]> Characteristics { get; }
+        string getMake();
+        Dictionary<string, string[]> getCharacteristics();
     }
 }

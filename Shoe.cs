@@ -10,8 +10,8 @@ namespace Stock_Management_System
     public class Shoe : Item, ICharacteristics
     {
         // Class Attributes
-        public string Make { get; private set; }
-        public Dictionary<string, string[]> Characteristics { get; private set; }
+        private string Make;
+        private Dictionary<string, string[]> Characteristics;
 
         // Class Constructor
         public Shoe(int id, string name, decimal price, int stockLevel, int orderStockLeevel, Supplier supplier, string make, Dictionary<string, string[]> characteristics) : base(id, name, price, stockLevel, orderStockLeevel, supplier)
@@ -19,5 +19,21 @@ namespace Stock_Management_System
             Make = make;
             Characteristics = characteristics;
         }
+
+        #region Manage Shoe Data
+
+        // Function to return the shoe items make
+        public string getMake()
+        {
+            return Make;
+        }
+
+        // Function to return the shoe items characteristics
+        public Dictionary<string, string[]> getCharacteristics()
+        {
+            return Characteristics;
+        }
+
+        #endregion
     }
 }
