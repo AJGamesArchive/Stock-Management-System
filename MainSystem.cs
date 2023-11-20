@@ -52,16 +52,9 @@ namespace Stock_Management_System
             DtlNameDisplayLbl.Text = "-----";
             DtlPriceDisplayLbl.Text = "-----";
             DtlStockLevelDisplayLbl.Text = "-----";
-            DtlSizeDisplayLbl.Text = "-----";
-            DtlColourDisplayLbl.Text = "-----";
-            DtlClothingStyleDisplayLbl.Text = "-----";
-            DtlShoeTypeDisplayLbl.Text = "-----";
-            DtlAccessoryDisplayLbl.Text = "-----";
-            DtlBagCapacityDisplayLbl.Text = "-----";
-            DtlNutritionTypeDisplayLbl.Text = "-----";
-            DtlNutritionQuantityDisplayLbl.Text = "-----";
-            DtlWatcheTypeDisplayLbl.Text = "-----";
-            SelectedItemDetailsGrpBx.Enabled = false;
+            DtlTypeDisplayLbl.Text = "-----";
+            DtlSupplierDisplayLbl.Text = "-----";
+            PurchaseConfirmationGrpBx.Enabled = false;
             // Select Item Group Box
             SelectItemACmb.Items.Clear();
             SelectItemACmb.Enabled = false;
@@ -94,6 +87,7 @@ namespace Stock_Management_System
             ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
+            DtlCustomerDisplayLbl.Text = "-----";
             CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             return;
@@ -113,7 +107,7 @@ namespace Stock_Management_System
         #endregion
 
 
-
+        
 
 
         #region Item Selection Method Group Box
@@ -150,7 +144,7 @@ namespace Stock_Management_System
         // Output the selected items details to the GUI when an item is selected
         private void SelectItemACmb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectedItemDetailsGrpBx.Enabled = true;
+            PurchaseConfirmationGrpBx.Enabled = true;
             if(im.getClothingItem(SelectItemACmb.Text, out Clothing clothing)) { shopOutputItem(clothing); return; }
             if(im.getShoeItem(SelectItemACmb.Text, out Shoe shoe)) { shopOutputItem(shoe); return; }
             if(im.getBagItem(SelectItemACmb.Text, out Bag bag)) { shopOutputItem(bag); return; }
@@ -219,6 +213,7 @@ namespace Stock_Management_System
             ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
+            DtlCustomerDisplayLbl.Text = "-----";
             CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             return;
@@ -247,6 +242,7 @@ namespace Stock_Management_System
             shopTabReset();
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
+            DtlCustomerDisplayLbl.Text = "-----";
             CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             CustomerEmailSelectCmb.SelectedIndex = -1;

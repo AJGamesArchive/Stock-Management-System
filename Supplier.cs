@@ -36,7 +36,7 @@ namespace Stock_Management_System
         // Overriden Function to create a string identifier for a supplier
         public override string ToString()
         {
-            return $"({Id}) {Name} - {Email}";
+            return $"({Id}) {Name}";
         }
 
         #endregion

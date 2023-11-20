@@ -33,30 +33,18 @@
             this.SystemControlsAGrpBx = new System.Windows.Forms.GroupBox();
             this.ManageStockBtn = new System.Windows.Forms.Button();
             this.ClearFormBtn = new System.Windows.Forms.Button();
-            this.SelectedItemDetailsGrpBx = new System.Windows.Forms.GroupBox();
+            this.PurchaseConfirmationGrpBx = new System.Windows.Forms.GroupBox();
+            this.DtlCustomerDisplayLbl = new System.Windows.Forms.Label();
+            this.DtlCustomerLbl = new System.Windows.Forms.Label();
             this.CancelSailBtn = new System.Windows.Forms.Button();
             this.SellItemBtn = new System.Windows.Forms.Button();
             this.ItemDetailsLbl = new System.Windows.Forms.Label();
             this.DtlNameDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlWatcheTypeDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlNutritionQuantityDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlNutritionTypeDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlBagCapacityDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlAccessoryDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlShoeTypeDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlClothingStyleDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlColourDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlSizeDisplayLbl = new System.Windows.Forms.Label();
+            this.DtlSupplierDisplayLbl = new System.Windows.Forms.Label();
+            this.DtlTypeDisplayLbl = new System.Windows.Forms.Label();
             this.DtlStockLevelDisplayLbl = new System.Windows.Forms.Label();
-            this.DtlWatcheTypeLbl = new System.Windows.Forms.Label();
-            this.DtlNutritionQuantityLbl = new System.Windows.Forms.Label();
-            this.DtlNutritionTypeLbl = new System.Windows.Forms.Label();
-            this.DtlBagCapacityLbl = new System.Windows.Forms.Label();
-            this.DtlAccessoryLbl = new System.Windows.Forms.Label();
-            this.DtlShoeTypeLbl = new System.Windows.Forms.Label();
-            this.DtlClothingStyleLbl = new System.Windows.Forms.Label();
-            this.DtlColourLbl = new System.Windows.Forms.Label();
-            this.DtlSizeLbl = new System.Windows.Forms.Label();
+            this.DtlSupplierLbl = new System.Windows.Forms.Label();
+            this.DtlTypeLbl = new System.Windows.Forms.Label();
             this.DtlStockLevelLbl = new System.Windows.Forms.Label();
             this.DtlPriceDisplayLbl = new System.Windows.Forms.Label();
             this.DtlPriceLbl = new System.Windows.Forms.Label();
@@ -103,7 +91,7 @@
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
             this.SystemControlsAGrpBx.SuspendLayout();
-            this.SelectedItemDetailsGrpBx.SuspendLayout();
+            this.PurchaseConfirmationGrpBx.SuspendLayout();
             this.ItemSelectionMethodGrpBx.SuspendLayout();
             this.SelectItemGrpBx.SuspendLayout();
             this.SelectCustomerGrpBx.SuspendLayout();
@@ -130,7 +118,7 @@
             // TabShop
             // 
             this.TabShop.Controls.Add(this.SystemControlsAGrpBx);
-            this.TabShop.Controls.Add(this.SelectedItemDetailsGrpBx);
+            this.TabShop.Controls.Add(this.PurchaseConfirmationGrpBx);
             this.TabShop.Controls.Add(this.ItemSelectionMethodGrpBx);
             this.TabShop.Controls.Add(this.SelectItemGrpBx);
             this.TabShop.Controls.Add(this.SelectCustomerGrpBx);
@@ -176,43 +164,51 @@
             this.ClearFormBtn.UseVisualStyleBackColor = true;
             this.ClearFormBtn.Click += new System.EventHandler(this.ClearFormBtn_Click);
             // 
-            // SelectedItemDetailsGrpBx
+            // PurchaseConfirmationGrpBx
             // 
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.CancelSailBtn);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.SellItemBtn);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.ItemDetailsLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNameDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlWatcheTypeDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNutritionQuantityDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNutritionTypeDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlBagCapacityDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlAccessoryDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlShoeTypeDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlClothingStyleDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlColourDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlSizeDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlStockLevelDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlWatcheTypeLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNutritionQuantityLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNutritionTypeLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlBagCapacityLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlAccessoryLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlShoeTypeLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlClothingStyleLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlColourLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlSizeLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlStockLevelLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlPriceDisplayLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlPriceLbl);
-            this.SelectedItemDetailsGrpBx.Controls.Add(this.DtlNameLbl);
-            this.SelectedItemDetailsGrpBx.Enabled = false;
-            this.SelectedItemDetailsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SelectedItemDetailsGrpBx.Location = new System.Drawing.Point(963, 132);
-            this.SelectedItemDetailsGrpBx.Name = "SelectedItemDetailsGrpBx";
-            this.SelectedItemDetailsGrpBx.Size = new System.Drawing.Size(297, 479);
-            this.SelectedItemDetailsGrpBx.TabIndex = 4;
-            this.SelectedItemDetailsGrpBx.TabStop = false;
-            this.SelectedItemDetailsGrpBx.Text = "Select Item Details";
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlCustomerDisplayLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlCustomerLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.CancelSailBtn);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.SellItemBtn);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.ItemDetailsLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlNameDisplayLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlSupplierDisplayLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlTypeDisplayLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlStockLevelDisplayLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlSupplierLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlTypeLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlStockLevelLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlPriceDisplayLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlPriceLbl);
+            this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlNameLbl);
+            this.PurchaseConfirmationGrpBx.Enabled = false;
+            this.PurchaseConfirmationGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PurchaseConfirmationGrpBx.Location = new System.Drawing.Point(963, 132);
+            this.PurchaseConfirmationGrpBx.Name = "PurchaseConfirmationGrpBx";
+            this.PurchaseConfirmationGrpBx.Size = new System.Drawing.Size(297, 479);
+            this.PurchaseConfirmationGrpBx.TabIndex = 4;
+            this.PurchaseConfirmationGrpBx.TabStop = false;
+            this.PurchaseConfirmationGrpBx.Text = "Purchase Confirmation";
+            // 
+            // DtlCustomerDisplayLbl
+            // 
+            this.DtlCustomerDisplayLbl.AutoSize = true;
+            this.DtlCustomerDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DtlCustomerDisplayLbl.Location = new System.Drawing.Point(25, 267);
+            this.DtlCustomerDisplayLbl.Name = "DtlCustomerDisplayLbl";
+            this.DtlCustomerDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.DtlCustomerDisplayLbl.TabIndex = 5;
+            this.DtlCustomerDisplayLbl.Text = "------";
+            // 
+            // DtlCustomerLbl
+            // 
+            this.DtlCustomerLbl.AutoSize = true;
+            this.DtlCustomerLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DtlCustomerLbl.Location = new System.Drawing.Point(19, 243);
+            this.DtlCustomerLbl.Name = "DtlCustomerLbl";
+            this.DtlCustomerLbl.Size = new System.Drawing.Size(81, 21);
+            this.DtlCustomerLbl.TabIndex = 4;
+            this.DtlCustomerLbl.Text = "Customer:";
             // 
             // CancelSailBtn
             // 
@@ -255,95 +251,25 @@
             this.DtlNameDisplayLbl.TabIndex = 0;
             this.DtlNameDisplayLbl.Text = "------";
             // 
-            // DtlWatcheTypeDisplayLbl
+            // DtlSupplierDisplayLbl
             // 
-            this.DtlWatcheTypeDisplayLbl.AutoSize = true;
-            this.DtlWatcheTypeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlWatcheTypeDisplayLbl.Location = new System.Drawing.Point(174, 302);
-            this.DtlWatcheTypeDisplayLbl.Name = "DtlWatcheTypeDisplayLbl";
-            this.DtlWatcheTypeDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlWatcheTypeDisplayLbl.TabIndex = 0;
-            this.DtlWatcheTypeDisplayLbl.Text = "------";
+            this.DtlSupplierDisplayLbl.AutoSize = true;
+            this.DtlSupplierDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DtlSupplierDisplayLbl.Location = new System.Drawing.Point(25, 203);
+            this.DtlSupplierDisplayLbl.Name = "DtlSupplierDisplayLbl";
+            this.DtlSupplierDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.DtlSupplierDisplayLbl.TabIndex = 0;
+            this.DtlSupplierDisplayLbl.Text = "------";
             // 
-            // DtlNutritionQuantityDisplayLbl
+            // DtlTypeDisplayLbl
             // 
-            this.DtlNutritionQuantityDisplayLbl.AutoSize = true;
-            this.DtlNutritionQuantityDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlNutritionQuantityDisplayLbl.Location = new System.Drawing.Point(174, 281);
-            this.DtlNutritionQuantityDisplayLbl.Name = "DtlNutritionQuantityDisplayLbl";
-            this.DtlNutritionQuantityDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlNutritionQuantityDisplayLbl.TabIndex = 0;
-            this.DtlNutritionQuantityDisplayLbl.Text = "------";
-            // 
-            // DtlNutritionTypeDisplayLbl
-            // 
-            this.DtlNutritionTypeDisplayLbl.AutoSize = true;
-            this.DtlNutritionTypeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlNutritionTypeDisplayLbl.Location = new System.Drawing.Point(174, 260);
-            this.DtlNutritionTypeDisplayLbl.Name = "DtlNutritionTypeDisplayLbl";
-            this.DtlNutritionTypeDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlNutritionTypeDisplayLbl.TabIndex = 0;
-            this.DtlNutritionTypeDisplayLbl.Text = "------";
-            // 
-            // DtlBagCapacityDisplayLbl
-            // 
-            this.DtlBagCapacityDisplayLbl.AutoSize = true;
-            this.DtlBagCapacityDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlBagCapacityDisplayLbl.Location = new System.Drawing.Point(174, 239);
-            this.DtlBagCapacityDisplayLbl.Name = "DtlBagCapacityDisplayLbl";
-            this.DtlBagCapacityDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlBagCapacityDisplayLbl.TabIndex = 0;
-            this.DtlBagCapacityDisplayLbl.Text = "------";
-            // 
-            // DtlAccessoryDisplayLbl
-            // 
-            this.DtlAccessoryDisplayLbl.AutoSize = true;
-            this.DtlAccessoryDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlAccessoryDisplayLbl.Location = new System.Drawing.Point(174, 218);
-            this.DtlAccessoryDisplayLbl.Name = "DtlAccessoryDisplayLbl";
-            this.DtlAccessoryDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlAccessoryDisplayLbl.TabIndex = 0;
-            this.DtlAccessoryDisplayLbl.Text = "------";
-            // 
-            // DtlShoeTypeDisplayLbl
-            // 
-            this.DtlShoeTypeDisplayLbl.AutoSize = true;
-            this.DtlShoeTypeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlShoeTypeDisplayLbl.Location = new System.Drawing.Point(174, 197);
-            this.DtlShoeTypeDisplayLbl.Name = "DtlShoeTypeDisplayLbl";
-            this.DtlShoeTypeDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlShoeTypeDisplayLbl.TabIndex = 0;
-            this.DtlShoeTypeDisplayLbl.Text = "------";
-            // 
-            // DtlClothingStyleDisplayLbl
-            // 
-            this.DtlClothingStyleDisplayLbl.AutoSize = true;
-            this.DtlClothingStyleDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlClothingStyleDisplayLbl.Location = new System.Drawing.Point(174, 177);
-            this.DtlClothingStyleDisplayLbl.Name = "DtlClothingStyleDisplayLbl";
-            this.DtlClothingStyleDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlClothingStyleDisplayLbl.TabIndex = 0;
-            this.DtlClothingStyleDisplayLbl.Text = "------";
-            // 
-            // DtlColourDisplayLbl
-            // 
-            this.DtlColourDisplayLbl.AutoSize = true;
-            this.DtlColourDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlColourDisplayLbl.Location = new System.Drawing.Point(174, 156);
-            this.DtlColourDisplayLbl.Name = "DtlColourDisplayLbl";
-            this.DtlColourDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlColourDisplayLbl.TabIndex = 0;
-            this.DtlColourDisplayLbl.Text = "------";
-            // 
-            // DtlSizeDisplayLbl
-            // 
-            this.DtlSizeDisplayLbl.AutoSize = true;
-            this.DtlSizeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlSizeDisplayLbl.Location = new System.Drawing.Point(174, 135);
-            this.DtlSizeDisplayLbl.Name = "DtlSizeDisplayLbl";
-            this.DtlSizeDisplayLbl.Size = new System.Drawing.Size(46, 21);
-            this.DtlSizeDisplayLbl.TabIndex = 0;
-            this.DtlSizeDisplayLbl.Text = "------";
+            this.DtlTypeDisplayLbl.AutoSize = true;
+            this.DtlTypeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DtlTypeDisplayLbl.Location = new System.Drawing.Point(174, 135);
+            this.DtlTypeDisplayLbl.Name = "DtlTypeDisplayLbl";
+            this.DtlTypeDisplayLbl.Size = new System.Drawing.Size(46, 21);
+            this.DtlTypeDisplayLbl.TabIndex = 0;
+            this.DtlTypeDisplayLbl.Text = "------";
             // 
             // DtlStockLevelDisplayLbl
             // 
@@ -355,95 +281,25 @@
             this.DtlStockLevelDisplayLbl.TabIndex = 0;
             this.DtlStockLevelDisplayLbl.Text = "------";
             // 
-            // DtlWatcheTypeLbl
+            // DtlSupplierLbl
             // 
-            this.DtlWatcheTypeLbl.AutoSize = true;
-            this.DtlWatcheTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlWatcheTypeLbl.Location = new System.Drawing.Point(28, 302);
-            this.DtlWatcheTypeLbl.Name = "DtlWatcheTypeLbl";
-            this.DtlWatcheTypeLbl.Size = new System.Drawing.Size(100, 21);
-            this.DtlWatcheTypeLbl.TabIndex = 0;
-            this.DtlWatcheTypeLbl.Text = "Watche Type:";
+            this.DtlSupplierLbl.AutoSize = true;
+            this.DtlSupplierLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DtlSupplierLbl.Location = new System.Drawing.Point(19, 180);
+            this.DtlSupplierLbl.Name = "DtlSupplierLbl";
+            this.DtlSupplierLbl.Size = new System.Drawing.Size(71, 21);
+            this.DtlSupplierLbl.TabIndex = 0;
+            this.DtlSupplierLbl.Text = "Supplier:";
             // 
-            // DtlNutritionQuantityLbl
+            // DtlTypeLbl
             // 
-            this.DtlNutritionQuantityLbl.AutoSize = true;
-            this.DtlNutritionQuantityLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlNutritionQuantityLbl.Location = new System.Drawing.Point(28, 281);
-            this.DtlNutritionQuantityLbl.Name = "DtlNutritionQuantityLbl";
-            this.DtlNutritionQuantityLbl.Size = new System.Drawing.Size(140, 21);
-            this.DtlNutritionQuantityLbl.TabIndex = 0;
-            this.DtlNutritionQuantityLbl.Text = "Nutrition Quantity:";
-            // 
-            // DtlNutritionTypeLbl
-            // 
-            this.DtlNutritionTypeLbl.AutoSize = true;
-            this.DtlNutritionTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlNutritionTypeLbl.Location = new System.Drawing.Point(28, 260);
-            this.DtlNutritionTypeLbl.Name = "DtlNutritionTypeLbl";
-            this.DtlNutritionTypeLbl.Size = new System.Drawing.Size(112, 21);
-            this.DtlNutritionTypeLbl.TabIndex = 0;
-            this.DtlNutritionTypeLbl.Text = "Nutrition Type:";
-            // 
-            // DtlBagCapacityLbl
-            // 
-            this.DtlBagCapacityLbl.AutoSize = true;
-            this.DtlBagCapacityLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlBagCapacityLbl.Location = new System.Drawing.Point(28, 239);
-            this.DtlBagCapacityLbl.Name = "DtlBagCapacityLbl";
-            this.DtlBagCapacityLbl.Size = new System.Drawing.Size(102, 21);
-            this.DtlBagCapacityLbl.TabIndex = 0;
-            this.DtlBagCapacityLbl.Text = "Bag Capacity:";
-            // 
-            // DtlAccessoryLbl
-            // 
-            this.DtlAccessoryLbl.AutoSize = true;
-            this.DtlAccessoryLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlAccessoryLbl.Location = new System.Drawing.Point(28, 218);
-            this.DtlAccessoryLbl.Name = "DtlAccessoryLbl";
-            this.DtlAccessoryLbl.Size = new System.Drawing.Size(82, 21);
-            this.DtlAccessoryLbl.TabIndex = 0;
-            this.DtlAccessoryLbl.Text = "Accessory:";
-            // 
-            // DtlShoeTypeLbl
-            // 
-            this.DtlShoeTypeLbl.AutoSize = true;
-            this.DtlShoeTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlShoeTypeLbl.Location = new System.Drawing.Point(28, 197);
-            this.DtlShoeTypeLbl.Name = "DtlShoeTypeLbl";
-            this.DtlShoeTypeLbl.Size = new System.Drawing.Size(84, 21);
-            this.DtlShoeTypeLbl.TabIndex = 0;
-            this.DtlShoeTypeLbl.Text = "Shoe Type:";
-            // 
-            // DtlClothingStyleLbl
-            // 
-            this.DtlClothingStyleLbl.AutoSize = true;
-            this.DtlClothingStyleLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlClothingStyleLbl.Location = new System.Drawing.Point(28, 177);
-            this.DtlClothingStyleLbl.Name = "DtlClothingStyleLbl";
-            this.DtlClothingStyleLbl.Size = new System.Drawing.Size(109, 21);
-            this.DtlClothingStyleLbl.TabIndex = 0;
-            this.DtlClothingStyleLbl.Text = "Clothing Style:";
-            // 
-            // DtlColourLbl
-            // 
-            this.DtlColourLbl.AutoSize = true;
-            this.DtlColourLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlColourLbl.Location = new System.Drawing.Point(28, 156);
-            this.DtlColourLbl.Name = "DtlColourLbl";
-            this.DtlColourLbl.Size = new System.Drawing.Size(60, 21);
-            this.DtlColourLbl.TabIndex = 0;
-            this.DtlColourLbl.Text = "Colour:";
-            // 
-            // DtlSizeLbl
-            // 
-            this.DtlSizeLbl.AutoSize = true;
-            this.DtlSizeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlSizeLbl.Location = new System.Drawing.Point(28, 135);
-            this.DtlSizeLbl.Name = "DtlSizeLbl";
-            this.DtlSizeLbl.Size = new System.Drawing.Size(41, 21);
-            this.DtlSizeLbl.TabIndex = 0;
-            this.DtlSizeLbl.Text = "Size:";
+            this.DtlTypeLbl.AutoSize = true;
+            this.DtlTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DtlTypeLbl.Location = new System.Drawing.Point(28, 135);
+            this.DtlTypeLbl.Name = "DtlTypeLbl";
+            this.DtlTypeLbl.Size = new System.Drawing.Size(45, 21);
+            this.DtlTypeLbl.TabIndex = 0;
+            this.DtlTypeLbl.Text = "Type:";
             // 
             // DtlStockLevelLbl
             // 
@@ -947,8 +803,8 @@
             this.NavSystemMain.ResumeLayout(false);
             this.TabShop.ResumeLayout(false);
             this.SystemControlsAGrpBx.ResumeLayout(false);
-            this.SelectedItemDetailsGrpBx.ResumeLayout(false);
-            this.SelectedItemDetailsGrpBx.PerformLayout();
+            this.PurchaseConfirmationGrpBx.ResumeLayout(false);
+            this.PurchaseConfirmationGrpBx.PerformLayout();
             this.ItemSelectionMethodGrpBx.ResumeLayout(false);
             this.ItemSelectionMethodGrpBx.PerformLayout();
             this.SelectItemGrpBx.ResumeLayout(false);
@@ -986,31 +842,17 @@
         private ComboBox SelectItemACmb;
         private Label SelectItemTypeLbl;
         private ComboBox SelectItemTypeCmb;
-        private GroupBox SelectedItemDetailsGrpBx;
+        private GroupBox PurchaseConfirmationGrpBx;
         private Label DtlNameDisplayLbl;
-        private Label DtlShoeTypeDisplayLbl;
-        private Label DtlClothingStyleDisplayLbl;
-        private Label DtlColourDisplayLbl;
-        private Label DtlSizeDisplayLbl;
+        private Label DtlSupplierDisplayLbl;
+        private Label DtlTypeDisplayLbl;
         private Label DtlStockLevelDisplayLbl;
-        private Label DtlShoeTypeLbl;
-        private Label DtlClothingStyleLbl;
-        private Label DtlColourLbl;
-        private Label DtlSizeLbl;
+        private Label DtlSupplierLbl;
+        private Label DtlTypeLbl;
         private Label DtlStockLevelLbl;
         private Label DtlPriceDisplayLbl;
         private Label DtlPriceLbl;
         private Label DtlNameLbl;
-        private Label DtlNutritionTypeDisplayLbl;
-        private Label DtlBagCapacityDisplayLbl;
-        private Label DtlAccessoryDisplayLbl;
-        private Label DtlNutritionTypeLbl;
-        private Label DtlBagCapacityLbl;
-        private Label DtlAccessoryLbl;
-        private Label DtlWatcheTypeDisplayLbl;
-        private Label DtlNutritionQuantityDisplayLbl;
-        private Label DtlWatcheTypeLbl;
-        private Label DtlNutritionQuantityLbl;
         private Label ItemDetailsLbl;
         private Button SellItemBtn;
         private Button CancelSailBtn;
@@ -1039,5 +881,7 @@
         private Button RefreshCustomersBtn;
         private Label CustomerEmailLbl;
         private Label CustomerEmailDisplayLbl;
+        private Label DtlCustomerDisplayLbl;
+        private Label DtlCustomerLbl;
     }
 }
