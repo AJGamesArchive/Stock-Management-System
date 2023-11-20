@@ -82,6 +82,19 @@ namespace Stock_Management_System
             return identifiers.ToArray();
         }
 
+        // Function to retrieve a customers details by a given Id
+        public bool getCustomerDetails(int id, out string[] details)
+        {
+            details = new string[3];
+            foreach(Customer c in Customers)
+            {
+                if(!c.hasMatchingAttribute(id)) { continue; }
+                details = c.getDetails();
+                return true;
+            }
+            return false;
+        }
+
         #endregion
 
         #region Add Data

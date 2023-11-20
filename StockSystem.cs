@@ -113,6 +113,13 @@ namespace Stock_Management_System
             return entityManager.generateSupplierIdentifierAll();
         }
 
+        // Function to return a customers details if the customer exists
+        public bool retrieveCustomerDetails(int id, out string[] details)
+        {
+            if(!entityManager.getCustomerDetails(id, out details)) { return false; }
+            return true;
+        }
+
         #endregion
     }
 }

@@ -59,6 +59,16 @@ namespace Stock_Management_System
             return $"({Id}) {Name} - {Email}";
         }
 
+        // Function to return a customers details
+        public string[] getDetails()
+        {
+            string[] details = new string[3];
+            details[0] = Name;
+            details[1] = Email;
+            details[2] = GDPR.ToString();
+            return details;
+        }
+
         #endregion
     }
 }

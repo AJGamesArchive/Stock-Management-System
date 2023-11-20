@@ -30,17 +30,17 @@ namespace Stock_Management_System
             VCPCustomerEmailCmb.Items.Clear();
             SelectSupplyerCmb.Items.Clear();
             // Update customer data combo boxes
-            string[] customerEmails = em.getCustomerEmails();
-            foreach(string email in customerEmails)
+            string[] customerIdentifiers = stockSystem.retrieveCustomerIdentifiers();
+            foreach(string identifier in customerIdentifiers)
             {
-                CustomerEmailSelectCmb.Items.Add(email);
-                VCPCustomerEmailCmb.Items.Add(email);
+                CustomerEmailSelectCmb.Items.Add(identifier);
+                VCPCustomerEmailCmb.Items.Add(identifier);
             }
             // Update supplier data combo box
-            string[] supplierNames = em.getSupplierNames();
-            foreach(string name in supplierNames)
+            string[] supplierIdentifiers = stockSystem.retrieveSupplierIdentifiers();
+            foreach(string identifier in supplierIdentifiers)
             {
-                SelectSupplyerCmb.Items.Add(name);
+                SelectSupplyerCmb.Items.Add(identifier);
             }
             return;
         }
@@ -62,142 +62,12 @@ namespace Stock_Management_System
             DtlNutritionQuantityDisplayLbl.Text = "-----";
             DtlWatcheTypeDisplayLbl.Text = "-----";
             SelectedItemDetailsGrpBx.Enabled = false;
-            // Accessory Filter Group Box
-            BagsRdBtn.Checked = false;
-            NutritionRdBtn.Checked = false;
-            WatchesRdBtn.Checked = false;
-            SelectBagCapacityCmb.Items.Clear();
-            SelectBagCapacityCmb.Enabled = false;
-            SelectNutritionTypeCmb.Items.Clear();
-            SelectNutritionTypeCmb.Enabled = false;
-            SelectNutritionQuantityCmb.Items.Clear();
-            SelectNutritionQuantityCmb.Enabled = false;
-            SelectWatcheTypeCmb.Items.Clear();
-            SelectWatcheTypeCmb.Enabled = false;
-            SelectItemDCmb.Items.Clear();
-            SelectItemDCmb.Enabled = false;
-            AccessoryFilterGrpBx.Enabled = false;
-            // Shoe Item Filter Group Box
-            RacerRdBtn.Checked = false;
-            StabilityRdBtn.Checked = false;
-            NeutralRdBtn.Checked = false;
-            TrailRdBtn.Checked = false;
-            TrackRdBtn.Checked = false;
-            SelectShoeSizeCmb.Items.Clear();
-            SelectShoeSizeCmb.Enabled = false;
-            SelectItemCCmb.Items.Clear();
-            SelectItemCCmb.Enabled = false;
-            ShoeItemFilterGrpBx.Enabled = false;
-            // Clothing Item Filter Group Box
-            ShortsRdBtn.Checked = false;
-            VestsRdBtn.Checked = false;
-            CaprisRdBtn.Checked = false;
-            TopsRdBtn.Checked = false;
-            LeggingsRdBtn.Checked = false;
-            JacketsRdBtn.Checked = false;
-            SelectClothingSizeCmb.Items.Clear();
-            SelectClothingSizeCmb.Enabled = false;
-            SelectClothingColourCmb.Items.Clear();
-            SelectClothingColourCmb.Enabled = false;
-            SelectItemBCmb.Items.Clear();
-            SelectItemBCmb.Enabled = false;
-            ClothingItemFilterGrpBx.Enabled = false;
             // Select Item Group Box
             SelectItemACmb.Items.Clear();
             SelectItemACmb.Enabled = false;
             SelectItemTypeCmb.SelectedIndex = -1;
             SelectItemTypeCmb.Enabled = false;
             SelectItemGrpBx.Enabled = false;
-        }
-
-        // Overloaded Function to output clothing item details to the GUI
-        private void shopOutputItem(Clothing item)
-        {
-            DtlNameDisplayLbl.Text = item.Name;
-            DtlPriceDisplayLbl.Text = item.Price.ToString();
-            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
-            DtlSizeDisplayLbl.Text = item.Size.ToString();
-            DtlColourDisplayLbl.Text = item.Colour;
-            DtlClothingStyleDisplayLbl.Text = item.Style.ToString();
-            DtlShoeTypeDisplayLbl.Text = "-----";
-            DtlAccessoryDisplayLbl.Text = "-----";
-            DtlBagCapacityDisplayLbl.Text = "-----";
-            DtlNutritionTypeDisplayLbl.Text = "-----";
-            DtlNutritionQuantityDisplayLbl.Text = "-----";
-            DtlWatcheTypeDisplayLbl.Text = "-----";
-            return;
-        }
-
-        // Overloaded Function to output shoe item details to the GUI
-        private void shopOutputItem(Shoe item)
-        {
-            DtlNameDisplayLbl.Text = item.Name;
-            DtlPriceDisplayLbl.Text = item.Price.ToString();
-            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
-            DtlSizeDisplayLbl.Text = item.Size.ToString();
-            DtlColourDisplayLbl.Text = "-----";
-            DtlClothingStyleDisplayLbl.Text = "-----";
-            DtlShoeTypeDisplayLbl.Text = item.Type.ToString();
-            DtlAccessoryDisplayLbl.Text = "-----";
-            DtlBagCapacityDisplayLbl.Text = "-----";
-            DtlNutritionTypeDisplayLbl.Text = "-----";
-            DtlNutritionQuantityDisplayLbl.Text = "-----";
-            DtlWatcheTypeDisplayLbl.Text = "-----";
-            return;
-        }
-
-        // Overloaded Function to output bag item details to the GUI
-        private void shopOutputItem(Bag item)
-        {
-            DtlNameDisplayLbl.Text = item.Name;
-            DtlPriceDisplayLbl.Text = item.Price.ToString();
-            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
-            DtlSizeDisplayLbl.Text = "-----";
-            DtlColourDisplayLbl.Text = "-----";
-            DtlClothingStyleDisplayLbl.Text = "-----";
-            DtlShoeTypeDisplayLbl.Text = "-----";
-            DtlAccessoryDisplayLbl.Text = "Bag";
-            DtlBagCapacityDisplayLbl.Text = item.Capacity.ToString();
-            DtlNutritionTypeDisplayLbl.Text = "-----";
-            DtlNutritionQuantityDisplayLbl.Text = "-----";
-            DtlWatcheTypeDisplayLbl.Text = "-----";
-            return;
-        }
-
-        // Overloaded Function to output nutrition item details to the GUI
-        private void shopOutputItem(Nutrition item)
-        {
-            DtlNameDisplayLbl.Text = item.Name;
-            DtlPriceDisplayLbl.Text = item.Price.ToString();
-            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
-            DtlSizeDisplayLbl.Text = "-----";
-            DtlColourDisplayLbl.Text = "-----";
-            DtlClothingStyleDisplayLbl.Text = "-----";
-            DtlShoeTypeDisplayLbl.Text = "-----";
-            DtlAccessoryDisplayLbl.Text = "Nutrition";
-            DtlBagCapacityDisplayLbl.Text = "-----";
-            DtlNutritionTypeDisplayLbl.Text = item.Type.ToString();
-            DtlNutritionQuantityDisplayLbl.Text = item.Quantity.ToString();
-            DtlWatcheTypeDisplayLbl.Text = "-----";
-            return;
-        }
-
-        // Overloaded Function to output watche item details to the GUI
-        private void shopOutputItem(Watche item)
-        {
-            DtlNameDisplayLbl.Text = item.Name;
-            DtlPriceDisplayLbl.Text = item.Price.ToString();
-            DtlStockLevelDisplayLbl.Text = item.StockLevel.ToString();
-            DtlSizeDisplayLbl.Text = "-----";
-            DtlColourDisplayLbl.Text = "-----";
-            DtlClothingStyleDisplayLbl.Text = "-----";
-            DtlShoeTypeDisplayLbl.Text = "-----";
-            DtlAccessoryDisplayLbl.Text = "Watche";
-            DtlBagCapacityDisplayLbl.Text = "-----";
-            DtlNutritionTypeDisplayLbl.Text = "-----";
-            DtlNutritionQuantityDisplayLbl.Text = "-----";
-            DtlWatcheTypeDisplayLbl.Text = item.Type.ToString();
-            return;
         }
 
         #endregion
@@ -207,10 +77,10 @@ namespace Stock_Management_System
         #region Select Customer Group Box
 
         // Open Add Customer form when the 'Add New' button is clicked
-        // Passes current entity manager instence into the 'Add Customer' form class
+        // Passes current stock system instence into the 'Add Customer' form class
         private void AddCustomerBtn_Click(object sender, EventArgs e)
         {
-            AddCustomer addCustomer = new AddCustomer(em);
+            AddCustomer addCustomer = new AddCustomer(stockSystem);
             addCustomer.Show();
             return;
         }
@@ -224,6 +94,7 @@ namespace Stock_Management_System
             ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
+            CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             return;
         }
@@ -231,18 +102,19 @@ namespace Stock_Management_System
         // Display the selected customers details to the GUI and unlock the item method selection system, if a customer is found
         private void CustomerEmailSelectCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(!em.getCustomer(CustomerEmailSelectCmb.Text, out Customer customer))
-            {
-                shopUnaccpectedError();
-                CustomerNameDisplayLbl.Text = customer.Name;
-                return;
-            }
-            CustomerNameDisplayLbl.Text = customer.Name;
-            CustomerGDPRDisplayLbl.Text = customer.GDPR.ToString();
+            if(!Tools.getEntityId(CustomerEmailSelectCmb.Text, out int id)) { shopUnaccpectedError("A valid Id could not be found for the selected customer. Please try again."); return; }
+            if(!stockSystem.retrieveCustomerDetails(id, out string[] details)) { shopUnaccpectedError("The selected customer could not be found. Please try again."); return; }
+            CustomerNameDisplayLbl.Text = details[0];
+            CustomerGDPRDisplayLbl.Text = details[2];
             ItemSelectionMethodGrpBx.Enabled = true;
+            return;
         }
 
         #endregion
+
+
+
+
 
         #region Item Selection Method Group Box
 
@@ -329,11 +201,11 @@ namespace Stock_Management_System
 
         #region View Restock Requirements By Supplier Group Box
 
-        // Open Add Customer form when the 'Add New' button is clicked
-        // Passes current entity manager instence into the 'Add Supplier' form class
+        // Open Add Supplier form when the 'Add New' button is clicked
+        // Passes current stock system instence into the 'Add Supplier' form class
         private void AddSupplyerBtn_Click(object sender, EventArgs e)
         {
-            AddSupplyer addSupplyer = new AddSupplyer(em);
+            AddSupplyer addSupplyer = new AddSupplyer(stockSystem);
             addSupplyer.Show();
             return;
         }
@@ -347,6 +219,7 @@ namespace Stock_Management_System
             ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
+            CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             return;
         }
@@ -369,14 +242,15 @@ namespace Stock_Management_System
         #region Unaccpected Error Occured
 
         // Function to handel unaccpected errors
-        private void shopUnaccpectedError()
+        private void shopUnaccpectedError(string message)
         {
             shopTabReset();
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
+            CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             CustomerEmailSelectCmb.SelectedIndex = -1;
-            MessageBox.Show("An unaccpected error has occured. Please try again or reset the form.", "Unaccpected Error");
+            MessageBox.Show(message, "Unaccpected Error");
             return;
         }
 
