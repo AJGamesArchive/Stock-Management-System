@@ -56,8 +56,8 @@ namespace Stock_Management_System
             DtlSupplierDisplayLbl.Text = "-----";
             PurchaseConfirmationGrpBx.Enabled = false;
             // Select Item Group Box
-            SelectItemACmb.Items.Clear();
-            SelectItemACmb.Enabled = false;
+            SelectItemCmb.Items.Clear();
+            SelectItemCmb.Enabled = false;
             SelectItemTypeCmb.SelectedIndex = -1;
             SelectItemTypeCmb.Enabled = false;
             SelectItemGrpBx.Enabled = false;
@@ -99,16 +99,14 @@ namespace Stock_Management_System
             if(!Tools.getEntityId(CustomerEmailSelectCmb.Text, out int id)) { shopUnaccpectedError("A valid Id could not be found for the selected customer. Please try again."); return; }
             if(!stockSystem.retrieveCustomerDetails(id, out string[] details)) { shopUnaccpectedError("The selected customer could not be found. Please try again."); return; }
             CustomerNameDisplayLbl.Text = details[0];
+            DtlCustomerDisplayLbl.Text = details[0];
+            CustomerEmailDisplayLbl.Text = details[1];
             CustomerGDPRDisplayLbl.Text = details[2];
             ItemSelectionMethodGrpBx.Enabled = true;
             return;
         }
 
         #endregion
-
-
-        
-
 
         #region Item Selection Method Group Box
 
@@ -117,13 +115,13 @@ namespace Stock_Management_System
         {
             if(!ItemNameRdBtn.Checked) { return; }
             shopTabReset();
-            string[] itemNames = im.getAllItemNames();
-            foreach(string name in itemNames)
+            string[] itemIdentifiers = stockSystem.retrieveItemIdentifiers();
+            foreach(string identifier in itemIdentifiers)
             {
-                SelectItemACmb.Items.Add(name);
+                SelectItemCmb.Items.Add(identifier);
             }
             SelectItemGrpBx.Enabled = true;
-            SelectItemACmb.Enabled = true;
+            SelectItemCmb.Enabled = true;
             return;
         }
 
@@ -142,15 +140,16 @@ namespace Stock_Management_System
         #region Select Item Group Box
 
         // Output the selected items details to the GUI when an item is selected
-        private void SelectItemACmb_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectItemCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
             PurchaseConfirmationGrpBx.Enabled = true;
-            if(im.getClothingItem(SelectItemACmb.Text, out Clothing clothing)) { shopOutputItem(clothing); return; }
-            if(im.getShoeItem(SelectItemACmb.Text, out Shoe shoe)) { shopOutputItem(shoe); return; }
-            if(im.getBagItem(SelectItemACmb.Text, out Bag bag)) { shopOutputItem(bag); return; }
-            if(im.getNutritionItem(SelectItemACmb.Text, out Nutrition nutrition)) { shopOutputItem(nutrition); return; }
-            if(im.getWatcheItem(SelectItemACmb.Text, out Watche watche)) { shopOutputItem(watche); return; }
-            shopUnaccpectedError();
+            if(!Tools.getEntityId(SelectItemCmb.Text, out int id)) { shopUnaccpectedError("A valid Id could not be found for the selected item. Please try again"); return; }
+            if(!stockSystem.retrieveCoreItemDetails(id, out string[] coreDetails)) { shopUnaccpectedError("The selected items core details could not be found. Please try again."); return; }
+            DtlNameDisplayLbl.Text = coreDetails[0];
+            DtlPriceDisplayLbl.Text = coreDetails[1];
+            DtlStockLevelDisplayLbl.Text = coreDetails[2];
+            DtlTypeDisplayLbl.Text = coreDetails[3];
+            DtlSupplierDisplayLbl.Text = coreDetails[4];
             return;
         }
 

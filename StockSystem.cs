@@ -120,6 +120,19 @@ namespace Stock_Management_System
             return true;
         }
 
+        // Function to retrieve the generated item identifier strings
+        public string[] retrieveItemIdentifiers()
+        {
+            return itemManager.generateItemIdentifiersAll();
+        }
+
+        // Function to retrieve the enerated core item details for an item based on given id
+        public bool retrieveCoreItemDetails(int id, out string[] coreDetails)
+        {
+            if(!itemManager.generateCoreItemDetails(id, out coreDetails)) { return false; }
+            return true;
+        }
+
         #endregion
     }
 }

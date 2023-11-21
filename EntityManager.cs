@@ -40,7 +40,7 @@ namespace Stock_Management_System
         {
             foreach(Supplier s in Suppliers)
             {
-                if(s.hasMatchingAttribute(id)) { continue; }
+                if(!s.hasMatchingAttribute(id)) { continue; }
                 supplier = s;
                 return true;
             }

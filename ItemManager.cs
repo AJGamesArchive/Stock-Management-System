@@ -53,6 +53,30 @@ namespace Stock_Management_System
             return Items.Count;
         }
 
+        // Function to retrieve an identifier string for every item in the system
+        public string[] generateItemIdentifiersAll()
+        {
+            List<string> identifiers = new List<string>();
+            foreach(Item i in Items)
+            {
+                identifiers.Add(i.ToString());
+            }
+            return identifiers.ToArray();
+        }
+
+        // Function to generate an array of core item details based on a given Id
+        public bool generateCoreItemDetails(int id, out string[] coreDetails)
+        {
+            foreach(Item i in Items)
+            {
+                if(!i.hasMatchingAttribute(id)) { continue; }
+                coreDetails = i.getCoreDetails();
+                return true;
+            }
+            coreDetails = new string[0];
+            return false;
+        }
+
         #endregion
 
         #region Add Data

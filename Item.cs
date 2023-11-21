@@ -63,6 +63,19 @@ namespace Stock_Management_System
             return $"({Id}) {this.GetType()} - {Name}";
         }
 
+        // Function to return the core item details
+        public string[] getCoreDetails()
+        {
+            return new string[]
+            {
+                Name,
+                Price.ToString(),
+                StockLevel.ToString(),
+                this.GetType().ToString(),
+                SupplierDetails.ToString()
+            };
+        }
+
         #endregion
 
         #region Class Responsibilities
