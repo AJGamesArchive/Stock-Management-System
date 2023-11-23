@@ -53,14 +53,45 @@ namespace Stock_Management_System
             return Items.Count;
         }
 
-        // Function to retrieve an identifier string for every item in the system
-        public string[] generateItemIdentifiersAll()
+        // Overloaded Function to retrieve an identifier string for every item in the system
+        public string[] generateItemIdentifiers()
         {
             List<string> identifiers = new List<string>();
             foreach(Item i in Items)
             {
                 identifiers.Add(i.ToString());
             }
+            return identifiers.ToArray();
+        }
+
+        // Overloaded Function to retrieve an identifier string for all of one type of item in the system
+        public string[] generateItemIdentifiers(string type)
+        {
+            List<string> identifiers = new List<string>();
+            switch (type)
+            {
+                case "Clothing":
+                    foreach(Item i in Items)
+                    {
+                        if(i is not Clothing clothing) { continue; }
+                        identifiers.Add(i.ToString());
+                    }
+                    break;
+                case "Shoe":
+                    foreach (Item i in Items)
+                    {
+                        if (i is not Shoe shoe) { continue; }
+                        identifiers.Add(i.ToString());
+                    }
+                    break;
+                case "Accessory":
+                    foreach (Item i in Items)
+                    {
+                        if (i is not Accessary accessary) { continue; }
+                        identifiers.Add(i.ToString());
+                    }
+                    break;
+            };
             return identifiers.ToArray();
         }
 

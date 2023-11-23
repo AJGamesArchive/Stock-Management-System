@@ -166,6 +166,12 @@ namespace Stock_Management_System
             return;
         }
 
+        // Updated the 'Select Item' combo box with a filtered list of items when an item type filter is selected
+        private void SelectItemTypeCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region Purchase Confirmation Group Box

@@ -485,6 +485,7 @@
             this.SelectItemTypeCmb.Name = "SelectItemTypeCmb";
             this.SelectItemTypeCmb.Size = new System.Drawing.Size(226, 46);
             this.SelectItemTypeCmb.TabIndex = 3;
+            this.SelectItemTypeCmb.SelectedIndexChanged += new System.EventHandler(this.SelectItemTypeCmb_SelectedIndexChanged);
             // 
             // SelectItemTypeLbl
             // 
