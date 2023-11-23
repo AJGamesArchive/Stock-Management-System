@@ -53,6 +53,10 @@
             this.ItemFilterRdBtn = new System.Windows.Forms.RadioButton();
             this.ItemNameRdBtn = new System.Windows.Forms.RadioButton();
             this.SelectItemGrpBx = new System.Windows.Forms.GroupBox();
+            this.CharacteristicsLbl = new System.Windows.Forms.Label();
+            this.CharacteristicsDisplayTxt = new System.Windows.Forms.TextBox();
+            this.SelectionFilterMessageLbl = new System.Windows.Forms.Label();
+            this.SelectionFilterLbl = new System.Windows.Forms.Label();
             this.SelectItemTypeCmb = new System.Windows.Forms.ComboBox();
             this.SelectItemTypeLbl = new System.Windows.Forms.Label();
             this.SelectItemCmb = new System.Windows.Forms.ComboBox();
@@ -139,7 +143,7 @@
             this.SystemControlsAGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SystemControlsAGrpBx.Name = "SystemControlsAGrpBx";
             this.SystemControlsAGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.SystemControlsAGrpBx.Size = new System.Drawing.Size(1596, 176);
+            this.SystemControlsAGrpBx.Size = new System.Drawing.Size(2141, 176);
             this.SystemControlsAGrpBx.TabIndex = 5;
             this.SystemControlsAGrpBx.TabStop = false;
             this.SystemControlsAGrpBx.Text = "System Controls";
@@ -147,7 +151,7 @@
             // ManageStockBtn
             // 
             this.ManageStockBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ManageStockBtn.Location = new System.Drawing.Point(965, 70);
+            this.ManageStockBtn.Location = new System.Drawing.Point(1195, 70);
             this.ManageStockBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ManageStockBtn.Name = "ManageStockBtn";
             this.ManageStockBtn.Size = new System.Drawing.Size(207, 62);
@@ -159,7 +163,7 @@
             // ClearFormBtn
             // 
             this.ClearFormBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ClearFormBtn.Location = new System.Drawing.Point(439, 70);
+            this.ClearFormBtn.Location = new System.Drawing.Point(669, 70);
             this.ClearFormBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ClearFormBtn.Name = "ClearFormBtn";
             this.ClearFormBtn.Size = new System.Drawing.Size(170, 62);
@@ -187,11 +191,11 @@
             this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlNameLbl);
             this.PurchaseConfirmationGrpBx.Enabled = false;
             this.PurchaseConfirmationGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PurchaseConfirmationGrpBx.Location = new System.Drawing.Point(1651, 264);
+            this.PurchaseConfirmationGrpBx.Location = new System.Drawing.Point(1318, 264);
             this.PurchaseConfirmationGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.PurchaseConfirmationGrpBx.Name = "PurchaseConfirmationGrpBx";
             this.PurchaseConfirmationGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.PurchaseConfirmationGrpBx.Size = new System.Drawing.Size(509, 958);
+            this.PurchaseConfirmationGrpBx.Size = new System.Drawing.Size(842, 770);
             this.PurchaseConfirmationGrpBx.TabIndex = 4;
             this.PurchaseConfirmationGrpBx.TabStop = false;
             this.PurchaseConfirmationGrpBx.Text = "Purchase Confirmation";
@@ -221,7 +225,7 @@
             // CancelSailBtn
             // 
             this.CancelSailBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CancelSailBtn.Location = new System.Drawing.Point(165, 842);
+            this.CancelSailBtn.Location = new System.Drawing.Point(547, 677);
             this.CancelSailBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.CancelSailBtn.Name = "CancelSailBtn";
             this.CancelSailBtn.Size = new System.Drawing.Size(175, 58);
@@ -233,7 +237,7 @@
             // SellItemBtn
             // 
             this.SellItemBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SellItemBtn.Location = new System.Drawing.Point(178, 772);
+            this.SellItemBtn.Location = new System.Drawing.Point(162, 677);
             this.SellItemBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SellItemBtn.Name = "SellItemBtn";
             this.SellItemBtn.Size = new System.Drawing.Size(147, 58);
@@ -256,7 +260,7 @@
             // 
             this.DtlNameDisplayLbl.AutoSize = true;
             this.DtlNameDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlNameDisplayLbl.Location = new System.Drawing.Point(298, 144);
+            this.DtlNameDisplayLbl.Location = new System.Drawing.Point(236, 144);
             this.DtlNameDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.DtlNameDisplayLbl.Name = "DtlNameDisplayLbl";
             this.DtlNameDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -278,7 +282,7 @@
             // 
             this.DtlTypeDisplayLbl.AutoSize = true;
             this.DtlTypeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlTypeDisplayLbl.Location = new System.Drawing.Point(298, 270);
+            this.DtlTypeDisplayLbl.Location = new System.Drawing.Point(236, 270);
             this.DtlTypeDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.DtlTypeDisplayLbl.Name = "DtlTypeDisplayLbl";
             this.DtlTypeDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -289,7 +293,7 @@
             // 
             this.DtlStockLevelDisplayLbl.AutoSize = true;
             this.DtlStockLevelDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlStockLevelDisplayLbl.Location = new System.Drawing.Point(298, 228);
+            this.DtlStockLevelDisplayLbl.Location = new System.Drawing.Point(236, 228);
             this.DtlStockLevelDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.DtlStockLevelDisplayLbl.Name = "DtlStockLevelDisplayLbl";
             this.DtlStockLevelDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -333,7 +337,7 @@
             // 
             this.DtlPriceDisplayLbl.AutoSize = true;
             this.DtlPriceDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlPriceDisplayLbl.Location = new System.Drawing.Point(298, 186);
+            this.DtlPriceDisplayLbl.Location = new System.Drawing.Point(236, 186);
             this.DtlPriceDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.DtlPriceDisplayLbl.Name = "DtlPriceDisplayLbl";
             this.DtlPriceDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -407,6 +411,10 @@
             // 
             // SelectItemGrpBx
             // 
+            this.SelectItemGrpBx.Controls.Add(this.CharacteristicsLbl);
+            this.SelectItemGrpBx.Controls.Add(this.CharacteristicsDisplayTxt);
+            this.SelectItemGrpBx.Controls.Add(this.SelectionFilterMessageLbl);
+            this.SelectItemGrpBx.Controls.Add(this.SelectionFilterLbl);
             this.SelectItemGrpBx.Controls.Add(this.SelectItemTypeCmb);
             this.SelectItemGrpBx.Controls.Add(this.SelectItemTypeLbl);
             this.SelectItemGrpBx.Controls.Add(this.SelectItemCmb);
@@ -417,10 +425,51 @@
             this.SelectItemGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SelectItemGrpBx.Name = "SelectItemGrpBx";
             this.SelectItemGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.SelectItemGrpBx.Size = new System.Drawing.Size(1596, 770);
+            this.SelectItemGrpBx.Size = new System.Drawing.Size(1263, 770);
             this.SelectItemGrpBx.TabIndex = 1;
             this.SelectItemGrpBx.TabStop = false;
             this.SelectItemGrpBx.Text = "Select Item";
+            // 
+            // CharacteristicsLbl
+            // 
+            this.CharacteristicsLbl.AutoSize = true;
+            this.CharacteristicsLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CharacteristicsLbl.Location = new System.Drawing.Point(22, 214);
+            this.CharacteristicsLbl.Name = "CharacteristicsLbl";
+            this.CharacteristicsLbl.Size = new System.Drawing.Size(170, 38);
+            this.CharacteristicsLbl.TabIndex = 7;
+            this.CharacteristicsLbl.Text = "Item Details:";
+            // 
+            // CharacteristicsDisplayTxt
+            // 
+            this.CharacteristicsDisplayTxt.Location = new System.Drawing.Point(21, 255);
+            this.CharacteristicsDisplayTxt.Multiline = true;
+            this.CharacteristicsDisplayTxt.Name = "CharacteristicsDisplayTxt";
+            this.CharacteristicsDisplayTxt.ReadOnly = true;
+            this.CharacteristicsDisplayTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.CharacteristicsDisplayTxt.Size = new System.Drawing.Size(1221, 504);
+            this.CharacteristicsDisplayTxt.TabIndex = 6;
+            // 
+            // SelectionFilterMessageLbl
+            // 
+            this.SelectionFilterMessageLbl.AutoSize = true;
+            this.SelectionFilterMessageLbl.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.SelectionFilterMessageLbl.ForeColor = System.Drawing.Color.Black;
+            this.SelectionFilterMessageLbl.Location = new System.Drawing.Point(237, 146);
+            this.SelectionFilterMessageLbl.Name = "SelectionFilterMessageLbl";
+            this.SelectionFilterMessageLbl.Size = new System.Drawing.Size(72, 38);
+            this.SelectionFilterMessageLbl.TabIndex = 5;
+            this.SelectionFilterMessageLbl.Text = "-----";
+            // 
+            // SelectionFilterLbl
+            // 
+            this.SelectionFilterLbl.AutoSize = true;
+            this.SelectionFilterLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectionFilterLbl.Location = new System.Drawing.Point(22, 146);
+            this.SelectionFilterLbl.Name = "SelectionFilterLbl";
+            this.SelectionFilterLbl.Size = new System.Drawing.Size(206, 38);
+            this.SelectionFilterLbl.TabIndex = 4;
+            this.SelectionFilterLbl.Text = "Selection Filter:";
             // 
             // SelectItemTypeCmb
             // 
@@ -431,17 +480,17 @@
             "Clothing",
             "Shoe",
             "Accessory"});
-            this.SelectItemTypeCmb.Location = new System.Drawing.Point(245, 146);
+            this.SelectItemTypeCmb.Location = new System.Drawing.Point(998, 138);
             this.SelectItemTypeCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SelectItemTypeCmb.Name = "SelectItemTypeCmb";
-            this.SelectItemTypeCmb.Size = new System.Drawing.Size(397, 46);
+            this.SelectItemTypeCmb.Size = new System.Drawing.Size(226, 46);
             this.SelectItemTypeCmb.TabIndex = 3;
             // 
             // SelectItemTypeLbl
             // 
             this.SelectItemTypeLbl.AutoSize = true;
             this.SelectItemTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectItemTypeLbl.Location = new System.Drawing.Point(22, 152);
+            this.SelectItemTypeLbl.Location = new System.Drawing.Point(775, 144);
             this.SelectItemTypeLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SelectItemTypeLbl.Name = "SelectItemTypeLbl";
             this.SelectItemTypeLbl.Size = new System.Drawing.Size(226, 38);
@@ -456,7 +505,7 @@
             this.SelectItemCmb.Location = new System.Drawing.Point(185, 72);
             this.SelectItemCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SelectItemCmb.Name = "SelectItemCmb";
-            this.SelectItemCmb.Size = new System.Drawing.Size(914, 46);
+            this.SelectItemCmb.Size = new System.Drawing.Size(1039, 46);
             this.SelectItemCmb.TabIndex = 1;
             this.SelectItemCmb.SelectedIndexChanged += new System.EventHandler(this.SelectItemCmb_SelectedIndexChanged);
             // 
@@ -948,5 +997,9 @@
         private Label CustomerEmailDisplayLbl;
         private Label DtlCustomerDisplayLbl;
         private Label DtlCustomerLbl;
+        private Label SelectionFilterLbl;
+        private Label SelectionFilterMessageLbl;
+        private TextBox CharacteristicsDisplayTxt;
+        private Label CharacteristicsLbl;
     }
 }

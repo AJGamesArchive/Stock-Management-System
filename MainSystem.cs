@@ -61,6 +61,9 @@ namespace Stock_Management_System
             SelectItemTypeCmb.SelectedIndex = -1;
             SelectItemTypeCmb.Enabled = false;
             SelectItemGrpBx.Enabled = false;
+            CharacteristicsDisplayTxt.Text = "";
+            SelectionFilterMessageLbl.Text = "-----";
+            SelectionFilterMessageLbl.ForeColor = Color.Black;
         }
 
         #endregion
@@ -122,6 +125,8 @@ namespace Stock_Management_System
             }
             SelectItemGrpBx.Enabled = true;
             SelectItemCmb.Enabled = true;
+            SelectionFilterMessageLbl.Text = "ALL ITEMS";
+            SelectionFilterMessageLbl.ForeColor = Color.ForestGreen;
             return;
         }
 
@@ -145,17 +150,25 @@ namespace Stock_Management_System
             PurchaseConfirmationGrpBx.Enabled = true;
             if(!Tools.getEntityId(SelectItemCmb.Text, out int id)) { shopUnaccpectedError("A valid Id could not be found for the selected item. Please try again"); return; }
             if(!stockSystem.retrieveCoreItemDetails(id, out string[] coreDetails)) { shopUnaccpectedError("The selected items core details could not be found. Please try again."); return; }
+            if(!stockSystem.retrieveItemCharacteristics(id, out string[] itemCharacteristics)) { shopUnaccpectedError(("The selected item's characteristics could not be found. Please try again.")); return; }
             DtlNameDisplayLbl.Text = coreDetails[0];
             DtlPriceDisplayLbl.Text = coreDetails[1];
             DtlStockLevelDisplayLbl.Text = coreDetails[2];
-            DtlTypeDisplayLbl.Text = coreDetails[3];
+            string[] typeSplit = coreDetails[3].Split(".");
+            DtlTypeDisplayLbl.Text = typeSplit[1];
             DtlSupplierDisplayLbl.Text = coreDetails[4];
+            CharacteristicsDisplayTxt.Text = "";
+            foreach (string detail in itemCharacteristics)
+            {
+                CharacteristicsDisplayTxt.Text += detail;
+                CharacteristicsDisplayTxt.Text += Environment.NewLine;
+            }
             return;
         }
 
         #endregion
 
-        #region Selected Item Details Group Box
+        #region Purchase Confirmation Group Box
 
         // Cancel the current sail when the 'Cancel Sail' button is clicked
         private void CancelSailBtn_Click(object sender, EventArgs e)

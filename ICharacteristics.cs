@@ -11,6 +11,6 @@ namespace Stock_Management_System
     {
         // Interface attributes
         string getMake();
-        Dictionary<string, string[]> getCharacteristics();
+        string[] getCharacteristics();
     }
 }

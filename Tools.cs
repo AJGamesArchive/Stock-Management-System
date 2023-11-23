@@ -33,5 +33,16 @@ namespace Stock_Management_System
             id = result;
             return true;
         }
+
+        // Function to take in an array and add all array elements to a string
+        public static string arrayToString(string[] array)
+        {
+            string s = "";
+            foreach(string element in array)
+            {
+                s += (element + ", ");
+            }
+            return s;
+        }
     }
 }

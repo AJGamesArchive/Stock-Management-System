@@ -133,6 +133,13 @@ namespace Stock_Management_System
             return true;
         }
 
+        // Function to return a string[] of the item charactoristics for a given item
+        public bool retrieveItemCharacteristics(int id, out string[] characteristics)
+        {
+            if(!itemManager.getItemCharacteristics(id, out characteristics)) { return false; }
+            return true;
+        }
+
         #endregion
     }
 }

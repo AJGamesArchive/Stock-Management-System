@@ -29,9 +29,14 @@ namespace Stock_Management_System
         }
 
         // Function to return the shoe items characteristics
-        public Dictionary<string, string[]> getCharacteristics()
+        public string[] getCharacteristics()
         {
-            return Characteristics;
+            List<string> characteristicsStrings = new List<string>();
+            foreach (var characteristic in Characteristics)
+            {
+                characteristicsStrings.Add($"{characteristic.Key} = {Tools.arrayToString(characteristic.Value)}");
+            }
+            return characteristicsStrings.ToArray();
         }
 
         #endregion

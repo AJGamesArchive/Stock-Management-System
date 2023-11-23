@@ -77,6 +77,31 @@ namespace Stock_Management_System
             return false;
         }
 
+        // Function to retrieve a string array of all the characteristics of a given item
+        public bool getItemCharacteristics(int id, out string[] characteristics)
+        {
+            characteristics = new string[0];
+            foreach(Item i in Items)
+            {
+                if(!i.hasMatchingAttribute(id)) { continue; }
+                switch(i)
+                {
+                    case Clothing clothing:
+                        characteristics = clothing.getCharacteristics();
+                        break;
+                    case Shoe shoe:
+                        characteristics = shoe.getCharacteristics();
+                        break;
+                    case Accessary accessory:
+                        characteristics = accessory.getCharacteristics();
+                        break;
+                };
+                if(characteristics.Length == 0) { return false; }
+                return true;
+            }
+            return false;
+        }
+
         #endregion
 
         #region Add Data
