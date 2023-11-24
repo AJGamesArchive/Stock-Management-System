@@ -60,7 +60,8 @@ namespace Stock_Management_System
         // Overriden Function to create a string identifier for an item
         public override string ToString()
         {
-            return $"({Id}) {this.GetType()} - {Name}";
+            string[] splitType = this.GetType().ToString().Split(".");
+            return $"({Id}) {splitType[1]} - {Name}";
         }
 
         // Function to return the core item details

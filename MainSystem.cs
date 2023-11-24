@@ -216,6 +216,8 @@ namespace Stock_Management_System
             if (!Tools.getEntityId(SelectItemCmb.Text, out int itemId)) { shopUnaccpectedError("An Id for the selected item could not be found. Please try again."); return; }
             if(!stockSystem.completePurchase(customerId, itemId)) { shopUnaccpectedError("An error occured while trying to sell the selected item to the selected customer. Please re-select the item and try again."); return; }
             shopTabReset();
+            ItemNameRdBtn.Checked = false;
+            ItemFilterRdBtn.Checked = false;
             MessageBox.Show("The purchase was completed successfully.", "Success!");
             return;
         }
