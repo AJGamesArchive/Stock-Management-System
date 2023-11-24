@@ -99,6 +99,7 @@ namespace Stock_Management_System
         // Display the selected customers details to the GUI and unlock the item method selection system, if a customer is found
         private void CustomerEmailSelectCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(CustomerEmailSelectCmb.SelectedIndex == -1) { return; }
             if(!Tools.getEntityId(CustomerEmailSelectCmb.Text, out int id)) { shopUnaccpectedError("A valid Id could not be found for the selected customer. Please try again."); return; }
             if(!stockSystem.retrieveCustomerDetails(id, out string[] details)) { shopUnaccpectedError("The selected customer could not be found. Please try again."); return; }
             CustomerNameDisplayLbl.Text = details[0];
@@ -169,7 +170,30 @@ namespace Stock_Management_System
         // Updated the 'Select Item' combo box with a filtered list of items when an item type filter is selected
         private void SelectItemTypeCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(SelectItemTypeCmb.SelectedIndex == -1) { return; }
+            SelectItemCmb.Enabled = true;
+            switch(SelectItemTypeCmb.Text)
+            {
+                case "Clothing":
+                    SelectionFilterMessageLbl.Text = "CLOTHING ITEMS";
+                    SelectionFilterMessageLbl.ForeColor = Color.Blue;
+                    break;
+                case "Shoe":
+                    SelectionFilterMessageLbl.Text = "SHOE ITEMS";
+                    SelectionFilterMessageLbl.ForeColor = Color.Red;
+                    break;
+                case "Accessory":
+                    SelectionFilterMessageLbl.Text = "ACCESSORY ITEMS";
+                    SelectionFilterMessageLbl.ForeColor = Color.Purple;
+                    break;
+            };
+            string[] spesificItemIdentifiers = stockSystem.retrieveItemIdentifiers(SelectItemTypeCmb.Text);
+            SelectItemCmb.Items.Clear();
+            foreach(string identifier in spesificItemIdentifiers)
+            {
+                SelectItemCmb.Items.Add(identifier);
+            }
+            return;
         }
 
         #endregion
@@ -182,6 +206,17 @@ namespace Stock_Management_System
             shopTabReset();
             ItemNameRdBtn.Checked = false;
             ItemFilterRdBtn.Checked = false;
+            return;
+        }
+
+        // Sell the selected item to the selected customer when the 'Sell Item' button is clicked
+        private void SellItemBtn_Click(object sender, EventArgs e)
+        {
+            if (!Tools.getEntityId(CustomerEmailSelectCmb.Text, out int customerId)) { shopUnaccpectedError("An ID for the selected customer could not be retrieved. Please try again."); return; }
+            if (!Tools.getEntityId(SelectItemCmb.Text, out int itemId)) { shopUnaccpectedError("An Id for the selected item could not be found. Please try again."); return; }
+            if(!stockSystem.completePurchase(customerId, itemId)) { shopUnaccpectedError("An error occured while trying to sell the selected item to the selected customer. Please re-select the item and try again."); return; }
+            shopTabReset();
+            MessageBox.Show("The purchase was completed successfully.", "Success!");
             return;
         }
 
@@ -258,6 +293,8 @@ namespace Stock_Management_System
         private void shopUnaccpectedError(string message)
         {
             shopTabReset();
+            ItemNameRdBtn.Checked = false;
+            ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
             CustomerNameDisplayLbl.Text = "-----";
             DtlCustomerDisplayLbl.Text = "-----";

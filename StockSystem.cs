@@ -120,10 +120,16 @@ namespace Stock_Management_System
             return true;
         }
 
-        // Function to retrieve the generated item identifier strings
+        // Overloaded Function to retrieve the generated item identifier strings
         public string[] retrieveItemIdentifiers()
         {
-            return itemManager.generateItemIdentifiersAll();
+            return itemManager.generateItemIdentifiers();
+        }
+
+        // Overloaded Function to retrieve the generated item identifiers for all the items of one type
+        public string[] retrieveItemIdentifiers(string type)
+        {
+            return itemManager.generateItemIdentifiers(type);
         }
 
         // Function to retrieve the enerated core item details for an item based on given id
@@ -139,6 +145,8 @@ namespace Stock_Management_System
             if(!itemManager.getItemCharacteristics(id, out characteristics)) { return false; }
             return true;
         }
+
+
 
         #endregion
     }

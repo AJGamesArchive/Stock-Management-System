@@ -24,6 +24,7 @@ namespace Stock_Management_System
         public static bool getEntityId(string identifier, out int id)
         {
             string[] firstSplit = identifier.Split("(");
+            if(firstSplit.Length < 2) { id = -1;  return false; }
             string[] secondSplit = firstSplit[1].Split(")");
             if (!int.TryParse(secondSplit[0], out int result))
             {

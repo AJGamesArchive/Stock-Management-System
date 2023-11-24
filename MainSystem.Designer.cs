@@ -244,6 +244,7 @@
             this.SellItemBtn.TabIndex = 2;
             this.SellItemBtn.Text = "Sell Item";
             this.SellItemBtn.UseVisualStyleBackColor = true;
+            this.SellItemBtn.Click += new System.EventHandler(this.SellItemBtn_Click);
             // 
             // ItemDetailsLbl
             // 
