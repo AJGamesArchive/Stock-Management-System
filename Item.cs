@@ -70,7 +70,7 @@ namespace Stock_Management_System
             return new string[]
             {
                 Name,
-                Price.ToString(),
+                $"£{Price.ToString()}",
                 StockLevel.ToString(),
                 this.GetType().ToString(),
                 SupplierDetails.ToString()

@@ -248,6 +248,30 @@ namespace Stock_Management_System
 
         #region Admin Tab
 
+        #region View Purchases By Customer Group Box
+
+        // Output a ustomers details and purchases when a customer is selected
+        private void VCPCustomerEmailCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(VCPCustomerEmailCmb.SelectedIndex == -1) { return; }
+            if(!Tools.getEntityId(VCPCustomerEmailCmb.Text, out int id)) { /* Insert adminTabUnaccpectedError here */ return; }
+            if(!stockSystem.retrieveCustomerDetails(id, out string[] details)) { /* Insert adminTabUnaccpectedError here */ return; }
+            if(!stockSystem.getCustomerPurchases(id, out string[] purchaseList)) { /* Insert adminTabUnaccpectedError here */ return; }
+            VCPCustomerNameDisplayLbl.Text = details[0];
+            VCPCustomerEmailDisplayLbl.Text = details[1];
+            VCPCustomerGDPRDisplayLbl.Text = details[2];
+            CustomerPurchasesOutputTxt.Text = "";
+            for(int i = 0; i < purchaseList.Length; i++)
+            {
+                if((i % 3 == 0) && (i != 0)) { CustomerPurchasesOutputTxt.Text += Environment.NewLine; }
+                CustomerPurchasesOutputTxt.Text += purchaseList[i];
+                CustomerPurchasesOutputTxt.Text += Environment.NewLine;
+            }
+            return;
+        }
+
+        #endregion
+
         #region View Restock Requirements By Supplier Group Box
 
         // Open Add Supplier form when the 'Add New' button is clicked

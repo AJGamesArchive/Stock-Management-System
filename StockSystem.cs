@@ -49,9 +49,9 @@ namespace Stock_Management_System
         }
 
         // Function to return a generated list of all purchases for a given customoer
-        public bool getCustomerPurchases(int customerId, out Dictionary<string, string>[] purchaseList)
+        public bool getCustomerPurchases(int customerId, out string[] purchaseList)
         {
-            if (!entityManager.getCustomer(customerId, out Customer customer)) { purchaseList = new Dictionary<string, string>[0]; return false; }
+            if (!entityManager.getCustomer(customerId, out Customer customer)) { purchaseList = new string[0]; return false; }
             purchaseList = customer.getPurchases();
             return true;
         }

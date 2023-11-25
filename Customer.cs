@@ -43,12 +43,15 @@ namespace Stock_Management_System
         }
 
         // Functioon to retrieve all purchases by the given customer
-        public Dictionary<string, string>[] getPurchases()
+        public string[] getPurchases()
         {
-            List<Dictionary<string, string>> purchases = new List<Dictionary<string, string>>();
-            foreach(Purchase p in Purchases)
+            List<string> purchases = new List<string>();
+            for(int i = 0; i < Purchases.Count; i++)
             {
-                purchases.Add(p.getPurchaseDetails());
+                Dictionary<string, string> details = Purchases[i].getPurchaseDetails();
+                purchases.Add($"Purchase {i + 1} - {details["Purchase Date"]}");
+                purchases.Add($"Item Purchased: {details["Item Purchased"]}");
+                purchases.Add($"Item Price: {details["Item Price"]}");
             }
             return purchases.ToArray();
         }

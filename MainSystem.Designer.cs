@@ -86,6 +86,10 @@
             this.SelectSupplyerCmb = new System.Windows.Forms.ComboBox();
             this.SelectSupplyerLbl = new System.Windows.Forms.Label();
             this.ViewPurchasesGrpBx = new System.Windows.Forms.GroupBox();
+            this.CustomerPurchasesOutputLbl = new System.Windows.Forms.Label();
+            this.CustomerPurchasesOutputTxt = new System.Windows.Forms.TextBox();
+            this.VCPCustomerEmailDisplayLbl = new System.Windows.Forms.Label();
+            this.VCPCustomerEmailOutputLbl = new System.Windows.Forms.Label();
             this.VCPCustomerNameDisplayLbl = new System.Windows.Forms.Label();
             this.VCPCustomerGDPRDisplayLbl = new System.Windows.Forms.Label();
             this.VCPCustomerGDPRLbl = new System.Windows.Forms.Label();
@@ -819,6 +823,10 @@
             // 
             // ViewPurchasesGrpBx
             // 
+            this.ViewPurchasesGrpBx.Controls.Add(this.CustomerPurchasesOutputLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.CustomerPurchasesOutputTxt);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerEmailDisplayLbl);
+            this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerEmailOutputLbl);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerNameDisplayLbl);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerGDPRDisplayLbl);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerGDPRLbl);
@@ -835,10 +843,53 @@
             this.ViewPurchasesGrpBx.TabStop = false;
             this.ViewPurchasesGrpBx.Text = "View Purchases by Customer";
             // 
+            // CustomerPurchasesOutputLbl
+            // 
+            this.CustomerPurchasesOutputLbl.AutoSize = true;
+            this.CustomerPurchasesOutputLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomerPurchasesOutputLbl.Location = new System.Drawing.Point(4, 267);
+            this.CustomerPurchasesOutputLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerPurchasesOutputLbl.Name = "CustomerPurchasesOutputLbl";
+            this.CustomerPurchasesOutputLbl.Size = new System.Drawing.Size(274, 38);
+            this.CustomerPurchasesOutputLbl.TabIndex = 12;
+            this.CustomerPurchasesOutputLbl.Text = "Customer Purchases:";
+            // 
+            // CustomerPurchasesOutputTxt
+            // 
+            this.CustomerPurchasesOutputTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CustomerPurchasesOutputTxt.Location = new System.Drawing.Point(19, 319);
+            this.CustomerPurchasesOutputTxt.Multiline = true;
+            this.CustomerPurchasesOutputTxt.Name = "CustomerPurchasesOutputTxt";
+            this.CustomerPurchasesOutputTxt.ReadOnly = true;
+            this.CustomerPurchasesOutputTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.CustomerPurchasesOutputTxt.Size = new System.Drawing.Size(1011, 699);
+            this.CustomerPurchasesOutputTxt.TabIndex = 11;
+            // 
+            // VCPCustomerEmailDisplayLbl
+            // 
+            this.VCPCustomerEmailDisplayLbl.AutoSize = true;
+            this.VCPCustomerEmailDisplayLbl.Location = new System.Drawing.Point(279, 194);
+            this.VCPCustomerEmailDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerEmailDisplayLbl.Name = "VCPCustomerEmailDisplayLbl";
+            this.VCPCustomerEmailDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.VCPCustomerEmailDisplayLbl.TabIndex = 9;
+            this.VCPCustomerEmailDisplayLbl.Text = "------";
+            // 
+            // VCPCustomerEmailOutputLbl
+            // 
+            this.VCPCustomerEmailOutputLbl.AutoSize = true;
+            this.VCPCustomerEmailOutputLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VCPCustomerEmailOutputLbl.Location = new System.Drawing.Point(54, 194);
+            this.VCPCustomerEmailOutputLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerEmailOutputLbl.Name = "VCPCustomerEmailOutputLbl";
+            this.VCPCustomerEmailOutputLbl.Size = new System.Drawing.Size(216, 38);
+            this.VCPCustomerEmailOutputLbl.TabIndex = 10;
+            this.VCPCustomerEmailOutputLbl.Text = "Customer Email:";
+            // 
             // VCPCustomerNameDisplayLbl
             // 
             this.VCPCustomerNameDisplayLbl.AutoSize = true;
-            this.VCPCustomerNameDisplayLbl.Location = new System.Drawing.Point(379, 136);
+            this.VCPCustomerNameDisplayLbl.Location = new System.Drawing.Point(279, 136);
             this.VCPCustomerNameDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.VCPCustomerNameDisplayLbl.Name = "VCPCustomerNameDisplayLbl";
             this.VCPCustomerNameDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -849,7 +900,7 @@
             // 
             this.VCPCustomerGDPRDisplayLbl.AutoSize = true;
             this.VCPCustomerGDPRDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerGDPRDisplayLbl.Location = new System.Drawing.Point(379, 194);
+            this.VCPCustomerGDPRDisplayLbl.Location = new System.Drawing.Point(947, 137);
             this.VCPCustomerGDPRDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.VCPCustomerGDPRDisplayLbl.Name = "VCPCustomerGDPRDisplayLbl";
             this.VCPCustomerGDPRDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -860,7 +911,7 @@
             // 
             this.VCPCustomerGDPRLbl.AutoSize = true;
             this.VCPCustomerGDPRLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerGDPRLbl.Location = new System.Drawing.Point(201, 194);
+            this.VCPCustomerGDPRLbl.Location = new System.Drawing.Point(769, 137);
             this.VCPCustomerGDPRLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.VCPCustomerGDPRLbl.Name = "VCPCustomerGDPRLbl";
             this.VCPCustomerGDPRLbl.Size = new System.Drawing.Size(177, 38);
@@ -871,7 +922,7 @@
             // 
             this.VCPCustomerNameLbl.AutoSize = true;
             this.VCPCustomerNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerNameLbl.Location = new System.Drawing.Point(154, 136);
+            this.VCPCustomerNameLbl.Location = new System.Drawing.Point(54, 136);
             this.VCPCustomerNameLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.VCPCustomerNameLbl.Name = "VCPCustomerNameLbl";
             this.VCPCustomerNameLbl.Size = new System.Drawing.Size(224, 38);
@@ -886,9 +937,9 @@
             this.VCPCustomerEmailLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.VCPCustomerEmailLbl.MaximumSize = new System.Drawing.Size(343, 0);
             this.VCPCustomerEmailLbl.Name = "VCPCustomerEmailLbl";
-            this.VCPCustomerEmailLbl.Size = new System.Drawing.Size(282, 76);
+            this.VCPCustomerEmailLbl.Size = new System.Drawing.Size(242, 38);
             this.VCPCustomerEmailLbl.TabIndex = 4;
-            this.VCPCustomerEmailLbl.Text = "Select a customer by email:";
+            this.VCPCustomerEmailLbl.Text = "Select a customer:";
             // 
             // VCPCustomerEmailCmb
             // 
@@ -896,13 +947,14 @@
             this.VCPCustomerEmailCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.VCPCustomerEmailCmb.FormattingEnabled = true;
             this.VCPCustomerEmailCmb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.VCPCustomerEmailCmb.Location = new System.Drawing.Point(382, 62);
+            this.VCPCustomerEmailCmb.Location = new System.Drawing.Point(287, 65);
             this.VCPCustomerEmailCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.VCPCustomerEmailCmb.MaxDropDownItems = 10;
             this.VCPCustomerEmailCmb.Name = "VCPCustomerEmailCmb";
-            this.VCPCustomerEmailCmb.Size = new System.Drawing.Size(481, 46);
+            this.VCPCustomerEmailCmb.Size = new System.Drawing.Size(759, 46);
             this.VCPCustomerEmailCmb.Sorted = true;
             this.VCPCustomerEmailCmb.TabIndex = 3;
+            this.VCPCustomerEmailCmb.SelectedIndexChanged += new System.EventHandler(this.VCPCustomerEmailCmb_SelectedIndexChanged);
             // 
             // MainSystem
             // 
@@ -1003,5 +1055,9 @@
         private Label SelectionFilterMessageLbl;
         private TextBox CharacteristicsDisplayTxt;
         private Label CharacteristicsLbl;
+        private Label VCPCustomerEmailDisplayLbl;
+        private Label VCPCustomerEmailOutputLbl;
+        private TextBox CustomerPurchasesOutputTxt;
+        private Label CustomerPurchasesOutputLbl;
     }
 }

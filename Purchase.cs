@@ -38,7 +38,7 @@ namespace Stock_Management_System
             {
                 {"Purchase Date", SaleDate.ToString()},
                 {"Item Purchased", Name},
-                {"Item Pricec", Price.ToString()}
+                {"Item Price", $"£{Price.ToString()}"}
             };
             return purchaseDetails;
         }
