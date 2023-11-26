@@ -66,6 +66,18 @@ namespace Stock_Management_System
             SelectionFilterMessageLbl.ForeColor = Color.Black;
         }
 
+        // Function to reset the state(s) and some attribute(s) of the GUI components on the admin tab
+        public void adminTabReset()
+        {
+            // Customer Purchases Group Box
+            VCPCustomerEmailCmb.SelectedIndex = -1;
+            VCPCustomerNameDisplayLbl.Text = "-----";
+            VCPCustomerEmailDisplayLbl.Text = "-----";
+            VCPCustomerGDPRDisplayLbl.Text = "-----";
+            CustomerPurchasesOutputTxt.Text = "";
+            // Supplier Restock Group Box
+        }
+
         #endregion
 
         #region Shop Tab
@@ -86,6 +98,7 @@ namespace Stock_Management_System
         {
             updateGUIData();
             shopTabReset();
+            adminTabReset();
             ItemNameRdBtn.Checked = false;
             ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
@@ -288,6 +301,7 @@ namespace Stock_Management_System
         {
             updateGUIData();
             shopTabReset();
+            adminTabReset();
             ItemNameRdBtn.Checked = false;
             ItemFilterRdBtn.Checked = false;
             ItemSelectionMethodGrpBx.Enabled = false;
@@ -306,6 +320,13 @@ namespace Stock_Management_System
         private void SellStockBtn_Click(object sender, EventArgs e)
         {
             NavSystemMain.SelectedIndex = 0;
+            return;
+        }
+
+        // Clear all outputs on the Admin Tab when the 'Clear Selection' button is clicked
+        private void ClearSelectionsBtn_Click(object sender, EventArgs e)
+        {
+            adminTabReset();
             return;
         }
 

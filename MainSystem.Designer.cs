@@ -712,6 +712,7 @@
             this.ClearSelectionsBtn.TabIndex = 2;
             this.ClearSelectionsBtn.Text = "Clear Selections";
             this.ClearSelectionsBtn.UseVisualStyleBackColor = true;
+            this.ClearSelectionsBtn.Click += new System.EventHandler(this.ClearSelectionsBtn_Click);
             // 
             // ViewRestockRequirementsGrpBx
             // 
