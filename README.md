@@ -11,10 +11,10 @@
 
 - Add a new item to the inventory (list of items sold)
 - ~~Add a new supplier~~
-- Get a list of items requiring restock by from a given supplier
-- Sell an item ~~to a new customer~~
-- Sell and item ~~to an existing customer~~
-- Get a list of all purchases by a customer
+- ~~Get a list of items requiring restock by from a given supplier~~
+- ~~Sell an item to a new customer~~
+- ~~Sell and item to an existing customer~~
+- ~~Get a list of all purchases by a customer~~
 
 ## GUI Design Information
 
@@ -22,12 +22,6 @@
 
 - Page Headers / Titles = 15
 - Standard Info Text & Input Boxes = 12
-
-## To Do
-
-- Look further into Interfaces and Overriding and find somewhere to make use of them in the OO model.
-- Look into what Overloading is.
-- Fully wwrap your head around the OO mobel.
 
 # Useful Resource
 
