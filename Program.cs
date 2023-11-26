@@ -20,6 +20,7 @@ namespace Stock_Management_System
             testData.createTestCustomers(stockSystem);
             testData.createTestSuppliers(stockSystem);
             testData.createTestItems(stockSystem);
+            testData.createTestPurchases(stockSystem);
 
             // Starting the application
             Application.Run(new MainSystem(stockSystem));

@@ -314,8 +314,8 @@ namespace Stock_Management_System
                     MessageBox.Show("Invalid test purchases were generated. Exiting Application.", "Unaccpected Error On Start-Up");
                     Application.Exit(); 
                 }
-                return;
             }
+            return;
         }
     }
 }

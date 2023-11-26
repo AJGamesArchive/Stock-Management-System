@@ -322,7 +322,11 @@ namespace Stock_Management_System
             if(SelectSupplyerCmb.SelectedIndex == -1) { return; }
             if(!Tools.getEntityId(SelectSupplyerCmb.Text, out int id)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
             if(!stockSystem.getRestockList(id, out string[] restockDetails)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
-            if(restockDetails.Length == 0) { SupplierRestockListTxt.Text = "Thereare currently no items from this supplier that are in need of restocking."; return; }
+            if(restockDetails.Length == 0) { SupplierRestockListTxt.Text = "There are currently no items from this supplier that are in need of restocking."; return; }
+            if(!stockSystem.retrieveSupplierContacts(id, out string[] contactDetails)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
+            SupplierEmailDisplayLbl.Text = contactDetails[0];
+            SupplierPhoneNumberDisplayLbl.Text = contactDetails[1];
+            SupplierRestockListTxt.Text = "";
             for(int i = 0; i < restockDetails.Length; i++)
             {
                 if((i % 4 == 0) && (i != 0)) { SupplierRestockListTxt.Text += Environment.NewLine; }

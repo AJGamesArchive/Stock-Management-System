@@ -95,6 +95,19 @@ namespace Stock_Management_System
             return false;
         }
 
+        // Function to retireve a suppliers contact details
+        public bool geSupplierContactDetails(int supplierId, out string[] contactDetails)
+        {
+            contactDetails = new string[2];
+            foreach(Supplier s in Suppliers)
+            {
+                if(!s.hasMatchingAttribute(supplierId)) { continue; }
+                contactDetails = s.getContactDetails();
+                return true;
+            }
+            return false;
+        }
+
         #endregion
 
         #region Add Data

@@ -39,6 +39,17 @@ namespace Stock_Management_System
             return $"({Id}) {Name}";
         }
 
+        // Function to createan array of a suppliers email address and phone number
+        public string[] getContactDetails()
+        {
+            string[] details =
+            {
+                Email,
+                PhoneNumber,
+            };
+            return details;
+        }
+
         #endregion
 
         #region Class Responsibilities

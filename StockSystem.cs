@@ -146,7 +146,12 @@ namespace Stock_Management_System
             return true;
         }
 
-
+        // Function to return a string[] of a given suppliers contact details
+        public bool retrieveSupplierContacts(int supplierId, out string[] contactDetails)
+        {
+            if(!entityManager.geSupplierContactDetails(supplierId, out contactDetails)) { return false; }
+            return true;
+        }
 
         #endregion
     }
