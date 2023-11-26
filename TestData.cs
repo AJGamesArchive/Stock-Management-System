@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Stock_Management_System
     public class TestData
     {
         // Creating customer test data
+        [Conditional("DEBUG")]
         public void createTestCustomers(StockSystem stockSystem)
         {
             stockSystem.enterNewCustomer("Alex Ward", "AW949@canterbury.ac.uk", true);
@@ -20,6 +22,7 @@ namespace Stock_Management_System
         }
 
         // Creating supplier test data
+        [Conditional("DEBUG")]
         public void createTestSuppliers(StockSystem stockSystem)
         {
             stockSystem.enterNewSupplier("ClothingLtd", "clothing.supplys@gmail.com", "01304591665");
@@ -29,6 +32,7 @@ namespace Stock_Management_System
         }
 
         // Creating item test data
+        [Conditional("DEBUG")]
         public void createTestItems(StockSystem stockSystem)
         {
             #region Clothing
@@ -301,6 +305,7 @@ namespace Stock_Management_System
         }
 
         // Creating purchase test data
+        [Conditional("DEBUG")]
         public void createTestPurchases(StockSystem stockSystem)
         {
             Random random = new Random();

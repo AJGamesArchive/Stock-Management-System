@@ -320,10 +320,10 @@ namespace Stock_Management_System
         private void SelectSupplyerCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(SelectSupplyerCmb.SelectedIndex == -1) { return; }
-            if(!Tools.getEntityId(SelectSupplyerCmb.Text, out int id)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
-            if(!stockSystem.getRestockList(id, out string[] restockDetails)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
+            if(!Tools.getEntityId(SelectSupplyerCmb.Text, out int id)) { adminUaccpectedError("A valid ID could not be found for the selected supplier. Please try again."); return; }
+            if(!stockSystem.getRestockList(id, out string[] restockDetails)) { adminUaccpectedError("The selected supplier could not be found. Please try again."); return; }
             if(restockDetails.Length == 0) { SupplierRestockListTxt.Text = "There are currently no items from this supplier that are in need of restocking."; return; }
-            if(!stockSystem.retrieveSupplierContacts(id, out string[] contactDetails)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
+            if(!stockSystem.retrieveSupplierContacts(id, out string[] contactDetails)) { adminUaccpectedError("The selected supplier could not be found. Please try again."); return; }
             SupplierEmailDisplayLbl.Text = contactDetails[0];
             SupplierPhoneNumberDisplayLbl.Text = contactDetails[1];
             SupplierRestockListTxt.Text = "";
@@ -360,7 +360,7 @@ namespace Stock_Management_System
 
         #region Unaccpected Error Occured
 
-        // Function to handel unaccpected errors
+        // Function to handel unaccpected errors on the shop tab
         private void shopUnaccpectedError(string message)
         {
             shopTabReset();
@@ -372,6 +372,14 @@ namespace Stock_Management_System
             CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
             CustomerEmailSelectCmb.SelectedIndex = -1;
+            MessageBox.Show(message, "Unaccpected Error");
+            return;
+        }
+
+        // Function to handel unaccpected errors on the admin tab
+        private void adminUaccpectedError(string message)
+        {
+            adminTabReset();
             MessageBox.Show(message, "Unaccpected Error");
             return;
         }
