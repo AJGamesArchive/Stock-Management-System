@@ -44,13 +44,16 @@ namespace Stock_Management_System
         #region Class Responsibilities
 
         // Function to generate a list of all the items needing restocking from a given supplier
-        public Dictionary<string, string>[] generateRestockList(Item[] items)
+        public string[] generateRestockList(Item[] items)
         {
-            List<Dictionary<string, string>> restockList = new List<Dictionary<string, string>>();
+            List<string> restockList = new List<string>();
             foreach(Item item in items)
             {
                 if(!item.getRestockDetails(out Dictionary<string, string> restockDeails)) { continue; }
-                restockList.Add(restockDeails);
+                restockList.Add($"ID: {restockDeails["Id"]}");
+                restockList.Add($"Name: {restockDeails["Name"]}");
+                restockList.Add($"Current Stock Level: {restockDeails["Current Stock Level"]}");
+                restockList.Add($"Restock Level: {restockDeails["Restock Level"]}");
             }
             return restockList.ToArray();
         }

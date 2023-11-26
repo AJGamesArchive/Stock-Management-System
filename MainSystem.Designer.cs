@@ -77,6 +77,8 @@
             this.SellStockBtn = new System.Windows.Forms.Button();
             this.ClearSelectionsBtn = new System.Windows.Forms.Button();
             this.ViewRestockRequirementsGrpBx = new System.Windows.Forms.GroupBox();
+            this.SupplierRestockListLbl = new System.Windows.Forms.Label();
+            this.SupplierRestockListTxt = new System.Windows.Forms.TextBox();
             this.RefreshSuppliersBtn = new System.Windows.Forms.Button();
             this.SupplierEmailDisplayLbl = new System.Windows.Forms.Label();
             this.AddSupplyerBtn = new System.Windows.Forms.Button();
@@ -716,6 +718,8 @@
             // 
             // ViewRestockRequirementsGrpBx
             // 
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierRestockListLbl);
+            this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierRestockListTxt);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.RefreshSuppliersBtn);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SupplierEmailDisplayLbl);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.AddSupplyerBtn);
@@ -734,6 +738,28 @@
             this.ViewRestockRequirementsGrpBx.TabStop = false;
             this.ViewRestockRequirementsGrpBx.Text = "View Restock Requirements by Supplyer";
             // 
+            // SupplierRestockListLbl
+            // 
+            this.SupplierRestockListLbl.AutoSize = true;
+            this.SupplierRestockListLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierRestockListLbl.Location = new System.Drawing.Point(45, 267);
+            this.SupplierRestockListLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SupplierRestockListLbl.Name = "SupplierRestockListLbl";
+            this.SupplierRestockListLbl.Size = new System.Drawing.Size(307, 38);
+            this.SupplierRestockListLbl.TabIndex = 13;
+            this.SupplierRestockListLbl.Text = "Items Needing Restock:";
+            // 
+            // SupplierRestockListTxt
+            // 
+            this.SupplierRestockListTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierRestockListTxt.Location = new System.Drawing.Point(30, 319);
+            this.SupplierRestockListTxt.Multiline = true;
+            this.SupplierRestockListTxt.Name = "SupplierRestockListTxt";
+            this.SupplierRestockListTxt.ReadOnly = true;
+            this.SupplierRestockListTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.SupplierRestockListTxt.Size = new System.Drawing.Size(1011, 699);
+            this.SupplierRestockListTxt.TabIndex = 13;
+            // 
             // RefreshSuppliersBtn
             // 
             this.RefreshSuppliersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -749,7 +775,7 @@
             // SupplierEmailDisplayLbl
             // 
             this.SupplierEmailDisplayLbl.AutoSize = true;
-            this.SupplierEmailDisplayLbl.Location = new System.Drawing.Point(398, 136);
+            this.SupplierEmailDisplayLbl.Location = new System.Drawing.Point(284, 136);
             this.SupplierEmailDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SupplierEmailDisplayLbl.Name = "SupplierEmailDisplayLbl";
             this.SupplierEmailDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -772,7 +798,7 @@
             // 
             this.SupplierPhoneNumberDisplayLbl.AutoSize = true;
             this.SupplierPhoneNumberDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SupplierPhoneNumberDisplayLbl.Location = new System.Drawing.Point(398, 194);
+            this.SupplierPhoneNumberDisplayLbl.Location = new System.Drawing.Point(284, 194);
             this.SupplierPhoneNumberDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SupplierPhoneNumberDisplayLbl.Name = "SupplierPhoneNumberDisplayLbl";
             this.SupplierPhoneNumberDisplayLbl.Size = new System.Drawing.Size(83, 38);
@@ -783,18 +809,18 @@
             // 
             this.SupplierPhoneNumberLbl.AutoSize = true;
             this.SupplierPhoneNumberLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierPhoneNumberLbl.Location = new System.Drawing.Point(82, 194);
+            this.SupplierPhoneNumberLbl.Location = new System.Drawing.Point(107, 195);
             this.SupplierPhoneNumberLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SupplierPhoneNumberLbl.Name = "SupplierPhoneNumberLbl";
-            this.SupplierPhoneNumberLbl.Size = new System.Drawing.Size(322, 38);
+            this.SupplierPhoneNumberLbl.Size = new System.Drawing.Size(167, 38);
             this.SupplierPhoneNumberLbl.TabIndex = 12;
-            this.SupplierPhoneNumberLbl.Text = "Supplier Phone Number:";
+            this.SupplierPhoneNumberLbl.Text = "Supplier Tel:";
             // 
             // SupplierEmailLbl
             // 
             this.SupplierEmailLbl.AutoSize = true;
             this.SupplierEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierEmailLbl.Location = new System.Drawing.Point(199, 136);
+            this.SupplierEmailLbl.Location = new System.Drawing.Point(75, 137);
             this.SupplierEmailLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SupplierEmailLbl.Name = "SupplierEmailLbl";
             this.SupplierEmailLbl.Size = new System.Drawing.Size(199, 38);
@@ -805,11 +831,12 @@
             // 
             this.SelectSupplyerCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectSupplyerCmb.FormattingEnabled = true;
-            this.SelectSupplyerCmb.Location = new System.Drawing.Point(398, 62);
+            this.SelectSupplyerCmb.Location = new System.Drawing.Point(284, 62);
             this.SelectSupplyerCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.SelectSupplyerCmb.Name = "SelectSupplyerCmb";
-            this.SelectSupplyerCmb.Size = new System.Drawing.Size(481, 46);
+            this.SelectSupplyerCmb.Size = new System.Drawing.Size(595, 46);
             this.SelectSupplyerCmb.TabIndex = 1;
+            this.SelectSupplyerCmb.SelectedIndexChanged += new System.EventHandler(this.SelectSupplyerCmb_SelectedIndexChanged);
             // 
             // SelectSupplyerLbl
             // 
@@ -818,9 +845,9 @@
             this.SelectSupplyerLbl.Location = new System.Drawing.Point(45, 68);
             this.SelectSupplyerLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.SelectSupplyerLbl.Name = "SelectSupplyerLbl";
-            this.SelectSupplyerLbl.Size = new System.Drawing.Size(363, 38);
+            this.SelectSupplyerLbl.Size = new System.Drawing.Size(229, 38);
             this.SelectSupplyerLbl.TabIndex = 0;
-            this.SelectSupplyerLbl.Text = "Select a supplyere by name:";
+            this.SelectSupplyerLbl.Text = "Select a Supplier:";
             // 
             // ViewPurchasesGrpBx
             // 
@@ -1060,5 +1087,7 @@
         private Label VCPCustomerEmailOutputLbl;
         private TextBox CustomerPurchasesOutputTxt;
         private Label CustomerPurchasesOutputLbl;
+        private TextBox SupplierRestockListTxt;
+        private Label SupplierRestockListLbl;
     }
 }

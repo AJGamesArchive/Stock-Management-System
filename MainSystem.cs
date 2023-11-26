@@ -76,6 +76,10 @@ namespace Stock_Management_System
             VCPCustomerGDPRDisplayLbl.Text = "-----";
             CustomerPurchasesOutputTxt.Text = "";
             // Supplier Restock Group Box
+            SelectSupplyerCmb.SelectedIndex = -1;
+            SupplierEmailDisplayLbl.Text = "-----";
+            SupplierPhoneNumberDisplayLbl.Text = "-----";
+            SupplierRestockListTxt.Text = "";
         }
 
         #endregion
@@ -309,6 +313,22 @@ namespace Stock_Management_System
             DtlCustomerDisplayLbl.Text = "-----";
             CustomerEmailDisplayLbl.Text = "-----";
             CustomerGDPRDisplayLbl.Text = "-----";
+            return;
+        }
+
+        // Output the generated item restock list to the GUI when a supplier is chosen
+        private void SelectSupplyerCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(SelectSupplyerCmb.SelectedIndex == -1) { return; }
+            if(!Tools.getEntityId(SelectSupplyerCmb.Text, out int id)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
+            if(!stockSystem.getRestockList(id, out string[] restockDetails)) { /* Insert Admin Tab Unaccpected Error Here */ return; }
+            if(restockDetails.Length == 0) { SupplierRestockListTxt.Text = "Thereare currently no items from this supplier that are in need of restocking."; return; }
+            for(int i = 0; i < restockDetails.Length; i++)
+            {
+                if((i % 4 == 0) && (i != 0)) { SupplierRestockListTxt.Text += Environment.NewLine; }
+                SupplierRestockListTxt.Text += restockDetails[i];
+                SupplierRestockListTxt.Text += Environment.NewLine;
+            }
             return;
         }
 

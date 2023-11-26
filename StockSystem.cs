@@ -40,9 +40,9 @@ namespace Stock_Management_System
         }
 
         // Function to return a generated list of all items needing restocking by a given supplier
-        public bool getRestockList(int supplierId, out Dictionary<string, string>[] restockList)
+        public bool getRestockList(int supplierId, out string[] restockList)
         {
-            if(!entityManager.getSupplier(supplierId, out Supplier supplier)) { restockList = new Dictionary<string, string>[0]; return false; }
+            if(!entityManager.getSupplier(supplierId, out Supplier supplier)) { restockList = new string[0]; return false; }
             Item[] items = itemManager.getItemsBySupplier(supplier);
             restockList = supplier.generateRestockList(items);
             return true;
