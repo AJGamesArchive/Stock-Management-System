@@ -259,6 +259,14 @@ namespace Stock_Management_System
             return;
         }
 
+        // Open the Add Item form when the 'Add New Item' button is clicked
+        private void AddItemBtn_Click(object sender, EventArgs e)
+        {
+            AddItem addItem = new AddItem(stockSystem);
+            addItem.Show();
+            return;
+        }
+
         #endregion
 
         #endregion

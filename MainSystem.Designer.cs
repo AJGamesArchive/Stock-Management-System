@@ -98,6 +98,7 @@
             this.VCPCustomerNameLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailCmb = new System.Windows.Forms.ComboBox();
+            this.AddItemBtn = new System.Windows.Forms.Button();
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
             this.SystemControlsAGrpBx.SuspendLayout();
@@ -142,6 +143,7 @@
             // 
             // SystemControlsAGrpBx
             // 
+            this.SystemControlsAGrpBx.Controls.Add(this.AddItemBtn);
             this.SystemControlsAGrpBx.Controls.Add(this.ManageStockBtn);
             this.SystemControlsAGrpBx.Controls.Add(this.ClearFormBtn);
             this.SystemControlsAGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -984,6 +986,18 @@
             this.VCPCustomerEmailCmb.TabIndex = 3;
             this.VCPCustomerEmailCmb.SelectedIndexChanged += new System.EventHandler(this.VCPCustomerEmailCmb_SelectedIndexChanged);
             // 
+            // AddItemBtn
+            // 
+            this.AddItemBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddItemBtn.Location = new System.Drawing.Point(913, 70);
+            this.AddItemBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.AddItemBtn.Name = "AddItemBtn";
+            this.AddItemBtn.Size = new System.Drawing.Size(211, 62);
+            this.AddItemBtn.TabIndex = 1;
+            this.AddItemBtn.Text = "Add New Item";
+            this.AddItemBtn.UseVisualStyleBackColor = true;
+            this.AddItemBtn.Click += new System.EventHandler(this.AddItemBtn_Click);
+            // 
             // MainSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
@@ -1089,5 +1103,6 @@
         private Label CustomerPurchasesOutputLbl;
         private TextBox SupplierRestockListTxt;
         private Label SupplierRestockListLbl;
+        private Button AddItemBtn;
     }
 }
