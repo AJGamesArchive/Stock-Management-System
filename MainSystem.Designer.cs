@@ -31,6 +31,7 @@
             this.NavSystemMain = new System.Windows.Forms.TabControl();
             this.TabShop = new System.Windows.Forms.TabPage();
             this.SystemControlsAGrpBx = new System.Windows.Forms.GroupBox();
+            this.AddItemBtn = new System.Windows.Forms.Button();
             this.ManageStockBtn = new System.Windows.Forms.Button();
             this.ClearFormBtn = new System.Windows.Forms.Button();
             this.PurchaseConfirmationGrpBx = new System.Windows.Forms.GroupBox();
@@ -98,7 +99,6 @@
             this.VCPCustomerNameLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailLbl = new System.Windows.Forms.Label();
             this.VCPCustomerEmailCmb = new System.Windows.Forms.ComboBox();
-            this.AddItemBtn = new System.Windows.Forms.Button();
             this.NavSystemMain.SuspendLayout();
             this.TabShop.SuspendLayout();
             this.SystemControlsAGrpBx.SuspendLayout();
@@ -118,11 +118,11 @@
             this.NavSystemMain.Controls.Add(this.TabShop);
             this.NavSystemMain.Controls.Add(this.TabAdmin);
             this.NavSystemMain.ItemSize = new System.Drawing.Size(0, 1);
-            this.NavSystemMain.Location = new System.Drawing.Point(10, 12);
-            this.NavSystemMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NavSystemMain.Location = new System.Drawing.Point(6, 6);
+            this.NavSystemMain.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.NavSystemMain.Name = "NavSystemMain";
             this.NavSystemMain.SelectedIndex = 0;
-            this.NavSystemMain.Size = new System.Drawing.Size(2186, 1258);
+            this.NavSystemMain.Size = new System.Drawing.Size(1275, 629);
             this.NavSystemMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.NavSystemMain.TabIndex = 0;
             // 
@@ -134,9 +134,9 @@
             this.TabShop.Controls.Add(this.SelectItemGrpBx);
             this.TabShop.Controls.Add(this.SelectCustomerGrpBx);
             this.TabShop.Location = new System.Drawing.Point(4, 5);
-            this.TabShop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TabShop.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TabShop.Name = "TabShop";
-            this.TabShop.Size = new System.Drawing.Size(2178, 1249);
+            this.TabShop.Size = new System.Drawing.Size(1267, 620);
             this.TabShop.TabIndex = 2;
             this.TabShop.Text = "ShopTab";
             this.TabShop.UseVisualStyleBackColor = true;
@@ -147,22 +147,30 @@
             this.SystemControlsAGrpBx.Controls.Add(this.ManageStockBtn);
             this.SystemControlsAGrpBx.Controls.Add(this.ClearFormBtn);
             this.SystemControlsAGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SystemControlsAGrpBx.Location = new System.Drawing.Point(19, 1046);
-            this.SystemControlsAGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SystemControlsAGrpBx.Location = new System.Drawing.Point(11, 523);
             this.SystemControlsAGrpBx.Name = "SystemControlsAGrpBx";
-            this.SystemControlsAGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.SystemControlsAGrpBx.Size = new System.Drawing.Size(2141, 176);
+            this.SystemControlsAGrpBx.Size = new System.Drawing.Size(1249, 88);
             this.SystemControlsAGrpBx.TabIndex = 5;
             this.SystemControlsAGrpBx.TabStop = false;
             this.SystemControlsAGrpBx.Text = "System Controls";
             // 
+            // AddItemBtn
+            // 
+            this.AddItemBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddItemBtn.Location = new System.Drawing.Point(533, 35);
+            this.AddItemBtn.Name = "AddItemBtn";
+            this.AddItemBtn.Size = new System.Drawing.Size(123, 31);
+            this.AddItemBtn.TabIndex = 1;
+            this.AddItemBtn.Text = "Add New Item";
+            this.AddItemBtn.UseVisualStyleBackColor = true;
+            this.AddItemBtn.Click += new System.EventHandler(this.AddItemBtn_Click);
+            // 
             // ManageStockBtn
             // 
             this.ManageStockBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ManageStockBtn.Location = new System.Drawing.Point(1195, 70);
-            this.ManageStockBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ManageStockBtn.Location = new System.Drawing.Point(697, 35);
             this.ManageStockBtn.Name = "ManageStockBtn";
-            this.ManageStockBtn.Size = new System.Drawing.Size(207, 62);
+            this.ManageStockBtn.Size = new System.Drawing.Size(121, 31);
             this.ManageStockBtn.TabIndex = 0;
             this.ManageStockBtn.Text = "Manage Stock";
             this.ManageStockBtn.UseVisualStyleBackColor = true;
@@ -171,10 +179,9 @@
             // ClearFormBtn
             // 
             this.ClearFormBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ClearFormBtn.Location = new System.Drawing.Point(669, 70);
-            this.ClearFormBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ClearFormBtn.Location = new System.Drawing.Point(390, 35);
             this.ClearFormBtn.Name = "ClearFormBtn";
-            this.ClearFormBtn.Size = new System.Drawing.Size(170, 62);
+            this.ClearFormBtn.Size = new System.Drawing.Size(99, 31);
             this.ClearFormBtn.TabIndex = 0;
             this.ClearFormBtn.Text = "Clear Form";
             this.ClearFormBtn.UseVisualStyleBackColor = true;
@@ -199,11 +206,9 @@
             this.PurchaseConfirmationGrpBx.Controls.Add(this.DtlNameLbl);
             this.PurchaseConfirmationGrpBx.Enabled = false;
             this.PurchaseConfirmationGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.PurchaseConfirmationGrpBx.Location = new System.Drawing.Point(1318, 264);
-            this.PurchaseConfirmationGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.PurchaseConfirmationGrpBx.Location = new System.Drawing.Point(769, 132);
             this.PurchaseConfirmationGrpBx.Name = "PurchaseConfirmationGrpBx";
-            this.PurchaseConfirmationGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.PurchaseConfirmationGrpBx.Size = new System.Drawing.Size(842, 770);
+            this.PurchaseConfirmationGrpBx.Size = new System.Drawing.Size(491, 385);
             this.PurchaseConfirmationGrpBx.TabIndex = 4;
             this.PurchaseConfirmationGrpBx.TabStop = false;
             this.PurchaseConfirmationGrpBx.Text = "Purchase Confirmation";
@@ -212,10 +217,9 @@
             // 
             this.DtlCustomerDisplayLbl.AutoSize = true;
             this.DtlCustomerDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlCustomerDisplayLbl.Location = new System.Drawing.Point(43, 534);
-            this.DtlCustomerDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlCustomerDisplayLbl.Location = new System.Drawing.Point(25, 267);
             this.DtlCustomerDisplayLbl.Name = "DtlCustomerDisplayLbl";
-            this.DtlCustomerDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.DtlCustomerDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.DtlCustomerDisplayLbl.TabIndex = 5;
             this.DtlCustomerDisplayLbl.Text = "------";
             // 
@@ -223,20 +227,18 @@
             // 
             this.DtlCustomerLbl.AutoSize = true;
             this.DtlCustomerLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlCustomerLbl.Location = new System.Drawing.Point(33, 486);
-            this.DtlCustomerLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlCustomerLbl.Location = new System.Drawing.Point(19, 243);
             this.DtlCustomerLbl.Name = "DtlCustomerLbl";
-            this.DtlCustomerLbl.Size = new System.Drawing.Size(142, 38);
+            this.DtlCustomerLbl.Size = new System.Drawing.Size(81, 21);
             this.DtlCustomerLbl.TabIndex = 4;
             this.DtlCustomerLbl.Text = "Customer:";
             // 
             // CancelSailBtn
             // 
             this.CancelSailBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CancelSailBtn.Location = new System.Drawing.Point(547, 677);
-            this.CancelSailBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.CancelSailBtn.Location = new System.Drawing.Point(319, 338);
             this.CancelSailBtn.Name = "CancelSailBtn";
-            this.CancelSailBtn.Size = new System.Drawing.Size(175, 58);
+            this.CancelSailBtn.Size = new System.Drawing.Size(102, 29);
             this.CancelSailBtn.TabIndex = 3;
             this.CancelSailBtn.Text = "Cancel Sail";
             this.CancelSailBtn.UseVisualStyleBackColor = true;
@@ -245,10 +247,9 @@
             // SellItemBtn
             // 
             this.SellItemBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SellItemBtn.Location = new System.Drawing.Point(162, 677);
-            this.SellItemBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SellItemBtn.Location = new System.Drawing.Point(94, 338);
             this.SellItemBtn.Name = "SellItemBtn";
-            this.SellItemBtn.Size = new System.Drawing.Size(147, 58);
+            this.SellItemBtn.Size = new System.Drawing.Size(86, 29);
             this.SellItemBtn.TabIndex = 2;
             this.SellItemBtn.Text = "Sell Item";
             this.SellItemBtn.UseVisualStyleBackColor = true;
@@ -258,10 +259,9 @@
             // 
             this.ItemDetailsLbl.AutoSize = true;
             this.ItemDetailsLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ItemDetailsLbl.Location = new System.Drawing.Point(33, 72);
-            this.ItemDetailsLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.ItemDetailsLbl.Location = new System.Drawing.Point(19, 36);
             this.ItemDetailsLbl.Name = "ItemDetailsLbl";
-            this.ItemDetailsLbl.Size = new System.Drawing.Size(170, 38);
+            this.ItemDetailsLbl.Size = new System.Drawing.Size(95, 21);
             this.ItemDetailsLbl.TabIndex = 1;
             this.ItemDetailsLbl.Text = "Item Details:";
             // 
@@ -269,10 +269,9 @@
             // 
             this.DtlNameDisplayLbl.AutoSize = true;
             this.DtlNameDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlNameDisplayLbl.Location = new System.Drawing.Point(236, 144);
-            this.DtlNameDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlNameDisplayLbl.Location = new System.Drawing.Point(138, 72);
             this.DtlNameDisplayLbl.Name = "DtlNameDisplayLbl";
-            this.DtlNameDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.DtlNameDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.DtlNameDisplayLbl.TabIndex = 0;
             this.DtlNameDisplayLbl.Text = "------";
             // 
@@ -280,10 +279,9 @@
             // 
             this.DtlSupplierDisplayLbl.AutoSize = true;
             this.DtlSupplierDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlSupplierDisplayLbl.Location = new System.Drawing.Point(43, 406);
-            this.DtlSupplierDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlSupplierDisplayLbl.Location = new System.Drawing.Point(25, 203);
             this.DtlSupplierDisplayLbl.Name = "DtlSupplierDisplayLbl";
-            this.DtlSupplierDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.DtlSupplierDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.DtlSupplierDisplayLbl.TabIndex = 0;
             this.DtlSupplierDisplayLbl.Text = "------";
             // 
@@ -291,10 +289,9 @@
             // 
             this.DtlTypeDisplayLbl.AutoSize = true;
             this.DtlTypeDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlTypeDisplayLbl.Location = new System.Drawing.Point(236, 270);
-            this.DtlTypeDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlTypeDisplayLbl.Location = new System.Drawing.Point(138, 135);
             this.DtlTypeDisplayLbl.Name = "DtlTypeDisplayLbl";
-            this.DtlTypeDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.DtlTypeDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.DtlTypeDisplayLbl.TabIndex = 0;
             this.DtlTypeDisplayLbl.Text = "------";
             // 
@@ -302,10 +299,9 @@
             // 
             this.DtlStockLevelDisplayLbl.AutoSize = true;
             this.DtlStockLevelDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlStockLevelDisplayLbl.Location = new System.Drawing.Point(236, 228);
-            this.DtlStockLevelDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlStockLevelDisplayLbl.Location = new System.Drawing.Point(138, 114);
             this.DtlStockLevelDisplayLbl.Name = "DtlStockLevelDisplayLbl";
-            this.DtlStockLevelDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.DtlStockLevelDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.DtlStockLevelDisplayLbl.TabIndex = 0;
             this.DtlStockLevelDisplayLbl.Text = "------";
             // 
@@ -313,10 +309,9 @@
             // 
             this.DtlSupplierLbl.AutoSize = true;
             this.DtlSupplierLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlSupplierLbl.Location = new System.Drawing.Point(33, 360);
-            this.DtlSupplierLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlSupplierLbl.Location = new System.Drawing.Point(19, 180);
             this.DtlSupplierLbl.Name = "DtlSupplierLbl";
-            this.DtlSupplierLbl.Size = new System.Drawing.Size(125, 38);
+            this.DtlSupplierLbl.Size = new System.Drawing.Size(71, 21);
             this.DtlSupplierLbl.TabIndex = 0;
             this.DtlSupplierLbl.Text = "Supplier:";
             // 
@@ -324,10 +319,9 @@
             // 
             this.DtlTypeLbl.AutoSize = true;
             this.DtlTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlTypeLbl.Location = new System.Drawing.Point(48, 270);
-            this.DtlTypeLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlTypeLbl.Location = new System.Drawing.Point(28, 135);
             this.DtlTypeLbl.Name = "DtlTypeLbl";
-            this.DtlTypeLbl.Size = new System.Drawing.Size(81, 38);
+            this.DtlTypeLbl.Size = new System.Drawing.Size(45, 21);
             this.DtlTypeLbl.TabIndex = 0;
             this.DtlTypeLbl.Text = "Type:";
             // 
@@ -335,10 +329,9 @@
             // 
             this.DtlStockLevelLbl.AutoSize = true;
             this.DtlStockLevelLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlStockLevelLbl.Location = new System.Drawing.Point(48, 228);
-            this.DtlStockLevelLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlStockLevelLbl.Location = new System.Drawing.Point(28, 114);
             this.DtlStockLevelLbl.Name = "DtlStockLevelLbl";
-            this.DtlStockLevelLbl.Size = new System.Drawing.Size(160, 38);
+            this.DtlStockLevelLbl.Size = new System.Drawing.Size(90, 21);
             this.DtlStockLevelLbl.TabIndex = 0;
             this.DtlStockLevelLbl.Text = "Stock Level:";
             // 
@@ -346,10 +339,9 @@
             // 
             this.DtlPriceDisplayLbl.AutoSize = true;
             this.DtlPriceDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DtlPriceDisplayLbl.Location = new System.Drawing.Point(236, 186);
-            this.DtlPriceDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlPriceDisplayLbl.Location = new System.Drawing.Point(138, 93);
             this.DtlPriceDisplayLbl.Name = "DtlPriceDisplayLbl";
-            this.DtlPriceDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.DtlPriceDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.DtlPriceDisplayLbl.TabIndex = 0;
             this.DtlPriceDisplayLbl.Text = "------";
             // 
@@ -357,10 +349,9 @@
             // 
             this.DtlPriceLbl.AutoSize = true;
             this.DtlPriceLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlPriceLbl.Location = new System.Drawing.Point(48, 186);
-            this.DtlPriceLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlPriceLbl.Location = new System.Drawing.Point(28, 93);
             this.DtlPriceLbl.Name = "DtlPriceLbl";
-            this.DtlPriceLbl.Size = new System.Drawing.Size(84, 38);
+            this.DtlPriceLbl.Size = new System.Drawing.Size(47, 21);
             this.DtlPriceLbl.TabIndex = 0;
             this.DtlPriceLbl.Text = "Price:";
             // 
@@ -368,10 +359,9 @@
             // 
             this.DtlNameLbl.AutoSize = true;
             this.DtlNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DtlNameLbl.Location = new System.Drawing.Point(48, 144);
-            this.DtlNameLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DtlNameLbl.Location = new System.Drawing.Point(28, 72);
             this.DtlNameLbl.Name = "DtlNameLbl";
-            this.DtlNameLbl.Size = new System.Drawing.Size(97, 38);
+            this.DtlNameLbl.Size = new System.Drawing.Size(55, 21);
             this.DtlNameLbl.TabIndex = 0;
             this.DtlNameLbl.Text = "Name:";
             // 
@@ -381,11 +371,9 @@
             this.ItemSelectionMethodGrpBx.Controls.Add(this.ItemNameRdBtn);
             this.ItemSelectionMethodGrpBx.Enabled = false;
             this.ItemSelectionMethodGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ItemSelectionMethodGrpBx.Location = new System.Drawing.Point(1651, 6);
-            this.ItemSelectionMethodGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ItemSelectionMethodGrpBx.Location = new System.Drawing.Point(963, 3);
             this.ItemSelectionMethodGrpBx.Name = "ItemSelectionMethodGrpBx";
-            this.ItemSelectionMethodGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ItemSelectionMethodGrpBx.Size = new System.Drawing.Size(509, 248);
+            this.ItemSelectionMethodGrpBx.Size = new System.Drawing.Size(297, 124);
             this.ItemSelectionMethodGrpBx.TabIndex = 1;
             this.ItemSelectionMethodGrpBx.TabStop = false;
             this.ItemSelectionMethodGrpBx.Text = "Item Selection Method";
@@ -394,10 +382,9 @@
             // 
             this.ItemFilterRdBtn.AutoSize = true;
             this.ItemFilterRdBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ItemFilterRdBtn.Location = new System.Drawing.Point(58, 148);
-            this.ItemFilterRdBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ItemFilterRdBtn.Location = new System.Drawing.Point(34, 74);
             this.ItemFilterRdBtn.Name = "ItemFilterRdBtn";
-            this.ItemFilterRdBtn.Size = new System.Drawing.Size(287, 42);
+            this.ItemFilterRdBtn.Size = new System.Drawing.Size(164, 25);
             this.ItemFilterRdBtn.TabIndex = 2;
             this.ItemFilterRdBtn.TabStop = true;
             this.ItemFilterRdBtn.Text = "Select by Item Filter";
@@ -408,10 +395,9 @@
             // 
             this.ItemNameRdBtn.AutoSize = true;
             this.ItemNameRdBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ItemNameRdBtn.Location = new System.Drawing.Point(58, 74);
-            this.ItemNameRdBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ItemNameRdBtn.Location = new System.Drawing.Point(34, 37);
             this.ItemNameRdBtn.Name = "ItemNameRdBtn";
-            this.ItemNameRdBtn.Size = new System.Drawing.Size(299, 42);
+            this.ItemNameRdBtn.Size = new System.Drawing.Size(171, 25);
             this.ItemNameRdBtn.TabIndex = 2;
             this.ItemNameRdBtn.TabStop = true;
             this.ItemNameRdBtn.Text = "Select by Item Name";
@@ -430,11 +416,9 @@
             this.SelectItemGrpBx.Controls.Add(this.SelectItemALbl);
             this.SelectItemGrpBx.Enabled = false;
             this.SelectItemGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SelectItemGrpBx.Location = new System.Drawing.Point(19, 264);
-            this.SelectItemGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SelectItemGrpBx.Location = new System.Drawing.Point(11, 132);
             this.SelectItemGrpBx.Name = "SelectItemGrpBx";
-            this.SelectItemGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.SelectItemGrpBx.Size = new System.Drawing.Size(1263, 770);
+            this.SelectItemGrpBx.Size = new System.Drawing.Size(737, 385);
             this.SelectItemGrpBx.TabIndex = 1;
             this.SelectItemGrpBx.TabStop = false;
             this.SelectItemGrpBx.Text = "Select Item";
@@ -443,20 +427,22 @@
             // 
             this.CharacteristicsLbl.AutoSize = true;
             this.CharacteristicsLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CharacteristicsLbl.Location = new System.Drawing.Point(22, 214);
+            this.CharacteristicsLbl.Location = new System.Drawing.Point(13, 107);
+            this.CharacteristicsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CharacteristicsLbl.Name = "CharacteristicsLbl";
-            this.CharacteristicsLbl.Size = new System.Drawing.Size(170, 38);
+            this.CharacteristicsLbl.Size = new System.Drawing.Size(95, 21);
             this.CharacteristicsLbl.TabIndex = 7;
             this.CharacteristicsLbl.Text = "Item Details:";
             // 
             // CharacteristicsDisplayTxt
             // 
-            this.CharacteristicsDisplayTxt.Location = new System.Drawing.Point(21, 255);
+            this.CharacteristicsDisplayTxt.Location = new System.Drawing.Point(12, 128);
+            this.CharacteristicsDisplayTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CharacteristicsDisplayTxt.Multiline = true;
             this.CharacteristicsDisplayTxt.Name = "CharacteristicsDisplayTxt";
             this.CharacteristicsDisplayTxt.ReadOnly = true;
             this.CharacteristicsDisplayTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.CharacteristicsDisplayTxt.Size = new System.Drawing.Size(1221, 504);
+            this.CharacteristicsDisplayTxt.Size = new System.Drawing.Size(714, 254);
             this.CharacteristicsDisplayTxt.TabIndex = 6;
             // 
             // SelectionFilterMessageLbl
@@ -464,9 +450,10 @@
             this.SelectionFilterMessageLbl.AutoSize = true;
             this.SelectionFilterMessageLbl.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.SelectionFilterMessageLbl.ForeColor = System.Drawing.Color.Black;
-            this.SelectionFilterMessageLbl.Location = new System.Drawing.Point(237, 146);
+            this.SelectionFilterMessageLbl.Location = new System.Drawing.Point(138, 73);
+            this.SelectionFilterMessageLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SelectionFilterMessageLbl.Name = "SelectionFilterMessageLbl";
-            this.SelectionFilterMessageLbl.Size = new System.Drawing.Size(72, 38);
+            this.SelectionFilterMessageLbl.Size = new System.Drawing.Size(40, 21);
             this.SelectionFilterMessageLbl.TabIndex = 5;
             this.SelectionFilterMessageLbl.Text = "-----";
             // 
@@ -474,9 +461,10 @@
             // 
             this.SelectionFilterLbl.AutoSize = true;
             this.SelectionFilterLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectionFilterLbl.Location = new System.Drawing.Point(22, 146);
+            this.SelectionFilterLbl.Location = new System.Drawing.Point(13, 73);
+            this.SelectionFilterLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SelectionFilterLbl.Name = "SelectionFilterLbl";
-            this.SelectionFilterLbl.Size = new System.Drawing.Size(206, 38);
+            this.SelectionFilterLbl.Size = new System.Drawing.Size(115, 21);
             this.SelectionFilterLbl.TabIndex = 4;
             this.SelectionFilterLbl.Text = "Selection Filter:";
             // 
@@ -489,10 +477,9 @@
             "Clothing",
             "Shoe",
             "Accessory"});
-            this.SelectItemTypeCmb.Location = new System.Drawing.Point(998, 138);
-            this.SelectItemTypeCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SelectItemTypeCmb.Location = new System.Drawing.Point(582, 69);
             this.SelectItemTypeCmb.Name = "SelectItemTypeCmb";
-            this.SelectItemTypeCmb.Size = new System.Drawing.Size(226, 46);
+            this.SelectItemTypeCmb.Size = new System.Drawing.Size(134, 29);
             this.SelectItemTypeCmb.TabIndex = 3;
             this.SelectItemTypeCmb.SelectedIndexChanged += new System.EventHandler(this.SelectItemTypeCmb_SelectedIndexChanged);
             // 
@@ -500,10 +487,9 @@
             // 
             this.SelectItemTypeLbl.AutoSize = true;
             this.SelectItemTypeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectItemTypeLbl.Location = new System.Drawing.Point(775, 144);
-            this.SelectItemTypeLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SelectItemTypeLbl.Location = new System.Drawing.Point(452, 72);
             this.SelectItemTypeLbl.Name = "SelectItemTypeLbl";
-            this.SelectItemTypeLbl.Size = new System.Drawing.Size(226, 38);
+            this.SelectItemTypeLbl.Size = new System.Drawing.Size(125, 21);
             this.SelectItemTypeLbl.TabIndex = 2;
             this.SelectItemTypeLbl.Text = "Select Item Type:";
             // 
@@ -512,10 +498,9 @@
             this.SelectItemCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectItemCmb.Enabled = false;
             this.SelectItemCmb.FormattingEnabled = true;
-            this.SelectItemCmb.Location = new System.Drawing.Point(185, 72);
-            this.SelectItemCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SelectItemCmb.Location = new System.Drawing.Point(108, 36);
             this.SelectItemCmb.Name = "SelectItemCmb";
-            this.SelectItemCmb.Size = new System.Drawing.Size(1039, 46);
+            this.SelectItemCmb.Size = new System.Drawing.Size(608, 29);
             this.SelectItemCmb.TabIndex = 1;
             this.SelectItemCmb.SelectedIndexChanged += new System.EventHandler(this.SelectItemCmb_SelectedIndexChanged);
             // 
@@ -523,10 +508,9 @@
             // 
             this.SelectItemALbl.AutoSize = true;
             this.SelectItemALbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectItemALbl.Location = new System.Drawing.Point(22, 78);
-            this.SelectItemALbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SelectItemALbl.Location = new System.Drawing.Point(13, 39);
             this.SelectItemALbl.Name = "SelectItemALbl";
-            this.SelectItemALbl.Size = new System.Drawing.Size(160, 38);
+            this.SelectItemALbl.Size = new System.Drawing.Size(89, 21);
             this.SelectItemALbl.TabIndex = 0;
             this.SelectItemALbl.Text = "Select Item:";
             // 
@@ -543,11 +527,9 @@
             this.SelectCustomerGrpBx.Controls.Add(this.CustomerEmailSelectLbl);
             this.SelectCustomerGrpBx.Controls.Add(this.CustomerEmailSelectCmb);
             this.SelectCustomerGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SelectCustomerGrpBx.Location = new System.Drawing.Point(19, 6);
-            this.SelectCustomerGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SelectCustomerGrpBx.Location = new System.Drawing.Point(11, 3);
             this.SelectCustomerGrpBx.Name = "SelectCustomerGrpBx";
-            this.SelectCustomerGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.SelectCustomerGrpBx.Size = new System.Drawing.Size(1596, 248);
+            this.SelectCustomerGrpBx.Size = new System.Drawing.Size(931, 124);
             this.SelectCustomerGrpBx.TabIndex = 0;
             this.SelectCustomerGrpBx.TabStop = false;
             this.SelectCustomerGrpBx.Text = "Select Customer";
@@ -556,30 +538,27 @@
             // 
             this.CustomerEmailLbl.AutoSize = true;
             this.CustomerEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CustomerEmailLbl.Location = new System.Drawing.Point(147, 184);
-            this.CustomerEmailLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerEmailLbl.Location = new System.Drawing.Point(86, 92);
             this.CustomerEmailLbl.Name = "CustomerEmailLbl";
-            this.CustomerEmailLbl.Size = new System.Drawing.Size(216, 38);
+            this.CustomerEmailLbl.Size = new System.Drawing.Size(123, 21);
             this.CustomerEmailLbl.TabIndex = 17;
             this.CustomerEmailLbl.Text = "Customer Email:";
             // 
             // CustomerEmailDisplayLbl
             // 
             this.CustomerEmailDisplayLbl.AutoSize = true;
-            this.CustomerEmailDisplayLbl.Location = new System.Drawing.Point(369, 184);
-            this.CustomerEmailDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerEmailDisplayLbl.Location = new System.Drawing.Point(215, 92);
             this.CustomerEmailDisplayLbl.Name = "CustomerEmailDisplayLbl";
-            this.CustomerEmailDisplayLbl.Size = new System.Drawing.Size(72, 38);
+            this.CustomerEmailDisplayLbl.Size = new System.Drawing.Size(40, 21);
             this.CustomerEmailDisplayLbl.TabIndex = 16;
             this.CustomerEmailDisplayLbl.Text = "-----";
             // 
             // RefreshCustomersBtn
             // 
             this.RefreshCustomersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RefreshCustomersBtn.Location = new System.Drawing.Point(1404, 120);
-            this.RefreshCustomersBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.RefreshCustomersBtn.Location = new System.Drawing.Point(819, 60);
             this.RefreshCustomersBtn.Name = "RefreshCustomersBtn";
-            this.RefreshCustomersBtn.Size = new System.Drawing.Size(153, 64);
+            this.RefreshCustomersBtn.Size = new System.Drawing.Size(89, 32);
             this.RefreshCustomersBtn.TabIndex = 15;
             this.RefreshCustomersBtn.Text = "Refresh";
             this.RefreshCustomersBtn.UseVisualStyleBackColor = true;
@@ -588,10 +567,9 @@
             // AddCustomerBtn
             // 
             this.AddCustomerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddCustomerBtn.Location = new System.Drawing.Point(1404, 58);
-            this.AddCustomerBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.AddCustomerBtn.Location = new System.Drawing.Point(819, 29);
             this.AddCustomerBtn.Name = "AddCustomerBtn";
-            this.AddCustomerBtn.Size = new System.Drawing.Size(153, 58);
+            this.AddCustomerBtn.Size = new System.Drawing.Size(89, 29);
             this.AddCustomerBtn.TabIndex = 3;
             this.AddCustomerBtn.Text = "Add New";
             this.AddCustomerBtn.UseVisualStyleBackColor = true;
@@ -600,10 +578,9 @@
             // CustomerNameDisplayLbl
             // 
             this.CustomerNameDisplayLbl.AutoSize = true;
-            this.CustomerNameDisplayLbl.Location = new System.Drawing.Point(365, 132);
-            this.CustomerNameDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerNameDisplayLbl.Location = new System.Drawing.Point(213, 66);
             this.CustomerNameDisplayLbl.Name = "CustomerNameDisplayLbl";
-            this.CustomerNameDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.CustomerNameDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.CustomerNameDisplayLbl.TabIndex = 2;
             this.CustomerNameDisplayLbl.Text = "------";
             // 
@@ -611,10 +588,9 @@
             // 
             this.CustomerGDPRDisplayLbl.AutoSize = true;
             this.CustomerGDPRDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CustomerGDPRDisplayLbl.Location = new System.Drawing.Point(1274, 132);
-            this.CustomerGDPRDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerGDPRDisplayLbl.Location = new System.Drawing.Point(743, 66);
             this.CustomerGDPRDisplayLbl.Name = "CustomerGDPRDisplayLbl";
-            this.CustomerGDPRDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.CustomerGDPRDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.CustomerGDPRDisplayLbl.TabIndex = 2;
             this.CustomerGDPRDisplayLbl.Text = "------";
             // 
@@ -622,10 +598,9 @@
             // 
             this.CustomerGDPRLbl.AutoSize = true;
             this.CustomerGDPRLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CustomerGDPRLbl.Location = new System.Drawing.Point(1095, 132);
-            this.CustomerGDPRLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerGDPRLbl.Location = new System.Drawing.Point(639, 66);
             this.CustomerGDPRLbl.Name = "CustomerGDPRLbl";
-            this.CustomerGDPRLbl.Size = new System.Drawing.Size(177, 38);
+            this.CustomerGDPRLbl.Size = new System.Drawing.Size(100, 21);
             this.CustomerGDPRLbl.TabIndex = 2;
             this.CustomerGDPRLbl.Text = "GDPR Status:";
             // 
@@ -633,10 +608,9 @@
             // 
             this.CustomerNameLbl.AutoSize = true;
             this.CustomerNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CustomerNameLbl.Location = new System.Drawing.Point(141, 132);
-            this.CustomerNameLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerNameLbl.Location = new System.Drawing.Point(82, 66);
             this.CustomerNameLbl.Name = "CustomerNameLbl";
-            this.CustomerNameLbl.Size = new System.Drawing.Size(224, 38);
+            this.CustomerNameLbl.Size = new System.Drawing.Size(127, 21);
             this.CustomerNameLbl.TabIndex = 2;
             this.CustomerNameLbl.Text = "Customer Name:";
             // 
@@ -644,11 +618,10 @@
             // 
             this.CustomerEmailSelectLbl.AutoSize = true;
             this.CustomerEmailSelectLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CustomerEmailSelectLbl.Location = new System.Drawing.Point(122, 64);
-            this.CustomerEmailSelectLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.CustomerEmailSelectLbl.MaximumSize = new System.Drawing.Size(343, 0);
+            this.CustomerEmailSelectLbl.Location = new System.Drawing.Point(71, 32);
+            this.CustomerEmailSelectLbl.MaximumSize = new System.Drawing.Size(200, 0);
             this.CustomerEmailSelectLbl.Name = "CustomerEmailSelectLbl";
-            this.CustomerEmailSelectLbl.Size = new System.Drawing.Size(246, 38);
+            this.CustomerEmailSelectLbl.Size = new System.Drawing.Size(138, 21);
             this.CustomerEmailSelectLbl.TabIndex = 1;
             this.CustomerEmailSelectLbl.Text = "Select a Customer:";
             // 
@@ -658,11 +631,10 @@
             this.CustomerEmailSelectCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CustomerEmailSelectCmb.FormattingEnabled = true;
             this.CustomerEmailSelectCmb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.CustomerEmailSelectCmb.Location = new System.Drawing.Point(369, 58);
-            this.CustomerEmailSelectCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.CustomerEmailSelectCmb.Location = new System.Drawing.Point(215, 29);
             this.CustomerEmailSelectCmb.MaxDropDownItems = 10;
             this.CustomerEmailSelectCmb.Name = "CustomerEmailSelectCmb";
-            this.CustomerEmailSelectCmb.Size = new System.Drawing.Size(1022, 46);
+            this.CustomerEmailSelectCmb.Size = new System.Drawing.Size(598, 29);
             this.CustomerEmailSelectCmb.Sorted = true;
             this.CustomerEmailSelectCmb.TabIndex = 0;
             this.CustomerEmailSelectCmb.SelectedIndexChanged += new System.EventHandler(this.CustomerEmailSelectCmb_SelectedIndexChanged);
@@ -673,9 +645,9 @@
             this.TabAdmin.Controls.Add(this.ViewRestockRequirementsGrpBx);
             this.TabAdmin.Controls.Add(this.ViewPurchasesGrpBx);
             this.TabAdmin.Location = new System.Drawing.Point(4, 5);
-            this.TabAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TabAdmin.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TabAdmin.Name = "TabAdmin";
-            this.TabAdmin.Size = new System.Drawing.Size(2178, 1249);
+            this.TabAdmin.Size = new System.Drawing.Size(1267, 620);
             this.TabAdmin.TabIndex = 3;
             this.TabAdmin.Text = "AdminTab";
             this.TabAdmin.UseVisualStyleBackColor = true;
@@ -685,11 +657,9 @@
             this.SystemControlsBGrpBx.Controls.Add(this.SellStockBtn);
             this.SystemControlsBGrpBx.Controls.Add(this.ClearSelectionsBtn);
             this.SystemControlsBGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SystemControlsBGrpBx.Location = new System.Drawing.Point(17, 1046);
-            this.SystemControlsBGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SystemControlsBGrpBx.Location = new System.Drawing.Point(10, 523);
             this.SystemControlsBGrpBx.Name = "SystemControlsBGrpBx";
-            this.SystemControlsBGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.SystemControlsBGrpBx.Size = new System.Drawing.Size(2134, 176);
+            this.SystemControlsBGrpBx.Size = new System.Drawing.Size(1245, 88);
             this.SystemControlsBGrpBx.TabIndex = 6;
             this.SystemControlsBGrpBx.TabStop = false;
             this.SystemControlsBGrpBx.Text = "System Controls";
@@ -697,10 +667,9 @@
             // SellStockBtn
             // 
             this.SellStockBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SellStockBtn.Location = new System.Drawing.Point(1478, 68);
-            this.SellStockBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SellStockBtn.Location = new System.Drawing.Point(862, 34);
             this.SellStockBtn.Name = "SellStockBtn";
-            this.SellStockBtn.Size = new System.Drawing.Size(207, 62);
+            this.SellStockBtn.Size = new System.Drawing.Size(121, 31);
             this.SellStockBtn.TabIndex = 1;
             this.SellStockBtn.Text = "Sell Stock";
             this.SellStockBtn.UseVisualStyleBackColor = true;
@@ -709,10 +678,9 @@
             // ClearSelectionsBtn
             // 
             this.ClearSelectionsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ClearSelectionsBtn.Location = new System.Drawing.Point(363, 68);
-            this.ClearSelectionsBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ClearSelectionsBtn.Location = new System.Drawing.Point(212, 34);
             this.ClearSelectionsBtn.Name = "ClearSelectionsBtn";
-            this.ClearSelectionsBtn.Size = new System.Drawing.Size(221, 62);
+            this.ClearSelectionsBtn.Size = new System.Drawing.Size(129, 31);
             this.ClearSelectionsBtn.TabIndex = 2;
             this.ClearSelectionsBtn.Text = "Clear Selections";
             this.ClearSelectionsBtn.UseVisualStyleBackColor = true;
@@ -731,11 +699,9 @@
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerCmb);
             this.ViewRestockRequirementsGrpBx.Controls.Add(this.SelectSupplyerLbl);
             this.ViewRestockRequirementsGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ViewRestockRequirementsGrpBx.Location = new System.Drawing.Point(1097, 6);
-            this.ViewRestockRequirementsGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ViewRestockRequirementsGrpBx.Location = new System.Drawing.Point(640, 3);
             this.ViewRestockRequirementsGrpBx.Name = "ViewRestockRequirementsGrpBx";
-            this.ViewRestockRequirementsGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ViewRestockRequirementsGrpBx.Size = new System.Drawing.Size(1054, 1042);
+            this.ViewRestockRequirementsGrpBx.Size = new System.Drawing.Size(615, 521);
             this.ViewRestockRequirementsGrpBx.TabIndex = 1;
             this.ViewRestockRequirementsGrpBx.TabStop = false;
             this.ViewRestockRequirementsGrpBx.Text = "View Restock Requirements by Supplyer";
@@ -744,31 +710,30 @@
             // 
             this.SupplierRestockListLbl.AutoSize = true;
             this.SupplierRestockListLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierRestockListLbl.Location = new System.Drawing.Point(45, 267);
-            this.SupplierRestockListLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SupplierRestockListLbl.Location = new System.Drawing.Point(26, 134);
             this.SupplierRestockListLbl.Name = "SupplierRestockListLbl";
-            this.SupplierRestockListLbl.Size = new System.Drawing.Size(307, 38);
+            this.SupplierRestockListLbl.Size = new System.Drawing.Size(172, 21);
             this.SupplierRestockListLbl.TabIndex = 13;
             this.SupplierRestockListLbl.Text = "Items Needing Restock:";
             // 
             // SupplierRestockListTxt
             // 
             this.SupplierRestockListTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierRestockListTxt.Location = new System.Drawing.Point(30, 319);
+            this.SupplierRestockListTxt.Location = new System.Drawing.Point(18, 160);
+            this.SupplierRestockListTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SupplierRestockListTxt.Multiline = true;
             this.SupplierRestockListTxt.Name = "SupplierRestockListTxt";
             this.SupplierRestockListTxt.ReadOnly = true;
             this.SupplierRestockListTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.SupplierRestockListTxt.Size = new System.Drawing.Size(1011, 699);
+            this.SupplierRestockListTxt.Size = new System.Drawing.Size(591, 352);
             this.SupplierRestockListTxt.TabIndex = 13;
             // 
             // RefreshSuppliersBtn
             // 
             this.RefreshSuppliersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RefreshSuppliersBtn.Location = new System.Drawing.Point(891, 124);
-            this.RefreshSuppliersBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.RefreshSuppliersBtn.Location = new System.Drawing.Point(520, 62);
             this.RefreshSuppliersBtn.Name = "RefreshSuppliersBtn";
-            this.RefreshSuppliersBtn.Size = new System.Drawing.Size(153, 64);
+            this.RefreshSuppliersBtn.Size = new System.Drawing.Size(89, 32);
             this.RefreshSuppliersBtn.TabIndex = 14;
             this.RefreshSuppliersBtn.Text = "Refresh";
             this.RefreshSuppliersBtn.UseVisualStyleBackColor = true;
@@ -777,20 +742,18 @@
             // SupplierEmailDisplayLbl
             // 
             this.SupplierEmailDisplayLbl.AutoSize = true;
-            this.SupplierEmailDisplayLbl.Location = new System.Drawing.Point(284, 136);
-            this.SupplierEmailDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SupplierEmailDisplayLbl.Location = new System.Drawing.Point(166, 68);
             this.SupplierEmailDisplayLbl.Name = "SupplierEmailDisplayLbl";
-            this.SupplierEmailDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.SupplierEmailDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.SupplierEmailDisplayLbl.TabIndex = 10;
             this.SupplierEmailDisplayLbl.Text = "------";
             // 
             // AddSupplyerBtn
             // 
             this.AddSupplyerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddSupplyerBtn.Location = new System.Drawing.Point(890, 58);
-            this.AddSupplyerBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.AddSupplyerBtn.Location = new System.Drawing.Point(519, 29);
             this.AddSupplyerBtn.Name = "AddSupplyerBtn";
-            this.AddSupplyerBtn.Size = new System.Drawing.Size(154, 64);
+            this.AddSupplyerBtn.Size = new System.Drawing.Size(90, 32);
             this.AddSupplyerBtn.TabIndex = 3;
             this.AddSupplyerBtn.Text = "Add New";
             this.AddSupplyerBtn.UseVisualStyleBackColor = true;
@@ -800,10 +763,9 @@
             // 
             this.SupplierPhoneNumberDisplayLbl.AutoSize = true;
             this.SupplierPhoneNumberDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SupplierPhoneNumberDisplayLbl.Location = new System.Drawing.Point(284, 194);
-            this.SupplierPhoneNumberDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SupplierPhoneNumberDisplayLbl.Location = new System.Drawing.Point(166, 97);
             this.SupplierPhoneNumberDisplayLbl.Name = "SupplierPhoneNumberDisplayLbl";
-            this.SupplierPhoneNumberDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.SupplierPhoneNumberDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.SupplierPhoneNumberDisplayLbl.TabIndex = 11;
             this.SupplierPhoneNumberDisplayLbl.Text = "------";
             // 
@@ -811,10 +773,9 @@
             // 
             this.SupplierPhoneNumberLbl.AutoSize = true;
             this.SupplierPhoneNumberLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierPhoneNumberLbl.Location = new System.Drawing.Point(107, 195);
-            this.SupplierPhoneNumberLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SupplierPhoneNumberLbl.Location = new System.Drawing.Point(62, 98);
             this.SupplierPhoneNumberLbl.Name = "SupplierPhoneNumberLbl";
-            this.SupplierPhoneNumberLbl.Size = new System.Drawing.Size(167, 38);
+            this.SupplierPhoneNumberLbl.Size = new System.Drawing.Size(93, 21);
             this.SupplierPhoneNumberLbl.TabIndex = 12;
             this.SupplierPhoneNumberLbl.Text = "Supplier Tel:";
             // 
@@ -822,10 +783,9 @@
             // 
             this.SupplierEmailLbl.AutoSize = true;
             this.SupplierEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierEmailLbl.Location = new System.Drawing.Point(75, 137);
-            this.SupplierEmailLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SupplierEmailLbl.Location = new System.Drawing.Point(44, 68);
             this.SupplierEmailLbl.Name = "SupplierEmailLbl";
-            this.SupplierEmailLbl.Size = new System.Drawing.Size(199, 38);
+            this.SupplierEmailLbl.Size = new System.Drawing.Size(113, 21);
             this.SupplierEmailLbl.TabIndex = 13;
             this.SupplierEmailLbl.Text = "Supplier Email:";
             // 
@@ -833,10 +793,9 @@
             // 
             this.SelectSupplyerCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectSupplyerCmb.FormattingEnabled = true;
-            this.SelectSupplyerCmb.Location = new System.Drawing.Point(284, 62);
-            this.SelectSupplyerCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.SelectSupplyerCmb.Location = new System.Drawing.Point(166, 31);
             this.SelectSupplyerCmb.Name = "SelectSupplyerCmb";
-            this.SelectSupplyerCmb.Size = new System.Drawing.Size(595, 46);
+            this.SelectSupplyerCmb.Size = new System.Drawing.Size(349, 29);
             this.SelectSupplyerCmb.TabIndex = 1;
             this.SelectSupplyerCmb.SelectedIndexChanged += new System.EventHandler(this.SelectSupplyerCmb_SelectedIndexChanged);
             // 
@@ -844,10 +803,9 @@
             // 
             this.SelectSupplyerLbl.AutoSize = true;
             this.SelectSupplyerLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SelectSupplyerLbl.Location = new System.Drawing.Point(45, 68);
-            this.SelectSupplyerLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.SelectSupplyerLbl.Location = new System.Drawing.Point(26, 34);
             this.SelectSupplyerLbl.Name = "SelectSupplyerLbl";
-            this.SelectSupplyerLbl.Size = new System.Drawing.Size(229, 38);
+            this.SelectSupplyerLbl.Size = new System.Drawing.Size(128, 21);
             this.SelectSupplyerLbl.TabIndex = 0;
             this.SelectSupplyerLbl.Text = "Select a Supplier:";
             // 
@@ -864,11 +822,9 @@
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerEmailLbl);
             this.ViewPurchasesGrpBx.Controls.Add(this.VCPCustomerEmailCmb);
             this.ViewPurchasesGrpBx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ViewPurchasesGrpBx.Location = new System.Drawing.Point(17, 6);
-            this.ViewPurchasesGrpBx.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ViewPurchasesGrpBx.Location = new System.Drawing.Point(10, 3);
             this.ViewPurchasesGrpBx.Name = "ViewPurchasesGrpBx";
-            this.ViewPurchasesGrpBx.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ViewPurchasesGrpBx.Size = new System.Drawing.Size(1056, 1042);
+            this.ViewPurchasesGrpBx.Size = new System.Drawing.Size(616, 521);
             this.ViewPurchasesGrpBx.TabIndex = 0;
             this.ViewPurchasesGrpBx.TabStop = false;
             this.ViewPurchasesGrpBx.Text = "View Purchases by Customer";
@@ -877,31 +833,30 @@
             // 
             this.CustomerPurchasesOutputLbl.AutoSize = true;
             this.CustomerPurchasesOutputLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CustomerPurchasesOutputLbl.Location = new System.Drawing.Point(4, 267);
-            this.CustomerPurchasesOutputLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CustomerPurchasesOutputLbl.Location = new System.Drawing.Point(2, 134);
             this.CustomerPurchasesOutputLbl.Name = "CustomerPurchasesOutputLbl";
-            this.CustomerPurchasesOutputLbl.Size = new System.Drawing.Size(274, 38);
+            this.CustomerPurchasesOutputLbl.Size = new System.Drawing.Size(155, 21);
             this.CustomerPurchasesOutputLbl.TabIndex = 12;
             this.CustomerPurchasesOutputLbl.Text = "Customer Purchases:";
             // 
             // CustomerPurchasesOutputTxt
             // 
             this.CustomerPurchasesOutputTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CustomerPurchasesOutputTxt.Location = new System.Drawing.Point(19, 319);
+            this.CustomerPurchasesOutputTxt.Location = new System.Drawing.Point(11, 160);
+            this.CustomerPurchasesOutputTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CustomerPurchasesOutputTxt.Multiline = true;
             this.CustomerPurchasesOutputTxt.Name = "CustomerPurchasesOutputTxt";
             this.CustomerPurchasesOutputTxt.ReadOnly = true;
             this.CustomerPurchasesOutputTxt.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.CustomerPurchasesOutputTxt.Size = new System.Drawing.Size(1011, 699);
+            this.CustomerPurchasesOutputTxt.Size = new System.Drawing.Size(591, 352);
             this.CustomerPurchasesOutputTxt.TabIndex = 11;
             // 
             // VCPCustomerEmailDisplayLbl
             // 
             this.VCPCustomerEmailDisplayLbl.AutoSize = true;
-            this.VCPCustomerEmailDisplayLbl.Location = new System.Drawing.Point(279, 194);
-            this.VCPCustomerEmailDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerEmailDisplayLbl.Location = new System.Drawing.Point(163, 97);
             this.VCPCustomerEmailDisplayLbl.Name = "VCPCustomerEmailDisplayLbl";
-            this.VCPCustomerEmailDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.VCPCustomerEmailDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.VCPCustomerEmailDisplayLbl.TabIndex = 9;
             this.VCPCustomerEmailDisplayLbl.Text = "------";
             // 
@@ -909,20 +864,18 @@
             // 
             this.VCPCustomerEmailOutputLbl.AutoSize = true;
             this.VCPCustomerEmailOutputLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerEmailOutputLbl.Location = new System.Drawing.Point(54, 194);
-            this.VCPCustomerEmailOutputLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerEmailOutputLbl.Location = new System.Drawing.Point(31, 97);
             this.VCPCustomerEmailOutputLbl.Name = "VCPCustomerEmailOutputLbl";
-            this.VCPCustomerEmailOutputLbl.Size = new System.Drawing.Size(216, 38);
+            this.VCPCustomerEmailOutputLbl.Size = new System.Drawing.Size(123, 21);
             this.VCPCustomerEmailOutputLbl.TabIndex = 10;
             this.VCPCustomerEmailOutputLbl.Text = "Customer Email:";
             // 
             // VCPCustomerNameDisplayLbl
             // 
             this.VCPCustomerNameDisplayLbl.AutoSize = true;
-            this.VCPCustomerNameDisplayLbl.Location = new System.Drawing.Point(279, 136);
-            this.VCPCustomerNameDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerNameDisplayLbl.Location = new System.Drawing.Point(163, 68);
             this.VCPCustomerNameDisplayLbl.Name = "VCPCustomerNameDisplayLbl";
-            this.VCPCustomerNameDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.VCPCustomerNameDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.VCPCustomerNameDisplayLbl.TabIndex = 5;
             this.VCPCustomerNameDisplayLbl.Text = "------";
             // 
@@ -930,10 +883,9 @@
             // 
             this.VCPCustomerGDPRDisplayLbl.AutoSize = true;
             this.VCPCustomerGDPRDisplayLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerGDPRDisplayLbl.Location = new System.Drawing.Point(947, 137);
-            this.VCPCustomerGDPRDisplayLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerGDPRDisplayLbl.Location = new System.Drawing.Point(552, 68);
             this.VCPCustomerGDPRDisplayLbl.Name = "VCPCustomerGDPRDisplayLbl";
-            this.VCPCustomerGDPRDisplayLbl.Size = new System.Drawing.Size(83, 38);
+            this.VCPCustomerGDPRDisplayLbl.Size = new System.Drawing.Size(46, 21);
             this.VCPCustomerGDPRDisplayLbl.TabIndex = 6;
             this.VCPCustomerGDPRDisplayLbl.Text = "------";
             // 
@@ -941,10 +893,9 @@
             // 
             this.VCPCustomerGDPRLbl.AutoSize = true;
             this.VCPCustomerGDPRLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerGDPRLbl.Location = new System.Drawing.Point(769, 137);
-            this.VCPCustomerGDPRLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerGDPRLbl.Location = new System.Drawing.Point(449, 68);
             this.VCPCustomerGDPRLbl.Name = "VCPCustomerGDPRLbl";
-            this.VCPCustomerGDPRLbl.Size = new System.Drawing.Size(177, 38);
+            this.VCPCustomerGDPRLbl.Size = new System.Drawing.Size(100, 21);
             this.VCPCustomerGDPRLbl.TabIndex = 7;
             this.VCPCustomerGDPRLbl.Text = "GDPR Status:";
             // 
@@ -952,10 +903,9 @@
             // 
             this.VCPCustomerNameLbl.AutoSize = true;
             this.VCPCustomerNameLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerNameLbl.Location = new System.Drawing.Point(54, 136);
-            this.VCPCustomerNameLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.VCPCustomerNameLbl.Location = new System.Drawing.Point(31, 68);
             this.VCPCustomerNameLbl.Name = "VCPCustomerNameLbl";
-            this.VCPCustomerNameLbl.Size = new System.Drawing.Size(224, 38);
+            this.VCPCustomerNameLbl.Size = new System.Drawing.Size(127, 21);
             this.VCPCustomerNameLbl.TabIndex = 8;
             this.VCPCustomerNameLbl.Text = "Customer Name:";
             // 
@@ -963,11 +913,10 @@
             // 
             this.VCPCustomerEmailLbl.AutoSize = true;
             this.VCPCustomerEmailLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VCPCustomerEmailLbl.Location = new System.Drawing.Point(36, 68);
-            this.VCPCustomerEmailLbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.VCPCustomerEmailLbl.MaximumSize = new System.Drawing.Size(343, 0);
+            this.VCPCustomerEmailLbl.Location = new System.Drawing.Point(21, 34);
+            this.VCPCustomerEmailLbl.MaximumSize = new System.Drawing.Size(200, 0);
             this.VCPCustomerEmailLbl.Name = "VCPCustomerEmailLbl";
-            this.VCPCustomerEmailLbl.Size = new System.Drawing.Size(242, 38);
+            this.VCPCustomerEmailLbl.Size = new System.Drawing.Size(135, 21);
             this.VCPCustomerEmailLbl.TabIndex = 4;
             this.VCPCustomerEmailLbl.Text = "Select a customer:";
             // 
@@ -977,35 +926,22 @@
             this.VCPCustomerEmailCmb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.VCPCustomerEmailCmb.FormattingEnabled = true;
             this.VCPCustomerEmailCmb.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.VCPCustomerEmailCmb.Location = new System.Drawing.Point(287, 65);
-            this.VCPCustomerEmailCmb.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.VCPCustomerEmailCmb.Location = new System.Drawing.Point(167, 32);
             this.VCPCustomerEmailCmb.MaxDropDownItems = 10;
             this.VCPCustomerEmailCmb.Name = "VCPCustomerEmailCmb";
-            this.VCPCustomerEmailCmb.Size = new System.Drawing.Size(759, 46);
+            this.VCPCustomerEmailCmb.Size = new System.Drawing.Size(444, 29);
             this.VCPCustomerEmailCmb.Sorted = true;
             this.VCPCustomerEmailCmb.TabIndex = 3;
             this.VCPCustomerEmailCmb.SelectedIndexChanged += new System.EventHandler(this.VCPCustomerEmailCmb_SelectedIndexChanged);
             // 
-            // AddItemBtn
-            // 
-            this.AddItemBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddItemBtn.Location = new System.Drawing.Point(913, 70);
-            this.AddItemBtn.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.AddItemBtn.Name = "AddItemBtn";
-            this.AddItemBtn.Size = new System.Drawing.Size(211, 62);
-            this.AddItemBtn.TabIndex = 1;
-            this.AddItemBtn.Text = "Add New Item";
-            this.AddItemBtn.UseVisualStyleBackColor = true;
-            this.AddItemBtn.Click += new System.EventHandler(this.AddItemBtn_Click);
-            // 
             // MainSystem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2198, 1268);
+            this.ClientSize = new System.Drawing.Size(1282, 634);
             this.Controls.Add(this.NavSystemMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximizeBox = false;
             this.Name = "MainSystem";
             this.Text = "Sarre Running Sports";

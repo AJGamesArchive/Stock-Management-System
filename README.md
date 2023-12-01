@@ -3,13 +3,13 @@
 ## Assessment Info
 
 - Task 1: Enum Report | Due: **Friday 8th December**
-- Task 2: Developing the Stock Management & Point of Sales System | Due: **Friday 8th December**
+- ~~Task 2: Developing the Stock Management & Point of Sales System | Due: Friday 8th December~~
 - Task 3: Interfaces Report | Due: **Friday 8th December**
 - Task 4: Optional Unit Test Creation | Due: **Friday 8th December**
 
 ## System Requirements
 
-- Add a new item to the inventory (list of items sold)
+- ~~Add a new item to the inventory (list of items sold)~~
 - ~~Add a new supplier~~
 - ~~Get a list of items requiring restock by from a given supplier~~
 - ~~Sell an item to a new customer~~
