@@ -189,22 +189,29 @@ namespace Stock_Management_System
         {
             if(SelectItemTypeCmb.SelectedIndex == -1) { return; }
             SelectItemCmb.Enabled = true;
+            ItemManager.ItemType type;
             switch(SelectItemTypeCmb.Text)
             {
                 case "Clothing":
                     SelectionFilterMessageLbl.Text = "CLOTHING ITEMS";
                     SelectionFilterMessageLbl.ForeColor = Color.Blue;
+                    type = ItemManager.ItemType.Clothing;
                     break;
                 case "Shoe":
                     SelectionFilterMessageLbl.Text = "SHOE ITEMS";
                     SelectionFilterMessageLbl.ForeColor = Color.Red;
+                    type = ItemManager.ItemType.Shoe;
                     break;
                 case "Accessory":
                     SelectionFilterMessageLbl.Text = "ACCESSORY ITEMS";
                     SelectionFilterMessageLbl.ForeColor = Color.Purple;
+                    type = ItemManager.ItemType.Accessory;
                     break;
+                default:
+                    shopUnaccpectedError($"There was an error searching for items of the selected type {SelectItemTypeCmb.Text}. Please try again.");
+                    return;
             };
-            string[] spesificItemIdentifiers = stockSystem.retrieveItemIdentifiers(SelectItemTypeCmb.Text);
+            string[] spesificItemIdentifiers = stockSystem.retrieveItemIdentifiers(type);
             SelectItemCmb.Items.Clear();
             foreach(string identifier in spesificItemIdentifiers)
             {

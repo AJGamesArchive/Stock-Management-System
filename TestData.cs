@@ -38,62 +38,62 @@ namespace Stock_Management_System
             #region Clothing
 
             // Clothing
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_1", 20, 50, 20, 1, "Shorts", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_1", 20, 50, 20, 1, "Shorts", new Dictionary<string, string[]> 
             { 
                 { "Size", new string[] { "25", "27", "29" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_2", 22, 19, 20, 1, "Shorts", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_2", 22, 19, 20, 1, "Shorts", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "30", "32", "34" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_3", 25, 20, 20, 1, "Capris", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_3", 25, 20, 20, 1, "Capris", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "25", "27", "29" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_4", 30, 15, 20, 1, "Capris", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_4", 30, 15, 20, 1, "Capris", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "30", "32", "34" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_5", 24, 5, 20, 1, "Leggings", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_5", 24, 5, 20, 1, "Leggings", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "25", "27", "29" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_6", 28, 8, 20, 1, "Leggings", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_6", 28, 8, 20, 1, "Leggings", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "30", "32", "34" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_7", 15, 50, 20, 1, "Vest", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_7", 15, 50, 20, 1, "Vest", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "25", "27", "29" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_8", 18, 50, 20, 1, "Vest", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_8", 18, 50, 20, 1, "Vest", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "30", "32", "34" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_9", 25, 12, 20, 1, "Top", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_9", 25, 12, 20, 1, "Top", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "25", "27", "29" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_10", 30, 18, 20, 1, "Top", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_10", 30, 18, 20, 1, "Top", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "30", "32", "34" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_11", 35, 50, 20, 1, "Jacket", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_11", 35, 50, 20, 1, "Jacket", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "25", "27", "29" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Clothing, "Clothing_Item_12", 40, 50, 20, 1, "Jacket", new Dictionary<string, string[]> 
+            stockSystem.enterNewItem(ItemManager.ItemType.Clothing, "Clothing_Item_12", 40, 50, 20, 1, "Jacket", new Dictionary<string, string[]> 
             {
                 { "Size", new string[] { "30", "32", "34" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
@@ -104,52 +104,52 @@ namespace Stock_Management_System
             #region Shoes
 
             // Shoes
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_1", 45, 60, 20, 2, "Racer", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_1", 45, 60, 20, 2, "Racer", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "20", "22", "24", "26" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_2", 50, 60, 20, 2, "Racer", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_2", 50, 60, 20, 2, "Racer", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "26", "28", "30", "32" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_3", 45, 60, 20, 2, "Stabiliyt", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_3", 45, 60, 20, 2, "Stabiliyt", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "20", "22", "24", "26" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_4", 50, 60, 20, 2, "Stability", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_4", 50, 60, 20, 2, "Stability", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "26", "28", "30", "32" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_5", 55, 60, 20, 2, "Neutral", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_5", 55, 60, 20, 2, "Neutral", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "20", "22", "24", "26" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_6", 60, 60, 20, 2, "Neutral", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_6", 60, 60, 20, 2, "Neutral", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "26", "28", "30", "32" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_7", 55, 60, 20, 2, "Trail", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_7", 55, 60, 20, 2, "Trail", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "20", "22", "24", "26" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_8", 60, 60, 20, 2, "Trail", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_8", 60, 60, 20, 2, "Trail", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "26", "28", "30", "32" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_9", 60, 60, 20, 2, "Track", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_9", 60, 60, 20, 2, "Track", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "20", "22", "24", "26" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Shoe, "Shoe_Item_10", 70, 60, 20, 2, "Track", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Shoe, "Shoe_Item_10", 70, 60, 20, 2, "Track", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "26", "28", "30", "32" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
@@ -164,42 +164,42 @@ namespace Stock_Management_System
             #region Bags
 
             // Bags
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_1", 20, 40, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_1", 20, 40, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "15", "20", "25", "30", "35", "40" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_2", 25, 3, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_2", 25, 3, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "30", "35", "40", "45", "50", "55" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_3", 30, 40, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_3", 30, 40, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "15", "20", "25", "30", "35", "40" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_4", 35, 8, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_4", 35, 8, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "30", "35", "40", "45", "50", "55" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_5", 40, 10, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_5", 40, 10, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "15", "20", "25", "30", "35", "40" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_6", 45, 2, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_6", 45, 2, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "30", "35", "40", "45", "50", "55" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_7", 50, 40, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_7", 50, 40, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "15", "20", "25", "30", "35", "40" } },
                 { "Colour", new string[] { "Blue, Black, Grey, Purple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Bag_Item_8", 55, 40, 10, 3, "Bag", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Bag_Item_8", 55, 40, 10, 3, "Bag", new Dictionary<string, string[]>
             {
                 { "Capacity", new string[] { "30", "35", "40", "45", "50", "55" } },
                 { "Colour", new string[] { "Blue, White, Green, Red" } }
@@ -210,32 +210,32 @@ namespace Stock_Management_System
             #region Nutritions
 
             // Nutritions
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Nutrition_Item_1", 30, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Nutrition_Item_1", 30, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
             {
                 { "Nutrition Type", new string[] { "Carbs" } },
                 { "Quantity", new string[] { "10", "15", "20", "25", "30" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Nutrition_Item_2", 35, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Nutrition_Item_2", 35, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
             {
                 { "Nutrition Type", new string[] { "Carbs" } },
                 { "Quantity", new string[] { "10", "15", "20", "25", "30", "35", "40" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Nutrition_Item_3", 40, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Nutrition_Item_3", 40, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
             {
                 { "Nutrition Type", new string[] { "Carbs" } },
                 { "Quantity", new string[] { "30", "35", "40", "45", "50", "55", "60" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Nutrition_Item_4", 30, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Nutrition_Item_4", 30, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
             {
                 { "Nutrition Type", new string[] { "Protein" } },
                 { "Quantity", new string[] { "10", "15", "20", "25", "30" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Nutrition_Item_5", 35, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Nutrition_Item_5", 35, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
             {
                 { "Nutrition Type", new string[] { "Protein" } },
                 { "Quantity", new string[] { "10", "15", "20", "25", "30", "35", "40" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Nutrition_Item_6", 40, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Nutrition_Item_6", 40, 60, 20, 3, "Nutrition", new Dictionary<string, string[]>
             {
                 { "Nutrition Type", new string[] { "Protein" } },
                 { "Quantity", new string[] { "30", "35", "40", "45", "50", "55", "60" } }
@@ -246,35 +246,35 @@ namespace Stock_Management_System
             #region Watches
 
             // Watches
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_1", 40, 11, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_1", 40, 11, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "Simple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_2", 50, 13, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_2", 50, 13, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "Simple" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_3", 40, 7, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_3", 40, 7, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "Hear Rate" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_4", 50, 50, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_4", 50, 50, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "Heart Rate" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_5", 50, 50, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_5", 50, 50, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "GPS" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_6", 60, 19, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_6", 60, 19, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "GPS" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_7", 50, 2, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_7", 50, 2, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "GPS and Heart Rate" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Watch_Item_8", 60, 50, 20, 3, "Watche", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Watch_Item_8", 60, 50, 20, 3, "Watche", new Dictionary<string, string[]>
             {
                 { "Watche Type", new string[] { "GPS and Heart Rate" } }
             });
@@ -284,13 +284,13 @@ namespace Stock_Management_System
             #region Other Accessorys
 
             // Other
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Hat_Item_1", 20, 40, 10, 3, "Hat", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Hat_Item_1", 20, 40, 10, 3, "Hat", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "10", "15", "20", "25", "30" } },
                 { "Colour", new string[] { "White", "Black", "Yellow", "Blue", "Green" } },
                 { "Hat Type", new string[] { "Cap" } }
             });
-            stockSystem.enterNewItem(StockSystem.ItemType.Accessory, "Hat_Item_2", 30, 5, 10, 3, "Hat", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Hat_Item_2", 30, 5, 10, 3, "Hat", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "10", "15", "20", "25", "30" } },
                 { "Colour", new string[] { "Yellow", "Black & White", "Rainbow" } },

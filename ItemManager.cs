@@ -11,6 +11,14 @@ namespace Stock_Management_System
     // Class to handel all the data processing (adding, updating, retrieving) for all items in the system
     public class ItemManager
     {
+        // Enumeration to state the type of an item being added to or searched for in the system
+        public enum ItemType
+        {
+            Clothing,
+            Shoe,
+            Accessory
+        }
+
         // Class Attributes
         private List<Item> Items;
 
@@ -65,26 +73,26 @@ namespace Stock_Management_System
         }
 
         // Overloaded Function to retrieve an identifier string for all of one type of item in the system
-        public string[] generateItemIdentifiers(string type)
+        public string[] generateItemIdentifiers(ItemType type)
         {
             List<string> identifiers = new List<string>();
             switch (type)
             {
-                case "Clothing":
+                case ItemType.Clothing:
                     foreach(Item i in Items)
                     {
                         if(i is not Clothing clothing) { continue; }
                         identifiers.Add(i.ToString());
                     }
                     break;
-                case "Shoe":
+                case ItemType.Shoe:
                     foreach (Item i in Items)
                     {
                         if (i is not Shoe shoe) { continue; }
                         identifiers.Add(i.ToString());
                     }
                     break;
-                case "Accessory":
+                case ItemType.Accessory:
                     foreach (Item i in Items)
                     {
                         if (i is not Accessary accessary) { continue; }

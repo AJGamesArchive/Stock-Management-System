@@ -9,14 +9,6 @@ namespace Stock_Management_System
 {
     public class StockSystem
     {
-        // Enumeration to state the type of an item being added to the system
-        public enum ItemType
-        {
-            Clothing,
-            Shoe,
-            Accessory
-        }
-
         // Class Attributes
         private EntityManager entityManager;
         private ItemManager itemManager;
@@ -75,21 +67,21 @@ namespace Stock_Management_System
         }
 
         // Function to enter a new items details into the systetm
-        public bool enterNewItem(ItemType type, string name, decimal price, int stockLevel, int orderStockLevel, int supplierId, string make, Dictionary<string, string[]> characteristics)
+        public bool enterNewItem(ItemManager.ItemType type, string name, decimal price, int stockLevel, int orderStockLevel, int supplierId, string make, Dictionary<string, string[]> characteristics)
         {
             if (!entityManager.getSupplier(supplierId, out Supplier supplier)) { return false; }
             int id = itemManager.getNumItems() + 1;
             switch(type)
             {
-                case ItemType.Clothing:
+                case ItemManager.ItemType.Clothing:
                     Clothing clothing = new Clothing(id, name, price, stockLevel, orderStockLevel, supplier, make, characteristics);
                     itemManager.addItem(clothing);
                     break;
-                case ItemType.Shoe:
+                case ItemManager.ItemType.Shoe:
                     Shoe shoe = new Shoe(id, name, price, stockLevel, orderStockLevel, supplier, make, characteristics);
                     itemManager.addItem(shoe);
                     break;
-                case ItemType.Accessory:
+                case ItemManager.ItemType.Accessory:
                     Accessary accessary = new Accessary(id, name, price, stockLevel, orderStockLevel, supplier, make, characteristics);
                     itemManager.addItem(accessary);
                     break;
@@ -127,7 +119,7 @@ namespace Stock_Management_System
         }
 
         // Overloaded Function to retrieve the generated item identifiers for all the items of one type
-        public string[] retrieveItemIdentifiers(string type)
+        public string[] retrieveItemIdentifiers(ItemManager.ItemType type)
         {
             return itemManager.generateItemIdentifiers(type);
         }

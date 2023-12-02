@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItem));
             this.EnterItemDetailsGrp = new System.Windows.Forms.GroupBox();
+            this.EnterMakeTxt = new System.Windows.Forms.TextBox();
+            this.EnterMakeLbl = new System.Windows.Forms.Label();
             this.SelectSupplierCmb = new System.Windows.Forms.ComboBox();
             this.SelectTypeCmb = new System.Windows.Forms.ComboBox();
             this.SelectSupplierLbl = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.EnterFurtherDetailsTxt = new System.Windows.Forms.TextBox();
             this.AddItemBtn = new System.Windows.Forms.Button();
             this.AddNewItemGrp = new System.Windows.Forms.GroupBox();
-            this.EnterMakeLbl = new System.Windows.Forms.Label();
-            this.EnterMakeTxt = new System.Windows.Forms.TextBox();
             this.EnterItemDetailsGrp.SuspendLayout();
             this.EnterFurtherItemDetailsGrp.SuspendLayout();
             this.AddNewItemGrp.SuspendLayout();
@@ -81,6 +81,27 @@
             this.EnterItemDetailsGrp.TabStop = false;
             this.EnterItemDetailsGrp.Text = "Enter New Item Details";
             // 
+            // EnterMakeTxt
+            // 
+            this.EnterMakeTxt.Location = new System.Drawing.Point(107, 130);
+            this.EnterMakeTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.EnterMakeTxt.Name = "EnterMakeTxt";
+            this.EnterMakeTxt.PlaceholderText = "Top Hat";
+            this.EnterMakeTxt.Size = new System.Drawing.Size(204, 29);
+            this.EnterMakeTxt.TabIndex = 13;
+            this.EnterMakeTxt.TextChanged += new System.EventHandler(this.EnterMakeTxt_TextChanged);
+            // 
+            // EnterMakeLbl
+            // 
+            this.EnterMakeLbl.AutoSize = true;
+            this.EnterMakeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EnterMakeLbl.Location = new System.Drawing.Point(12, 133);
+            this.EnterMakeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.EnterMakeLbl.Name = "EnterMakeLbl";
+            this.EnterMakeLbl.Size = new System.Drawing.Size(91, 21);
+            this.EnterMakeLbl.TabIndex = 12;
+            this.EnterMakeLbl.Text = "Enter Make:";
+            // 
             // SelectSupplierCmb
             // 
             this.SelectSupplierCmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -104,6 +125,7 @@
             this.SelectTypeCmb.Name = "SelectTypeCmb";
             this.SelectTypeCmb.Size = new System.Drawing.Size(200, 29);
             this.SelectTypeCmb.TabIndex = 10;
+            this.SelectTypeCmb.SelectedIndexChanged += new System.EventHandler(this.SelectTypeCmb_SelectedIndexChanged);
             // 
             // SelectSupplierLbl
             // 
@@ -198,6 +220,7 @@
             this.EnterNameTxt.PlaceholderText = "Pointy Top Hat";
             this.EnterNameTxt.Size = new System.Drawing.Size(200, 29);
             this.EnterNameTxt.TabIndex = 1;
+            this.EnterNameTxt.TextChanged += new System.EventHandler(this.EnterNameTxt_TextChanged);
             // 
             // EnterNameLbl
             // 
@@ -276,26 +299,6 @@
             this.AddNewItemGrp.TabIndex = 16;
             this.AddNewItemGrp.TabStop = false;
             this.AddNewItemGrp.Text = "Add Item?";
-            // 
-            // EnterMakeLbl
-            // 
-            this.EnterMakeLbl.AutoSize = true;
-            this.EnterMakeLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.EnterMakeLbl.Location = new System.Drawing.Point(12, 133);
-            this.EnterMakeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.EnterMakeLbl.Name = "EnterMakeLbl";
-            this.EnterMakeLbl.Size = new System.Drawing.Size(91, 21);
-            this.EnterMakeLbl.TabIndex = 12;
-            this.EnterMakeLbl.Text = "Enter Make:";
-            // 
-            // EnterMakeTxt
-            // 
-            this.EnterMakeTxt.Location = new System.Drawing.Point(107, 130);
-            this.EnterMakeTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.EnterMakeTxt.Name = "EnterMakeTxt";
-            this.EnterMakeTxt.PlaceholderText = "Top Hat";
-            this.EnterMakeTxt.Size = new System.Drawing.Size(204, 29);
-            this.EnterMakeTxt.TabIndex = 13;
             // 
             // AddItem
             // 
