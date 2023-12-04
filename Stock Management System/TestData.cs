@@ -284,7 +284,7 @@ namespace Stock_Management_System
             #region Other Accessorys
 
             // Other
-            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Hat_Item_1", 20, 40, 10, 3, "Hat", new Dictionary<string, string[]>
+            stockSystem.enterNewItem(ItemManager.ItemType.Accessory, "Hat_Item_1", 20, 0, 10, 3, "Hat", new Dictionary<string, string[]>
             {
                 { "Size", new string[] { "10", "15", "20", "25", "30" } },
                 { "Colour", new string[] { "White", "Black", "Yellow", "Blue", "Green" } },
