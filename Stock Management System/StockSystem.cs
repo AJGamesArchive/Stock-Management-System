@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Management_System
 {
-    public class StockSystem
+    public sealed class StockSystem
     {
         // Class Attributes
         private EntityManager entityManager;

@@ -9,7 +9,7 @@ using static Stock_Management_System.Shoe;
 namespace Stock_Management_System
 {
     // Class to handel all the data processing (adding, updating, retrieving) for all items in the system
-    public class ItemManager
+    public sealed class ItemManager
     {
         // Enumeration to state the type of an item being added to or searched for in the system
         public enum ItemType
