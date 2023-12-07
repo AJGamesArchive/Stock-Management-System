@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Stock_Management_System
 {
     // Class to handel all th data processing (adding, updating, retrieving) for all Customers and Suppliers in the system
-    public class EntityManager
+    public sealed class EntityManager
     {
         // Class Attributes
         private List<Customer> Customers;

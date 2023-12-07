@@ -286,9 +286,10 @@ namespace Stock_Management_System
         private void VCPCustomerEmailCmb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(VCPCustomerEmailCmb.SelectedIndex == -1) { return; }
-            if(!Tools.getEntityId(VCPCustomerEmailCmb.Text, out int id)) { /* Insert adminTabUnaccpectedError here */ return; }
-            if(!stockSystem.retrieveCustomerDetails(id, out string[] details)) { /* Insert adminTabUnaccpectedError here */ return; }
-            if(!stockSystem.getCustomerPurchases(id, out string[] purchaseList)) { /* Insert adminTabUnaccpectedError here */ return; }
+            if(!Tools.getEntityId(VCPCustomerEmailCmb.Text, out int id)) { adminUaccpectedError("An ID could not be found for the selected customer. Please try again."); return; }
+            if(!stockSystem.retrieveCustomerDetails(id, out string[] details)) { adminUaccpectedError("The selected customer could not be found. Please try again."); return; }
+            if(!stockSystem.getCustomerPurchases(id, out string[] purchaseList)) { adminUaccpectedError("The purchase history for this customer could not be retrieved. Please try again."); return; }
+            if(purchaseList.Length == 0) { CustomerPurchasesOutputTxt.Text = "This customer has not brought any items yet."; return; }
             VCPCustomerNameDisplayLbl.Text = details[0];
             VCPCustomerEmailDisplayLbl.Text = details[1];
             VCPCustomerGDPRDisplayLbl.Text = details[2];
